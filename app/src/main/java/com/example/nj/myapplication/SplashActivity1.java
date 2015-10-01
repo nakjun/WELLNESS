@@ -3,8 +3,12 @@ package com.example.nj.myapplication;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class SplashActivity1 extends AppCompatActivity {
@@ -23,6 +27,16 @@ public class SplashActivity1 extends AppCompatActivity {
         result_text = (TextView)findViewById(R.id.textView_result);
         result_text.setText("YES를 "+yes_count+"개 선택하셨습니다.\n" +
                 "더 많은 YES를 선택하고 싶다면 다음 장으로 이동해주세요");
+
+        RelativeLayout relative = (RelativeLayout)findViewById(R.id.Re);
+        relative.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SplashActivity1.this,ImageActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
     }
 
     @Override
