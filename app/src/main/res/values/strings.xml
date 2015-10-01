@@ -5,4 +5,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_splash1">SplashActivity1</string>
     <string name="title_activity_image">ImageActivity</string>
+    <string name="title_activity_yes_no">YesNoActivity</string>
+    <string name="title_activity_behavior">BehaviorActivity</string>
 </resources>
