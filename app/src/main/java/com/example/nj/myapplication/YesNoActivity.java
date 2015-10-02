@@ -1,5 +1,6 @@
 package com.example.nj.myapplication;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,7 +13,7 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class YesNoActivity extends AppCompatActivity {
+public class YesNoActivity extends Activity {
 
     ImageButton imgYes,imgNo;
     TextView tView;

@@ -1,11 +1,12 @@
 package com.example.nj.myapplication;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class BehaviorActivity extends AppCompatActivity {
+public class BehaviorActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

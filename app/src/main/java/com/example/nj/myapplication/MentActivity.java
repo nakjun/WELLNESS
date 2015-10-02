@@ -1,5 +1,6 @@
 package com.example.nj.myapplication;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
-public class MentActivity extends AppCompatActivity {
+public class MentActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

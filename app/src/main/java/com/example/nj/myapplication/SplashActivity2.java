@@ -1,5 +1,6 @@
 package com.example.nj.myapplication;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +10,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class SplashActivity2 extends AppCompatActivity {
+public class SplashActivity2 extends Activity {
 
     Intent intent;
     TextView result_text;
