@@ -11,7 +11,6 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
-import com.example.nj.myapplication.SplashActivity2;
 
 public class YesNoActivity extends Activity {
 
