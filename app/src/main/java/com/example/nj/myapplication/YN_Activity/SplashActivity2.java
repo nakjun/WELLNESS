@@ -1,14 +1,15 @@
-package com.example.nj.myapplication;
+package com.example.nj.myapplication.YN_Activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.example.nj.myapplication.R;
 
 public class SplashActivity2 extends Activity {
 
