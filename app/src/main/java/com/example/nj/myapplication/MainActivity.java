@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.nj.myapplication.DW_Activity.DW_Activity;
 import com.example.nj.myapplication.YN_Activity.YesNoActivity;
 
 public class MainActivity extends Activity {
@@ -17,7 +19,16 @@ public class MainActivity extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button btn_login = (Button)findViewById(R.id.btn_login);
 
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, DW_Activity.class);
+                startActivity(i);
+                finish();
+            }
+        });
     }
 
     @Override

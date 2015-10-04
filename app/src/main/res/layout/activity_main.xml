@@ -4,4 +4,85 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    ></RelativeLayout>
+    >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="아이디"
+        android:id="@+id/textview_ID"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="295dp" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_below="@+id/textview_ID"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:focusable="true"
+        android:maxLines="1"
+        android:maxLength="20" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="비밀번호"
+        android:id="@+id/textview_PW"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:id="@+id/editText2"
+        android:layout_alignParentStart="true"
+        android:focusable="true"
+        android:maxLines="1"
+        android:layout_below="@+id/textview_PW"
+        android:layout_alignParentLeft="true"
+        android:maxLength="10" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:id="@+id/btn_login"
+        android:width="20dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/editText2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:id="@+id/btn_join"
+        android:layout_alignTop="@+id/btn_login"
+        android:layout_toRightOf="@+id/btn_login"
+        android:layout_toEndOf="@+id/btn_login"
+        android:layout_marginLeft="63dp"
+        android:layout_marginStart="63dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디,패스워드 찾기"
+        android:id="@+id/button3"
+        android:layout_alignTop="@+id/btn_join"
+        android:layout_toRightOf="@+id/btn_join"
+        android:layout_toEndOf="@+id/btn_join"
+        android:layout_marginLeft="73dp"
+        android:layout_marginStart="73dp" />
+
+</RelativeLayout>
