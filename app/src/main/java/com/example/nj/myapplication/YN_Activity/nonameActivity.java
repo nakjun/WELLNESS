@@ -1,9 +1,12 @@
 package com.example.nj.myapplication.YN_Activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.example.nj.myapplication.R;
 
@@ -13,6 +16,16 @@ public class nonameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_noname);
+
+        ImageView imgview = (ImageView)findViewById(R.id.imageView_YNmain);
+        imgview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(nonameActivity.this, YesNoActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
     }
 
     @Override

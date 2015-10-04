@@ -9,7 +9,7 @@
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/imageView_"
+        android:id="@+id/imageView_YNmain"
         android:background="@drawable/main"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"

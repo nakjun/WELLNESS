@@ -17,15 +17,7 @@ public class MainActivity extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ImageView imgview = (ImageView)findViewById(R.id.imageView_Main);
-        imgview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this,YesNoActivity.class);
-                startActivity(i);
-                finish();
-            }
-        });
+
     }
 
     @Override
