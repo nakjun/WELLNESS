@@ -1,17 +1,17 @@
-package com.example.nj.myapplication;
+package com.example.nj.myapplication.YN_Activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.example.nj.myapplication.R;
+import com.example.nj.myapplication.SplashActivity2;
 
 public class YesNoActivity extends Activity {
 
