@@ -32,6 +32,11 @@
             android:name=".BehaviorActivity"
             android:label="@string/title_activity_behavior" >
         </activity>
+        <activity
+            android:name=".DW_Activity.DW_activity"
+            android:label="@string/title_activity_dw_activity"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>
