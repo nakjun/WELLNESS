@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:text="로그인"
         android:id="@+id/btn_login"
-        android:width="20dp"
+
         android:layout_marginTop="63dp"
         android:layout_marginLeft="20dp"
         android:layout_below="@+id/editText2"
@@ -67,6 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="회원가입"
+
         android:id="@+id/btn_join"
         android:layout_alignTop="@+id/btn_login"
         android:layout_toRightOf="@+id/btn_login"
@@ -78,6 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="아이디,패스워드 찾기"
+
         android:id="@+id/button3"
         android:layout_alignTop="@+id/btn_join"
         android:layout_toRightOf="@+id/btn_join"
