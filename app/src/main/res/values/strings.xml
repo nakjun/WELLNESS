@@ -7,6 +7,7 @@
     <string name="title_activity_image">ImageActivity</string>
     <string name="title_activity_yes_no">YesNoActivity</string>
     <string name="title_activity_behavior">BehaviorActivity</string>
+    <string name="title_activity_join">JoinActivity</string>
     <string name="title_activity_noname">nonameActivity</string>
     <string name="title_activity_dw_">DW_Activity</string>
     <string name="dw_title">불안/긴장 해소하기</string>

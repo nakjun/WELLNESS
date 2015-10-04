@@ -27,7 +27,6 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, DW_Activity.class);
                 startActivity(i);
-                finish();
             }
         });
         btn_join.setOnClickListener(new View.OnClickListener() {
@@ -35,7 +34,6 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, YesNoActivity.class);
                 startActivity(i);
-                finish();
             }
         });
     }
