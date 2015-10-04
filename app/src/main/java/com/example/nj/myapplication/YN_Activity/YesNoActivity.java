@@ -61,7 +61,6 @@ public class YesNoActivity extends Activity {
                 } else {
                     i = new Intent(YesNoActivity.this, SplashActivity2.class);
                     i.putExtra("YesCount", yes_count);
-                    i.putExtra("NoCount", no_count);
                     startActivity(i);
                     finish();
                 }

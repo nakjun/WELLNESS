@@ -28,11 +28,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SplashActivity2"
+            android:name=".YN_Activity.SplashActivity2"
             android:label="@string/title_activity_splash1" >
         </activity>
         <activity
-            android:name=".MentActivity"
+            android:name=".YN_Activity.MentActivity"
             android:label="@string/title_activity_image" >
         </activity>
         <activity
@@ -40,11 +40,11 @@
             android:label="@string/title_activity_yes_no" >
         </activity>
         <activity
-            android:name=".BehaviorActivity"
+            android:name=".YN_Activity.BehaviorActivity"
             android:label="@string/title_activity_behavior" >
         </activity>
         <activity
-            android:name=".nonameActivity"
+            android:name=".YN_Activity.nonameActivity"
             android:label="@string/title_activity_noname"
             android:windowSoftInputMode="adjustResize|stateHidden" >
         </activity>
@@ -57,6 +57,10 @@
             android:name=".DW_Activity.DW_Activity"
             android:label="@string/title_activity_dw_"
             android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".JoinActivity"
+            android:label="@string/title_activity_join" >
         </activity>
     </application>
 
