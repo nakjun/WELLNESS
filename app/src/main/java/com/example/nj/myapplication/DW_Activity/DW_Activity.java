@@ -16,7 +16,7 @@ public class DW_Activity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dw_);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         /*TODO
             create activity
         */

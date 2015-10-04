@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView_Main2"
-        android:background="@drawable/title2"
+        android:background="@drawable/yn_title2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton_Behavior"
-        android:background="@drawable/button2"
+        android:background="@drawable/yn_button2"
         android:layout_alignBottom="@+id/imageView_Main2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />

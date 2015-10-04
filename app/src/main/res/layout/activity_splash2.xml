@@ -17,7 +17,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/textarea"
+        android:background="@drawable/yn_textarea"
         android:id="@+id/imageView_TEXTAREA"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true" />
