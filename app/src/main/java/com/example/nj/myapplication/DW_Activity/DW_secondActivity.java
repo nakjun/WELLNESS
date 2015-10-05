@@ -21,10 +21,16 @@ public class DW_secondActivity extends AppCompatActivity {
         top=(TextView)findViewById(R.id.dw_sec_topText);
         mid=(TextView)findViewById(R.id.dw_sec_midText);
         bot=(TextView)findViewById(R.id.dw_sec_botText);
+
+        back=(ImageButton)findViewById(R.id.dw_sec_back);
+        back.setImageResource(R.drawable.common_back_button);
+
         top.setText(R.string.dw_2nd_top);
+        top.setTextSize(32);
         mid.setText(R.string.dw_2nd_mid);
         mid.setTextSize(32);
         bot.setText(R.string.dw_2nd_bottom);
+
     }
 
 
