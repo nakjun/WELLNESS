@@ -55,6 +55,8 @@
         android:text="Large Text"
         android:id="@+id/dw_sec_botText"
         android:layout_below="@+id/dw_sec_midText"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textAlignment="gravity"
+        android:gravity="center" />
 
 </RelativeLayout>
