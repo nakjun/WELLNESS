@@ -62,7 +62,14 @@
             android:name=".JoinActivity"
             android:label="@string/title_activity_join" >
         </activity>
-        <activity android:name=".DW_Activity.DW_secondActivity" >
+        <activity
+            android:name=".DW_Activity.DW_secondActivity"
+            android:label="@string/title_activity_dw_second"
+            android:parentActivityName=".DW_Activity.DW_Activity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nj.myapplication.DW_Activity.DW_Activity" />
         </activity>
     </application>
 

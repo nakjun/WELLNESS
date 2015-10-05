@@ -40,7 +40,6 @@ public class DW_Activity extends Activity {
                 startActivity(new Intent(DW_Activity.this,DW_secondActivity.class));
             }
         });
-
         //TODO create activity
 
 
