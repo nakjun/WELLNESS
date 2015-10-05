@@ -1,10 +1,9 @@
 package com.example.nj.myapplication.DW_Activity;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -13,7 +12,7 @@ import com.example.nj.myapplication.R;
 
 public class DW_secondActivity extends AppCompatActivity {
     TextView top,mid,bot;
-    ImageButton back,center;
+    ImageButton backImage, centerImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,8 +21,18 @@ public class DW_secondActivity extends AppCompatActivity {
         mid=(TextView)findViewById(R.id.dw_sec_midText);
         bot=(TextView)findViewById(R.id.dw_sec_botText);
 
-        back=(ImageButton)findViewById(R.id.dw_sec_back);
-        back.setImageResource(R.drawable.common_back_button);
+        backImage =(ImageButton)findViewById(R.id.dw_sec_back);
+        backImage.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.common_back_button), 100, 100, false));
+        backImage.setBackgroundResource(R.color.transparent);
+        backImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+        centerImage=(ImageButton)findViewById(R.id.dW_sec_cenImg);
+        centerImage.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dw_sec_cen), 500, 500, false));
 
         top.setText(R.string.dw_2nd_top);
         top.setTextSize(32);

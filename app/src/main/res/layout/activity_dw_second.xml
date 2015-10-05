@@ -19,10 +19,11 @@
         android:text="Large Text"
         android:id="@+id/dw_sec_topText"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/imageButton"
+        android:layout_toRightOf="@+id/dw_sec_back"
         android:layout_toEndOf="@+id/imageButton"
         android:layout_marginLeft="35dp"
-        android:layout_marginStart="35dp" />
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="30dp" />
 
     <ImageButton
         android:layout_width="wrap_content"
