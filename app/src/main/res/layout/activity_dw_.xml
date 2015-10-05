@@ -63,7 +63,8 @@
         android:layout_below="@id/dw_main_imageGrid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button"
-        />
+        android:text="@string/dw_main_button_name"
+        android:id="@+id/dw_main_button"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_centerInParent="true" />
 </RelativeLayout>
