@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
         btn_join.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, YesNoActivity.class);
+                Intent i = new Intent(MainActivity.this, JoinActivity.class);
                 startActivity(i);
             }
         });

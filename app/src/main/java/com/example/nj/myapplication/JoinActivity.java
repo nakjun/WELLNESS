@@ -3,15 +3,37 @@ package com.example.nj.myapplication;
 import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.DatePicker;
+import android.widget.Toast;
 
 public class JoinActivity extends Activity {
-
+    DatePicker datePicker;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join);
+
+        datePicker = (DatePicker) findViewById(R.id.datePicker);
+
+        datePicker.init(datePicker.getYear(),
+                datePicker.getMonth(),
+                datePicker.getDayOfMonth(),
+                new DatePicker.OnDateChangedListener() {
+
+                    @Override
+                    public void onDateChanged(DatePicker view, int year,
+                                              int monthOfYear, int dayOfMonth) {
+                        // TODO Auto-generated method stub
+                        String msg = String.format("%d / %d / %d", year,monthOfYear+1, dayOfMonth);
+                        Log.d("date",msg);
+                        //Toast.makeText(JoinActivity.this, msg, Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+
     }
 
     @Override
