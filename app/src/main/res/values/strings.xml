@@ -9,11 +9,21 @@
     <string name="title_activity_behavior">BehaviorActivity</string>
     <string name="title_activity_join">JoinActivity</string>
     <string name="title_activity_noname">nonameActivity</string>
+
     <string name="title_activity_dw_">DW_Activity</string>
+    <string name="title_activity_dw_second">DW_secondActivity</string>
+    <string name="title_activity_dw__breathe">DW_BreatheActivity</string>
+    <string name="title_activity_dw__breathe2">DW_BreatheActivity2</string>
+
     <string name="dw_title">불안/긴장 해소하기</string>
     <string name="dw_main_button_name">\"클릭\"</string>
     <string name="dw_2nd_top">조용하고 편안한 장소를 찾아요</string>
     <string name="dw_2nd_mid">그림을 터치해 주세요</string>
     <string name="dw_2nd_bottom">모든 준비가 되시면 그림을 눌러주시기 바랍니다.\n그림을 클릭한 후 부터 자동으로 진행되오니\n안내 멘트에 따라 해주시기 바랍니다.</string>
-    <string name="title_activity_dw_second">DW_secondActivity</string>
+
+    <string name="dw_breathe_title">4,7,8 호흡법</string>
+    <string name="dw_4sec">\"코\"로 4초동안</string>
+    <string name="dw_7sec">7초동안 참는다</string>
+    <string name="dw_8sec">\"입\"으로 8초동안</string>
+
 </resources>

@@ -1,5 +1,6 @@
 package com.example.nj.myapplication.DW_Activity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -33,7 +34,12 @@ public class DW_secondActivity extends AppCompatActivity {
 
         centerImage=(ImageButton)findViewById(R.id.dW_sec_cenImg);
         centerImage.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dw_sec_cen), 500, 500, false));
-
+        centerImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DW_secondActivity.this,DW_BreatheActivity1.class));
+            }
+        });
         top.setText(R.string.dw_2nd_top);
         top.setTextSize(32);
         mid.setText(R.string.dw_2nd_mid);
