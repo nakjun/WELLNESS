@@ -16,4 +16,5 @@
     <string name="dw_2nd_mid">그림을 터치해 주세요</string>
     <string name="dw_2nd_bottom">모든 준비가 되시면 그림을 눌러주시기 바랍니다.\n그림을 클릭한 후 부터 자동으로 진행되오니\n안내 멘트에 따라 해주시기 바랍니다.</string>
     <string name="title_activity_dw_second">DW_secondActivity</string>
+    <string name="title_activity_hub">HubActivity</string>
 </resources>
