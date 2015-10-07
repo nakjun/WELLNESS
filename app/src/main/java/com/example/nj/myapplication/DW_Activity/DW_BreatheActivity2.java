@@ -41,7 +41,7 @@ public class DW_BreatheActivity2 extends AppCompatActivity {
         topTextView.setTextSize(32);
         topTextView.setText(R.string.dw_breathe_title);
 
-        botTextView=(TextView)findViewById(R.id.dw_breathe2_botText);
+        botTextView=(TextView)findViewById(R.id. dw_breathe2_botText);
         botTextView.setTextSize(32);
         botTextView.setText(R.string.dw_7sec);
 

@@ -38,6 +38,9 @@ public class JoinActivity extends Activity {
     ListItem ITEM;
     phpDown task_down;
     phpInsert task_insert;
+
+    boolean flag = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,8 +54,10 @@ public class JoinActivity extends Activity {
                 get_edit();
                 get_date();
 
-                task_insert = new phpInsert();
-                task_insert.execute("http://220.69.209.170/psycho/insert.php?id=" + ID + "&pw=" + PW + "&name=" + NAME + "&gender=" + GENDER + "&nick=" + NICKNAME + "&birth=" + BIRTH);
+                if(flag) {
+                    task_insert = new phpInsert();
+                    task_insert.execute("http://220.69.209.170/psycho/insert.php?id=" + ID + "&pw=" + PW + "&name=" + NAME + "&gender=" + GENDER + "&nick=" + NICKNAME + "&birth=" + BIRTH);
+                }
             }
         });
     }
@@ -102,6 +107,10 @@ public class JoinActivity extends Activity {
         NAME = ed2.getText().toString();
         GENDER = ed3.getText().toString();
         NICKNAME = ed4.getText().toString();
+        if(ID.equals("")||PW.equals("")||NAME.equals("")||GENDER.equals("")||NICKNAME.equals("")) {
+            Toast.makeText(getApplicationContext(), "모든 정보를 입력해주세요", Toast.LENGTH_SHORT).show();
+            flag=true;
+        }
     }
 
 
