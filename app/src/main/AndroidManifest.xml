@@ -75,8 +75,22 @@
                 android:value="com.example.nj.myapplication.DW_Activity.DW_Activity" />
         </activity>
         <activity
-            android:name=".HubActivity"
-            android:label="@string/title_activity_hub" >
+            android:name=".DW_Activity.DW_BreatheActivity1"
+            android:label="@string/title_activity_dw_breatheactivity1"
+            android:parentActivityName=".DW_Activity.DW_secondActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nj.myapplication.DW_Activity.DW_secondActivity" />
+        </activity>
+        <activity
+            android:name=".DW_Activity.DW_BreatheActivity2"
+            android:label="@string/title_activity_dw_breatheactivity2"
+            android:parentActivityName=".DW_Activity.DW_BreatheActivity1"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nj.myapplication.DW_Activity.DW_BreatheActivity1" />
         </activity>
     </application>
 
