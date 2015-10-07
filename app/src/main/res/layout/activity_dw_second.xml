@@ -32,10 +32,7 @@
         android:layout_below="@+id/dw_sec_topText"
         android:layout_marginTop="142dp"
         android:layout_centerInParent="true"
-        android:layout_alignParentLeft="false"
         android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="false"
-        android:layout_alignParentRight="false"
         android:layout_alignWithParentIfMissing="false" />
 
     <TextView
