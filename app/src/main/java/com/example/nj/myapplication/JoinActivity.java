@@ -1,6 +1,7 @@
 package com.example.nj.myapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
@@ -52,14 +53,6 @@ public class JoinActivity extends Activity {
 
                 task_insert = new phpInsert();
                 task_insert.execute("http://220.69.209.170/psycho/insert.php?id=" + ID + "&pw=" + PW + "&name=" + NAME + "&gender=" + GENDER + "&nick=" + NICKNAME + "&birth=" + BIRTH);
-                //task_insert.doInBackground("http://220.69.209.170/psycho/insert.php?id="+ID+"&pw="+PW+"&name="+NAME+"&gender="+GENDER+"&nick="+NICKNAME+"&birth="+BIRTH);
-/*
-                Log.d("ID", ID);
-                Log.d("PW", PW);
-                Log.d("NAME", NAME);
-                Log.d("GENDER", GENDER);
-                Log.d("NICKNAME", NICKNAME);
-                Log.d("BIRTH",BIRTH);*/
             }
         });
     }
@@ -169,6 +162,7 @@ public class JoinActivity extends Activity {
                 Toast.makeText(getApplicationContext(),"DB Insert Failed.",Toast.LENGTH_SHORT).show();
             }else{
                 Toast.makeText(getApplicationContext(),"DB Insert Complete.",Toast.LENGTH_SHORT).show();
+                finish();
             }
         }
 
