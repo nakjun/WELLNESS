@@ -22,4 +22,5 @@
     <string name="dw_7sec">7초동안 참는다</string>
     <string name="dw_4sec">"코"로 4초동안</string>
     <string name="dw_breathe_title">4,7,8 호흡법</string>
+    <string name="title_activity_dp">DpActivity</string>
 </resources>

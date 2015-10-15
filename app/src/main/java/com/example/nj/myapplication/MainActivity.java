@@ -4,10 +4,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -24,7 +26,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class MainActivity extends Activity {
-    Button btn_login,btn_join;
+    Button btn_login,btn_join,btn_find;
+    phpDown task;
+    String ID,PW;
+    EditText ed_id,ed_pw;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -32,18 +37,34 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         btn_login = (Button)findViewById(R.id.btn_login);
         btn_join = (Button)findViewById(R.id.btn_join);
+        btn_find = (Button)findViewById(R.id.btn_find);
+
+        ed_id = (EditText)findViewById(R.id.editText_ID);
+        ed_pw = (EditText)findViewById(R.id.editText_PW);
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, DW_Activity.class);
-                startActivity(i);
+
+                ID = ed_id.getText().toString();
+                PW = ed_pw.getText().toString();
+
+                task = new phpDown();
+                task.execute("http://220.69.209.170/psycho/login.php?id="+ID+"&pw="+PW);
             }
         });
         btn_join.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, JoinActivity.class);
+                i.putExtra("ID",ID);
+                startActivity(i);
+            }
+        });
+        btn_find.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, HubActivity.class);
                 startActivity(i);
             }
         });
@@ -104,22 +125,13 @@ public class MainActivity extends Activity {
             return jsonHtml.toString();
         }
 
-        /*
-        protected void onPostExecute(String str){
-            txtView.setText(str);
-        }
-        */
 
         protected void onPostExecute(String str){
-            if(str.equals("true"))
-            {
-                Toast.makeText(getApplicationContext(),"Login Success.",Toast.LENGTH_SHORT).show();
+            if(str.charAt(0)=='s') {
+                startActivity(new Intent(MainActivity.this, HubActivity.class));
             }
             else
-            {
-                Toast.makeText(getApplicationContext(),"Login Fail.",Toast.LENGTH_SHORT).show();
-            }
-
+                Toast.makeText(getApplicationContext(),"Login Fail",Toast.LENGTH_SHORT).show();
         }
 
     }

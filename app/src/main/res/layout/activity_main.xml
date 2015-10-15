@@ -21,7 +21,7 @@
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/editText_ID"
         android:layout_below="@+id/textview_ID"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -43,7 +43,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:id="@+id/editText2"
+        android:id="@+id/editText_PW"
         android:layout_alignParentStart="true"
         android:focusable="true"
         android:maxLines="1"
@@ -57,9 +57,7 @@
         android:text="로그인"
         android:id="@+id/btn_login"
 
-        android:layout_marginTop="63dp"
-        android:layout_marginLeft="20dp"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/editText_PW"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -80,7 +78,7 @@
         android:layout_height="wrap_content"
         android:text="아이디,패스워드 찾기"
 
-        android:id="@+id/button3"
+        android:id="@+id/btn_find"
         android:layout_alignTop="@+id/btn_join"
         android:layout_toRightOf="@+id/btn_join"
         android:layout_toEndOf="@+id/btn_join"

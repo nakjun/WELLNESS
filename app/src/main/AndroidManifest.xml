@@ -92,6 +92,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.nj.myapplication.DW_Activity.DW_BreatheActivity1" />
         </activity>
+        <activity
+            android:name=".HubActivity"
+            android:label="@string/title_activity_hub" >
+        </activity>
+        <activity
+            android:name=".DP_Activity.DpActivity"
+            android:label="@string/title_activity_dp" >
+        </activity>
     </application>
 
 </manifest>

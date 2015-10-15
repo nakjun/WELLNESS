@@ -14,12 +14,29 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <ImageButton
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton_Behavior"
+        android:text="계획"
+        android:id="@+id/btn_behavior"
         android:background="@drawable/yn_button2"
         android:layout_alignBottom="@+id/imageView_Main2"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="64dp"
+        android:layout_marginStart="64dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="행동"
+        android:id="@+id/btn_behavior2"
+        android:background="@drawable/yn_button2"
+        android:layout_alignBottom="@+id/imageView_Main2"
+        android:layout_alignRight="@+id/imageView_Main2"
+        android:layout_alignEnd="@+id/imageView_Main2"
+        android:layout_marginRight="45dp"
+        android:layout_marginEnd="45dp" />
+
+
 </RelativeLayout>
