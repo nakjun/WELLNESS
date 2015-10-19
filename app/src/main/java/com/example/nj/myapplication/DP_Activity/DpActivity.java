@@ -2,8 +2,11 @@ package com.example.nj.myapplication.DP_Activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.example.nj.myapplication.R;
 
@@ -13,6 +16,16 @@ public class DpActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dp);
+
+        /*
+        ImageButton img_btn = (ImageButton)findViewById(R.id.btn_startdp);
+        img_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //
+                Log.d("click","on click");
+            }
+        });*/
     }
 
     @Override
