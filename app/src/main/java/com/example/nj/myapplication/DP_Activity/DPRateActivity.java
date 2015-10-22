@@ -1,39 +1,25 @@
 package com.example.nj.myapplication.DP_Activity;
 
 import android.app.Activity;
-import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageButton;
 
 import com.example.nj.myapplication.R;
 
-public class DPActivity extends Activity {
+public class DPRateActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dp);
-
-        ImageButton img_btn = (ImageButton)findViewById(R.id.btn_nextdp);
-        img_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //
-                Intent i = new Intent(DPActivity.this,DPSelectActivity.class);
-                startActivity(i);
-                finish();
-            }
-        });
+        setContentView(R.layout.activity_dprate);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_dp, menu);
+        getMenuInflater().inflate(R.menu.menu_dprate, menu);
         return true;
     }
 

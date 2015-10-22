@@ -97,8 +97,16 @@
             android:label="@string/title_activity_hub" >
         </activity>
         <activity
-            android:name=".DP_Activity.DpActivity"
+            android:name=".DP_Activity.DPActivity"
             android:label="@string/title_activity_dp" >
+        </activity>
+        <activity
+            android:name=".DP_Activity.DPSelectActivity"
+            android:label="@string/title_activity_dpselect" >
+        </activity>
+        <activity
+            android:name=".DP_Activity.DPRateActivity"
+            android:label="@string/title_activity_dprate" >
         </activity>
     </application>
 
