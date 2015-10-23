@@ -108,6 +108,14 @@
             android:name=".DP_Activity.DPRateActivity"
             android:label="@string/title_activity_dprate" >
         </activity>
+        <activity
+            android:name=".DP_Activity.DPWhere"
+            android:label="@string/title_activity_dpwhere" >
+        </activity>
+        <activity
+            android:name=".DP_Activity.DPSixButtonSelect"
+            android:label="@string/title_activity_dpsix_button_select" >
+        </activity>
     </application>
 
 </manifest>
