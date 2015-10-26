@@ -4,58 +4,55 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:id="@+id/MainActivityRelativeLayout"
     >
 
 
-    <TextView
-        android:layout_width="wrap_content"
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/Til_id"
+        android:layout_width="500dp"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="아이디"
-        android:id="@+id/textview_ID"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="295dp"
-        android:layout_marginLeft="100dp" />
-
-    <EditText
+        android:layout_above="@+id/Til_pw"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="10dp">
+        <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText_ID"
-        android:layout_below="@+id/textview_ID"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:focusable="true"
         android:maxLines="1"
         android:maxLength="20"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp" />
+        android:layout_above="@+id/textview_PW"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
 
-    <TextView
-        android:layout_width="wrap_content"
+        />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/Til_pw"
+        android:layout_width="500dp"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="비밀번호"
-        android:id="@+id/textview_PW"
         android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="100dp" />
-
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:id="@+id/editText_PW"
-        android:layout_alignParentStart="true"
-        android:focusable="true"
-        android:maxLines="1"
-        android:layout_below="@+id/textview_PW"
-        android:layout_alignParentLeft="true"
-        android:maxLength="10"
         android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp" />
+        android:layout_marginRight="100dp">
+         <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:id="@+id/editText_PW"
+            android:layout_alignParentStart="true"
+            android:focusable="true"
+            android:maxLines="1"
+            android:layout_alignParentLeft="true"
+            android:maxLength="10"
+
+
+            />
+    </android.support.design.widget.TextInputLayout>
 
     <Button
         android:layout_width="wrap_content"
@@ -63,10 +60,9 @@
         android:text="로그인"
         android:id="@+id/btn_login"
 
-        android:layout_below="@+id/editText_PW"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="100dp" />
+        android:layout_below="@+id/Til_pw"
+        android:layout_alignLeft="@+id/Til_pw"
+        android:layout_alignStart="@+id/Til_pw" />
 
     <Button
         android:layout_width="wrap_content"
@@ -91,5 +87,8 @@
         android:layout_toEndOf="@+id/btn_join"
         android:layout_marginLeft="23dp"
         android:layout_marginStart="73dp" />
+
+
+
 
 </RelativeLayout>

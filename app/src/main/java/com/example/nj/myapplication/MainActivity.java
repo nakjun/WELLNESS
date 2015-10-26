@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.nj.myapplication.DW_Activity.DW_Activity;
@@ -30,6 +32,8 @@ public class MainActivity extends Activity {
     phpDown task;
     String ID,PW;
     EditText ed_id,ed_pw;
+    TextInputLayout Til_id,Til_pw;
+    RelativeLayout rel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -41,7 +45,13 @@ public class MainActivity extends Activity {
 
         ed_id = (EditText)findViewById(R.id.editText_ID);
         ed_pw = (EditText)findViewById(R.id.editText_PW);
-
+        Til_id=(TextInputLayout)findViewById(R.id.Til_id);
+        Til_id.setHint("아이디");
+        Til_pw=(TextInputLayout)findViewById(R.id.Til_pw);
+        Til_pw.setHint("패스워드");
+        ed_id.clearFocus();
+        rel=(RelativeLayout)findViewById(R.id.MainActivityRelativeLayout);
+        rel.requestFocus();
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,7 +60,7 @@ public class MainActivity extends Activity {
                 PW = ed_pw.getText().toString();
 
                 task = new phpDown();
-                task.execute("http://220.69.209.170/psycho/login.php?id="+ID+"&pw="+PW);
+                task.execute("http://220.69.209.170/psycho/login.php?id=" + ID + "&pw=" + PW);
             }
         });
         btn_join.setOnClickListener(new View.OnClickListener() {
