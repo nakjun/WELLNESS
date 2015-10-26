@@ -1,5 +1,6 @@
 package com.example.nj.myapplication.DW_Activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -18,7 +19,7 @@ import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
 
-public class DW_BreatheActivity2 extends AppCompatActivity {
+public class DW_BreatheActivity2 extends Activity {
     TextView topTextView,botTextView;
     ImageView centerImage;
     ImageButton backImage;
@@ -52,14 +53,14 @@ public class DW_BreatheActivity2 extends AppCompatActivity {
         centerImage=(ImageView)findViewById(R.id.dw_breathe2_image);
         centerImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dw_breathe_7sec), 450, 500, false);
         centerImage.setImageBitmap(centerImageBitmap);
-        narration= MediaPlayer.create(getApplicationContext(), R.raw.dw_narration_4);
+        narration= MediaPlayer.create(getApplicationContext(), R.raw.dw_narration_5);
         narration.start();
         timer = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
                     synchronized (this) {
-                        wait(5500);
+                        wait(8500);
                     }
                     narration.pause();
                     startActivity(new Intent(DW_BreatheActivity2.this, DW_BreatheActivity3.class));
@@ -74,11 +75,16 @@ public class DW_BreatheActivity2 extends AppCompatActivity {
         timer.start();
     }
     @Override
+    protected void onResume() {
+        super.onResume();
+        narration.seekTo(0);
+        narration.start();
+    }
+    @Override
     protected void onDestroy() {
-        for(int j = 0;j<5;j++){
-            Destory(centerImage);
-        }
         super.onDestroy();
+        narration.pause();
+        Destory(centerImage);
     }
 
     public void Destory(ImageView iv) {

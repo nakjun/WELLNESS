@@ -3,28 +3,28 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:fitsSystemWindows="true"
-    tools:context="com.example.nj.myapplication.DW_Activity.DW_BreatheActivity1">
+    tools:context="com.example.nj.myapplication.DW_Activity.DW_BreatheActivity3">
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/dw_sec_back3" />
+        android:id="@+id/dw_sec_back4" />
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
-        android:id="@+id/dw_breathe2_topText"
+        android:id="@+id/dw_breathe3_topText"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="35dp"
         android:layout_marginStart="35dp"
         android:layout_marginTop="30dp"
-        android:layout_toRightOf="@id/dw_sec_back3" />
+        android:layout_toRightOf="@id/dw_sec_back4" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/dw_breathe2_image"
-        android:layout_below="@+id/dw_breathe2_topText"
+        android:id="@+id/dw_breathe3_image"
+        android:layout_below="@+id/dw_breathe3_topText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="142dp"/>
 
@@ -32,8 +32,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Text"
-        android:id="@+id/dw_breathe2_botText"
-        android:layout_below="@+id/dw_breathe2_image"
+        android:id="@+id/dw_breathe3_botText"
+        android:layout_below="@+id/dw_breathe3_image"
         android:layout_centerHorizontal="true"
         />
 

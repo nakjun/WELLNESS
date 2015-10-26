@@ -63,6 +63,12 @@ public class DW_BreatheActivity1 extends Activity {
         narration.start();
         timer.start();
     }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        narration.seekTo(0);
+        narration.start();
+    }
 
     @Override
     protected void onDestroy() {
