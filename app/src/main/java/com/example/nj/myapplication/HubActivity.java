@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.example.nj.myapplication.DP_Activity.DpActivity;
 import com.example.nj.myapplication.DW_Activity.DW_Activity;
+import com.example.nj.myapplication.SM_Activity.SM_Activity;
 import com.example.nj.myapplication.YN_Activity.YesNoActivity;
 
 public class HubActivity extends Activity {
@@ -25,6 +26,7 @@ public class HubActivity extends Activity {
         Button btn_478 = (Button)findViewById(R.id.btn_478);
         Button btn_yesno = (Button)findViewById(R.id.btn_yesno);
         Button btn_dp = (Button)findViewById(R.id.btn_dp);
+        Button btn_sm=(Button)findViewById(R.id.btn_sm);
         btn_478.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,6 +43,12 @@ public class HubActivity extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(HubActivity.this, DpActivity.class));
+            }
+        });
+        btn_sm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HubActivity.this, SM_Activity.class));
             }
         });
     }

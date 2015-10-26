@@ -129,6 +129,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.nj.myapplication.DW_Activity.DW_BreatheActivity2" />
         </activity>
+        <activity
+            android:name=".SM_Activity.SM_Activity"
+            android:label="@string/title_activity_sm_"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>
