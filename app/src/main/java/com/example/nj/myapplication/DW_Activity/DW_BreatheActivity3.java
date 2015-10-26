@@ -85,6 +85,7 @@ public class DW_BreatheActivity3 extends Activity {
         super.onDestroy();
         narration.pause();
         Destory(centerImage);
+        Destory(backImage);
     }
 
     public void Destory(ImageView iv) {
