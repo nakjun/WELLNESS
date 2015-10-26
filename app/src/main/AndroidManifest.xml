@@ -116,6 +116,10 @@
             android:name=".DP_Activity.DPSixButtonSelect"
             android:label="@string/title_activity_dpsix_button_select" >
         </activity>
+        <activity
+            android:name=".DP_Activity.DPmyStatus"
+            android:label="@string/title_activity_dpmy_status" >
+        </activity>
     </application>
 
 </manifest>

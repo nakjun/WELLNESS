@@ -27,4 +27,5 @@
     <string name="title_activity_dprate">DPRateActivity</string>
     <string name="title_activity_dpwhere">DPWhere</string>
     <string name="title_activity_dpsix_button_select">DPSixButtonSelect</string>
+    <string name="title_activity_dpmy_status">DPmyStatus</string>
 </resources>

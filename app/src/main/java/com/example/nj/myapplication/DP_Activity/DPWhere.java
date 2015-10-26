@@ -32,7 +32,8 @@ public class DPWhere extends AppCompatActivity {
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //intent.putExtra()
+                startActivity(intent);
+                finish();
             }
         });
         img2.setOnClickListener(new View.OnClickListener() {
