@@ -129,11 +129,22 @@ public class MainActivity extends Activity {
 
 
         protected void onPostExecute(String str){
+
+            if(str.equals("s"))
+            {
+                startActivity(new Intent(MainActivity.this, HubActivity.class));
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(),"Login Fail",Toast.LENGTH_SHORT).show();
+            }
+
+            /*
             if(str.charAt(0)=='s') {
                 startActivity(new Intent(MainActivity.this, HubActivity.class));
             }
             else
-                Toast.makeText(getApplicationContext(),"Login Fail",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Login Fail",Toast.LENGTH_SHORT).show();*/
         }
 
     }

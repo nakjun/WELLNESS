@@ -3,6 +3,9 @@ package com.example.nj.myapplication.DW_Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -21,6 +24,7 @@ public class DW_BreatheActivity2 extends AppCompatActivity {
     ImageButton backImage;
     Bitmap centerImageBitmap,backImageBitmap;
     Thread timer;
+    MediaPlayer narration;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,15 +52,17 @@ public class DW_BreatheActivity2 extends AppCompatActivity {
         centerImage=(ImageView)findViewById(R.id.dw_breathe2_image);
         centerImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dw_breathe_7sec), 450, 500, false);
         centerImage.setImageBitmap(centerImageBitmap);
-
+        narration= MediaPlayer.create(getApplicationContext(), R.raw.dw_narration_4);
+        narration.start();
         timer = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
                     synchronized (this) {
-                        wait(4000);
+                        wait(5500);
                     }
-//                    startActivity(new Intent(DW_BreatheActivity2.this, DW_BreatheActivity3.class));
+                    narration.pause();
+                    startActivity(new Intent(DW_BreatheActivity2.this, DW_BreatheActivity3.class));
                     centerImageBitmap.recycle();
                     backImageBitmap.recycle();
                 } catch (InterruptedException e) {
@@ -66,5 +72,23 @@ public class DW_BreatheActivity2 extends AppCompatActivity {
             }
         });
         timer.start();
+    }
+    @Override
+    protected void onDestroy() {
+        for(int j = 0;j<5;j++){
+            Destory(centerImage);
+        }
+        super.onDestroy();
+    }
+
+    public void Destory(ImageView iv) {
+        Drawable d = iv.getDrawable();
+        if(d instanceof Drawable)
+        {
+            Bitmap bitmap = ((BitmapDrawable)d).getBitmap();
+            bitmap.recycle();
+            bitmap = null;
+        }
+
     }
 }

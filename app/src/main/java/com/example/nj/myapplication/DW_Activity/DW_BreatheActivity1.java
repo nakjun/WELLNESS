@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -17,7 +19,7 @@ public class DW_BreatheActivity1 extends Activity {
     ImageView centerImage;
     ImageButton backImage;
     Thread timer;
-
+    MediaPlayer narration;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,8 +49,9 @@ public class DW_BreatheActivity1 extends Activity {
             public void run() {
                 try {
                     synchronized (this) {
-                        wait(4000);
+                        wait(14500);
                     }
+                    narration.pause();
                     startActivity(new Intent(DW_BreatheActivity1.this, DW_BreatheActivity2.class));
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -56,6 +59,14 @@ public class DW_BreatheActivity1 extends Activity {
 
             }
         });
+        narration= MediaPlayer.create(getApplicationContext(),R.raw.dw_narration_3);
+        narration.start();
         timer.start();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        narration.pause();
     }
 }

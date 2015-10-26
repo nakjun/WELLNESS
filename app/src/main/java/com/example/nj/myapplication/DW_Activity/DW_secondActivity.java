@@ -3,7 +3,9 @@ package com.example.nj.myapplication.DW_Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
@@ -14,6 +16,7 @@ import com.example.nj.myapplication.R;
 public class DW_secondActivity extends AppCompatActivity {
     TextView top,mid,bot;
     ImageButton backImage, centerImage;
+    MediaPlayer narration;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,7 @@ public class DW_secondActivity extends AppCompatActivity {
         centerImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                narration.pause();
                 startActivity(new Intent(DW_secondActivity.this,DW_BreatheActivity1.class));
             }
         });
@@ -46,8 +50,21 @@ public class DW_secondActivity extends AppCompatActivity {
         mid.setTextSize(32);
         bot.setText(R.string.dw_2nd_bottom);
 
+        narration= MediaPlayer.create(getApplicationContext(),R.raw.dw_narration_2);
+        narration.start();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        narration.seekTo(0);
+        narration.start();
+    }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        narration.pause();
+    }
 
 }

@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Point;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.View;
@@ -18,6 +21,7 @@ public class DW_Activity extends Activity {
     TextView title;
     ImageView image1,image2,image3,image4;
     Button button;
+    MediaPlayer narration;
     int width;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,11 +50,43 @@ public class DW_Activity extends Activity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(DW_Activity.this,DW_secondActivity.class));
+                narration.pause();
+                startActivity(new Intent(DW_Activity.this, DW_secondActivity.class));
             }
         });
+        narration= MediaPlayer.create(getApplicationContext(),R.raw.dw_narration_1);
+        narration.start();
         //TODO create activity
 
+
+    }
+
+     @Override
+    protected void onResume() {
+        super.onResume();
+        narration.seekTo(0);
+        narration.start();
+    }
+
+    @Override
+     protected void onDestroy() {
+        narration.pause();
+        Destory(image1);
+        Destory(image2);
+        Destory(image3);
+        Destory(image4);
+        super.onDestroy();
+    }
+
+    public void Destory(ImageView iv) {
+
+        Drawable d = iv.getDrawable();
+        if(d instanceof Drawable)
+        {
+            Bitmap bitmap = ((BitmapDrawable)d).getBitmap();
+            bitmap.recycle();
+            bitmap = null;
+        }
 
     }
 

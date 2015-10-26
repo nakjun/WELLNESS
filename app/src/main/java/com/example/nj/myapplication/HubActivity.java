@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.nj.myapplication.DP_Activity.DPActivity;
+import com.example.nj.myapplication.DP_Activity.DpActivity;
 import com.example.nj.myapplication.DW_Activity.DW_Activity;
 import com.example.nj.myapplication.YN_Activity.YesNoActivity;
 
@@ -40,7 +40,7 @@ public class HubActivity extends Activity {
         btn_dp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HubActivity.this, DPActivity.class));
+                startActivity(new Intent(HubActivity.this, DpActivity.class));
             }
         });
     }

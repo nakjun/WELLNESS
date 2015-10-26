@@ -6,7 +6,6 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,7 +14,7 @@ import android.widget.ImageView;
 
 import com.example.nj.myapplication.R;
 
-public class DPActivity extends Activity {
+public class DpActivity extends Activity {
     ImageView img1,img2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +29,7 @@ public class DPActivity extends Activity {
             @Override
             public void onClick(View v) {
                 //
-                Intent i = new Intent(DPActivity.this,DPSelectActivity.class);
+                Intent i = new Intent(DpActivity.this,DPSelectActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -43,7 +42,7 @@ public class DPActivity extends Activity {
         Destory(img2);
 
         super.onDestroy();
-    }
+    }//김민상 코딩좀해라~
 
     public void Destory(ImageView iv) {
 
