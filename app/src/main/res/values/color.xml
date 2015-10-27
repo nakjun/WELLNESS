@@ -3,5 +3,6 @@
     <color name="transparent">#00000000</color>
     <color name="sm_main_text">#1F497D</color>
     <color name="sm_2_title">#d4b9ff</color>
+    <color name="sm_2_table_dark">#8064a1</color>
     <color name="white">#ffffff</color>
 </resources>
