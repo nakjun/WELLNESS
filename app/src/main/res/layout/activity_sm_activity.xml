@@ -16,13 +16,14 @@
         android:layout_alignParentStart="true" />
 
     <ImageButton
+        android:background="?android:attr/selectableItemBackground"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/sm_main_btn"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_margin="10dp" />
+        android:layout_margin="15dp" />
 
     <TextView
         android:layout_width="wrap_content"

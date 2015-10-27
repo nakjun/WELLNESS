@@ -30,7 +30,7 @@ public class SM_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sm_activity);
         centerImage=(ImageView)findViewById(R.id.sm_main_centerimage);
-        centerImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_main_1), 600, 1024, false);
+        centerImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_main_1), 600, 1000, false);
         centerImage.setImageBitmap(centerImageBitmap);
         btnBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_btn_right), 50, 50, false);
         imagebtn=(ImageButton)findViewById(R.id.sm_main_btn);
