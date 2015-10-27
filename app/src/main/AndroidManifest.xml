@@ -134,6 +134,24 @@
             android:label="@string/title_activity_sm_"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".SM_Activity.SM_Activity_2"
+            android:label="@string/title_activity_sm__activity_2"
+            android:parentActivityName=".SM_Activity.SM_Activity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nj.myapplication.SM_Activity.SM_Activity" />
+        </activity>
+        <activity
+            android:name=".SM_Activity.SM_Activity_3"
+            android:label="@string/title_activity_sm__activity_3"
+            android:parentActivityName=".SM_Activity.SM_Activity_2"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nj.myapplication.SM_Activity.SM_Activity_2" />
+        </activity>
     </application>
 
 </manifest>

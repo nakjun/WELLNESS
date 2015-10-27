@@ -83,6 +83,11 @@ public class DW_BreatheActivity2 extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        try {
+            timer.wait();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         narration.pause();
         Destory(centerImage);
         Destory(backImage);

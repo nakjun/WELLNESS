@@ -1,8 +1,11 @@
 package com.example.nj.myapplication.SM_Activity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -14,6 +17,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.nj.myapplication.DW_Activity.DW_BreatheActivity2;
 import com.example.nj.myapplication.R;
 
 public class SM_Activity extends AppCompatActivity {
@@ -35,7 +39,7 @@ public class SM_Activity extends AppCompatActivity {
         imagebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(SM_Activity.this, SM_Activity_2.class));
             }
         });
         title=(TextView)findViewById(R.id.sm_main_title);
@@ -46,4 +50,21 @@ public class SM_Activity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Destory(centerImage);
+        Destory(imagebtn);
+    }
+    public void Destory(ImageView iv) {
+
+        Drawable d = iv.getDrawable();
+        if(d instanceof Drawable)
+        {
+            Bitmap bitmap = ((BitmapDrawable)d).getBitmap();
+            bitmap.recycle();
+            bitmap = null;
+        }
+
+    }
 }

@@ -84,6 +84,11 @@ public class DW_BreatheActivity3 extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         narration.pause();
+        try {
+            timer.wait();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         Destory(centerImage);
         Destory(backImage);
     }
