@@ -21,7 +21,7 @@ public class DPRateActivity extends Activity {
     ImageView img[] = new ImageView[5];
     Intent intent,getintent;
     int i;
-    int status;
+
     String str;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +33,13 @@ public class DPRateActivity extends Activity {
         getintent = getIntent();
         str = getintent.getStringExtra("status");
 
-        Toast.makeText(getApplicationContext(), "status"+status, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "status"+str, Toast.LENGTH_SHORT).show();
 
         img[0].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 intent.putExtra("star_rate", 0 + "");
+                intent.putExtra("status",str);
                 Toast.makeText(getApplicationContext(), "You Select" + 1 + "stars", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
 
@@ -49,6 +50,7 @@ public class DPRateActivity extends Activity {
             @Override
             public void onClick(View v) {
                 intent.putExtra("star_rate", 1 + "");
+                intent.putExtra("status",str);
                 Toast.makeText(getApplicationContext(), "You Select" + 2 + "stars", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
 
@@ -59,6 +61,7 @@ public class DPRateActivity extends Activity {
             @Override
             public void onClick(View v) {
                 intent.putExtra("star_rate", 2 + "");
+                intent.putExtra("status",str);
                 Toast.makeText(getApplicationContext(), "You Select" + 3 + "stars", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
 
@@ -69,6 +72,7 @@ public class DPRateActivity extends Activity {
             @Override
             public void onClick(View v) {
                 intent.putExtra("star_rate", 3 + "");
+                intent.putExtra("status",str);
                 Toast.makeText(getApplicationContext(), "You Select" + 4 + "stars", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
 
@@ -79,6 +83,7 @@ public class DPRateActivity extends Activity {
             @Override
             public void onClick(View v) {
                 intent.putExtra("star_rate", 4 + "");
+                intent.putExtra("status",str);
                 Toast.makeText(getApplicationContext(), "You Select" + 5 + "stars", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
 

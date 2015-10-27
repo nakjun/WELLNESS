@@ -21,7 +21,8 @@ public class DPSixButtonSelect extends Activity {
     TextView title;
     Button btn[] = new Button[6];
 
-    Intent intent;
+    Intent intent,get_intent;
+    String str;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,7 +112,12 @@ public class DPSixButtonSelect extends Activity {
     }
 
     void init() {
+        get_intent=getIntent();
+        str = get_intent.getStringExtra("status");
+
         intent = new Intent(DPSixButtonSelect.this, DPmyStatus.class);
+        intent.putExtra("status",str);
+
         title = (TextView)findViewById(R.id.dpSixButtonTitle);
 
         btn[0] = (Button) findViewById(R.id.BUTTON_ONE);
@@ -124,7 +130,6 @@ public class DPSixButtonSelect extends Activity {
 
 
     void setTextSixButton() {
-
 
         for (int i = 0; i < 6; i++) {
             btn[i].setText(Text[i]);

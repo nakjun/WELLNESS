@@ -1,5 +1,6 @@
 package com.example.nj.myapplication.DP_Activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -11,13 +12,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.nj.myapplication.R;
 
-public class DPWhere extends AppCompatActivity {
+public class DPWhere extends Activity {
 
     ImageView img1,img2,img3;
-    Intent intent;
+    Intent intent,get_intent;
+    String str;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,10 +32,16 @@ public class DPWhere extends AppCompatActivity {
         img3 = (ImageView)findViewById(R.id.imageView_home);
 
         intent = new Intent(DPWhere.this,DPSixButtonSelect.class);
+        get_intent=getIntent();
+
+        str = get_intent.getStringExtra("status");
+
+        Toast.makeText(getApplicationContext(), "status" + str, Toast.LENGTH_SHORT).show();
 
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                intent.putExtra("status",str);
                 startActivity(intent);
                 finish();
             }
