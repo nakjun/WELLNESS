@@ -32,16 +32,12 @@ public class DPWhere extends Activity {
         img3 = (ImageView)findViewById(R.id.imageView_home);
 
         intent = new Intent(DPWhere.this,DPSixButtonSelect.class);
-        get_intent=getIntent();
-
-        str = get_intent.getStringExtra("status");
 
         Toast.makeText(getApplicationContext(), "status" + str, Toast.LENGTH_SHORT).show();
 
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent.putExtra("status",str);
                 startActivity(intent);
                 finish();
             }

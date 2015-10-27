@@ -20,6 +20,8 @@ public class DPSelectActivity extends Activity {
     ImageView img;
     Intent i;
     Random r;
+
+    public static int status;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +29,7 @@ public class DPSelectActivity extends Activity {
 
         i = new Intent(DPSelectActivity.this, DPRateActivity.class);
         r = new Random();
-        i.putExtra("status", r.nextInt(6)+"");
+        status = r.nextInt(6);
 
         img = (ImageView)findViewById(R.id.image_dpdescript);
         img.setOnClickListener(new View.OnClickListener() {

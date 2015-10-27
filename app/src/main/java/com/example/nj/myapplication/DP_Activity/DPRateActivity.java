@@ -31,7 +31,6 @@ public class DPRateActivity extends Activity {
         init_imgView();
         intent = new Intent(DPRateActivity.this, DPWhere.class);
         getintent = getIntent();
-        str = getintent.getStringExtra("status");
 
         Toast.makeText(getApplicationContext(), "status"+str, Toast.LENGTH_SHORT).show();
 
@@ -39,7 +38,6 @@ public class DPRateActivity extends Activity {
             @Override
             public void onClick(View v) {
                 intent.putExtra("star_rate", 0 + "");
-                intent.putExtra("status",str);
                 Toast.makeText(getApplicationContext(), "You Select" + 1 + "stars", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
 
@@ -50,7 +48,6 @@ public class DPRateActivity extends Activity {
             @Override
             public void onClick(View v) {
                 intent.putExtra("star_rate", 1 + "");
-                intent.putExtra("status",str);
                 Toast.makeText(getApplicationContext(), "You Select" + 2 + "stars", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
 
@@ -72,7 +69,7 @@ public class DPRateActivity extends Activity {
             @Override
             public void onClick(View v) {
                 intent.putExtra("star_rate", 3 + "");
-                intent.putExtra("status",str);
+
                 Toast.makeText(getApplicationContext(), "You Select" + 4 + "stars", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
 
@@ -83,7 +80,7 @@ public class DPRateActivity extends Activity {
             @Override
             public void onClick(View v) {
                 intent.putExtra("star_rate", 4 + "");
-                intent.putExtra("status",str);
+
                 Toast.makeText(getApplicationContext(), "You Select" + 5 + "stars", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
 
@@ -115,7 +112,6 @@ public class DPRateActivity extends Activity {
     }
 
     public void Destory(ImageView iv) {
-
         Drawable d = iv.getDrawable();
         if(d instanceof Drawable)
         {
@@ -123,7 +119,6 @@ public class DPRateActivity extends Activity {
             bitmap.recycle();
             bitmap = null;
         }
-
     }
 
 

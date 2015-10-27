@@ -36,4 +36,5 @@
     <string name="sm_2_title">우리들의 순간문득</string>
     <string name="title_activity_sm__activity_2">SM_Activity_2</string>
     <string name="title_activity_sm__activity_3">SM_Activity_3</string>
+    <string name="title_activity_id__singletonclass">ID_Singletonclass</string>
 </resources>

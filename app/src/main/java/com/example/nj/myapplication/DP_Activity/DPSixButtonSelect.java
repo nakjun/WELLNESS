@@ -14,14 +14,15 @@ import com.example.nj.myapplication.R;
 
 public class DPSixButtonSelect extends Activity {
     String select[] = {"", ""};
-    String Text[] = {"그 사람을 때리고 밀쳤다", "소리나 비명을 질렀다", "내버려두고 가버렸다", "어른에게 말했다", "아무것도 하지 않았다", "기타 다른 행동"};
+    String Origin_Text[] = {"누가 나를\n놀렸다", "내 뜻대로\n되지않았다", "학습량이\n많았다", "소외\n당했다", "누군가에게\n야단맞았다", "기타\n다른 사유"};
+    String Text[] = {"그 사람을 때리고\n밀쳤다", "소리나 비명을\n질렀다", "내버려두고\n가버렸다", "어른에게\n말했다", "아무것도 하지\n않았다", "기타\n다른 행동"};
     String Text_Title = "기분(감정)이 들때 나는 무엇을 했나요?";
 
     boolean flag = false;
     TextView title;
     Button btn[] = new Button[6];
 
-    Intent intent,get_intent;
+    Intent intent, get_intent;
     String str;
 
     @Override
@@ -30,6 +31,27 @@ public class DPSixButtonSelect extends Activity {
         setContentView(R.layout.activity_dpsix_button_select);
 
         init();
+        set_clickListener();
+    }
+
+    void init() {
+        intent = new Intent(DPSixButtonSelect.this, DPmyStatus.class);
+
+        title = (TextView) findViewById(R.id.dpSixButtonTitle);
+
+        btn[0] = (Button) findViewById(R.id.BUTTON_ONE);
+        btn[1] = (Button) findViewById(R.id.BUTTON_TWO);
+        btn[2] = (Button) findViewById(R.id.BUTTON_THREE);
+        btn[3] = (Button) findViewById(R.id.BUTTON_FOUR);
+        btn[4] = (Button) findViewById(R.id.BUTTON_FIVE);
+        btn[5] = (Button) findViewById(R.id.BUTTON_SIX);
+
+        for (int i = 0; i < 6; i++) {
+            btn[i].setText(Origin_Text[i]);
+        }
+    }
+
+    void set_clickListener() {
 
         btn[0].setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,24 +133,6 @@ public class DPSixButtonSelect extends Activity {
         });
     }
 
-    void init() {
-        get_intent=getIntent();
-        str = get_intent.getStringExtra("status");
-
-        intent = new Intent(DPSixButtonSelect.this, DPmyStatus.class);
-        intent.putExtra("status",str);
-
-        title = (TextView)findViewById(R.id.dpSixButtonTitle);
-
-        btn[0] = (Button) findViewById(R.id.BUTTON_ONE);
-        btn[1] = (Button) findViewById(R.id.BUTTON_TWO);
-        btn[2] = (Button) findViewById(R.id.BUTTON_THREE);
-        btn[3] = (Button) findViewById(R.id.BUTTON_FOUR);
-        btn[4] = (Button) findViewById(R.id.BUTTON_FIVE);
-        btn[5] = (Button) findViewById(R.id.BUTTON_SIX);
-    }
-
-
     void setTextSixButton() {
 
         for (int i = 0; i < 6; i++) {
@@ -144,8 +148,6 @@ public class DPSixButtonSelect extends Activity {
         startActivity(intent);
         finish();
     }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

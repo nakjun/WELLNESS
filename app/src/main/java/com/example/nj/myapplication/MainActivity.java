@@ -28,36 +28,37 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class MainActivity extends Activity {
-    Button btn_login,btn_join,btn_find;
+    Button btn_login, btn_join, btn_find;
     phpDown task;
-    String ID,PW;
-    EditText ed_id,ed_pw;
-    TextInputLayout Til_id,Til_pw;
+    String ID, PW;
+    EditText ed_id, ed_pw;
+    TextInputLayout Til_id, Til_pw;
     RelativeLayout rel;
+    public static IDSingletonclass LoginID;
+    Intent i;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btn_login = (Button)findViewById(R.id.btn_login);
-        btn_join = (Button)findViewById(R.id.btn_join);
-        btn_find = (Button)findViewById(R.id.btn_find);
 
-        ed_id = (EditText)findViewById(R.id.editText_ID);
-        ed_pw = (EditText)findViewById(R.id.editText_PW);
-        Til_id=(TextInputLayout)findViewById(R.id.Til_id);
-        Til_id.setHint("아이디");
-        Til_pw=(TextInputLayout)findViewById(R.id.Til_pw);
-        Til_pw.setHint("패스워드");
-        ed_id.clearFocus();
-        rel=(RelativeLayout)findViewById(R.id.MainActivityRelativeLayout);
-        rel.requestFocus();
+        init();
+
+        btn_login = (Button) findViewById(R.id.btn_login);
+        btn_join = (Button) findViewById(R.id.btn_join);
+        btn_find = (Button) findViewById(R.id.btn_find);
+
+
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 ID = ed_id.getText().toString();
                 PW = ed_pw.getText().toString();
+
+                Toast.makeText(getApplicationContext(), ID, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), PW, Toast.LENGTH_SHORT).show();
 
                 task = new phpDown();
                 task.execute("http://220.69.209.170/psycho/login.php?id=" + ID + "&pw=" + PW);
@@ -67,7 +68,6 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, JoinActivity.class);
-                i.putExtra("ID",ID);
                 startActivity(i);
             }
         });
@@ -79,6 +79,20 @@ public class MainActivity extends Activity {
             }
         });
     }
+
+    void init() {
+
+        ed_id = (EditText)findViewById(R.id.editText_ID);
+        ed_pw = (EditText)findViewById(R.id.editText_PW);
+        Til_id=(TextInputLayout)findViewById(R.id.Til_id);
+        Til_id.setHint("아이디");
+        Til_pw=(TextInputLayout)findViewById(R.id.Til_pw);
+        Til_pw.setHint("패스워드");
+        ed_id.clearFocus();
+        rel=(RelativeLayout)findViewById(R.id.MainActivityRelativeLayout);
+        rel.requestFocus();
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -142,11 +156,21 @@ public class MainActivity extends Activity {
 
             if(str.equals("s"))
             {
-                startActivity(new Intent(MainActivity.this, HubActivity.class));
+                i = new Intent(MainActivity.this, HubActivity.class);
+                LoginID = new IDSingletonclass(ID);
+                startActivity(i);
             }
             else
             {
-                Toast.makeText(getApplicationContext(),"Login Fail",Toast.LENGTH_SHORT).show();
+                if(str.charAt(0)=='s')
+                {
+                    i = new Intent(MainActivity.this, HubActivity.class);
+                    LoginID = new IDSingletonclass(ID);
+                    startActivity(i);
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "Login Fail", Toast.LENGTH_SHORT).show();
+                }
             }
 
             /*
