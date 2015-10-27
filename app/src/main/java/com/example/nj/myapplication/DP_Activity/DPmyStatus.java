@@ -13,6 +13,10 @@ import com.example.nj.myapplication.R;
 public class DPmyStatus extends Activity {
     Intent intent ;
     String result1,result2;
+
+
+    String Text[]={""};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

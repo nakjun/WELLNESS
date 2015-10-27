@@ -15,18 +15,25 @@ import android.widget.ImageView;
 
 import com.example.nj.myapplication.R;
 
+import java.util.Random;
+
 public class DPSelectActivity extends Activity {
     ImageView img;
+    Intent i;
+    Random r;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dpselect);
 
+        i = new Intent(DPSelectActivity.this, DPRateActivity.class);
+        r = new Random();
+        i.putExtra("status", r.nextInt(6)+"");
+
         img = (ImageView)findViewById(R.id.image_dpdescript);
         img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(DPSelectActivity.this, DPRateActivity.class);
                 startActivity(i);
                 finish();
             }

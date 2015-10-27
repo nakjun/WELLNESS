@@ -19,9 +19,10 @@ import com.example.nj.myapplication.R;
 public class DPRateActivity extends Activity {
 
     ImageView img[] = new ImageView[5];
-    Intent intent;
+    Intent intent,getintent;
     int i;
-
+    int status;
+    String str;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,10 @@ public class DPRateActivity extends Activity {
 
         init_imgView();
         intent = new Intent(DPRateActivity.this, DPWhere.class);
+        getintent = getIntent();
+        str = getintent.getStringExtra("status");
+
+        Toast.makeText(getApplicationContext(), "status"+status, Toast.LENGTH_SHORT).show();
 
         img[0].setOnClickListener(new View.OnClickListener() {
             @Override
