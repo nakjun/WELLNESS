@@ -83,7 +83,7 @@
             android:id="@+id/sm_2_table_06"
             android:background="@color/sm_2_title" />
 
-        
+
 
     </GridLayout>
 
