@@ -87,9 +87,9 @@ public class DPmyStatus extends Activity {
 
     void set_display()
     {
-        text_status.setBackgroundResource(image_id[status]);
+        text_status.setBackgroundResource(image_id[0]);
         text_status.setText(Status_Name[DPRateActivity.rates]+Status_rates[DPRateActivity.rates]);
-        description.setText(Text[status]);
+        description.setText(Text[0]);
     }
 
 
