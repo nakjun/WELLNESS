@@ -21,7 +21,7 @@
         android:textSize="25pt"
         android:id="@+id/btn_behavior"
         android:background="@drawable/yn_button2"
-        android:layout_marginLeft="35dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginStart="133dp"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"

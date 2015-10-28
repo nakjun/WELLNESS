@@ -31,7 +31,7 @@ public class SM_Activity_2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sm__activity_2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.sm_2_toolbar);
-        toolbar.setTitle("\t\t\t\t\t\t\t\t\t\t\t\t\t\tWELLNESS");
+        toolbar.setTitle("WELLNESS");
         toolbar.setTitleTextColor(R.color.sm_2_title);
         toolbar.setTitleTextAppearance(getApplicationContext(), R.style.TextSize36);
         setSupportActionBar(toolbar);
