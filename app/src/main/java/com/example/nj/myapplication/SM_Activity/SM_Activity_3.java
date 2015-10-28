@@ -23,15 +23,15 @@ public class SM_Activity_3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sm__activity_3);
         Toolbar toolbar = (Toolbar) findViewById(R.id.sm_3_toolbar);
-        toolbar.setTitle("\t\t\t\t\t\t\t\t\t\tWELLNESS");
+        toolbar.setTitle("\t\t\t\t\t\t\t\t\t\t\t\t\t\tWELLNESS");
         toolbar.setTitleTextColor(R.color.sm_2_title);
         toolbar.setTitleTextAppearance(getApplicationContext(), R.style.TextSize36);
 
         setSupportActionBar(toolbar);
         btn_prev=(ImageButton)findViewById(R.id.sm_3_btn_prev);
         btn_next=(ImageButton)findViewById(R.id.sm_3_btn_next);
-        btn_prev_bitmap = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_btn_left), 50, 50, false);
-        btn_next_bitmap = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_btn_right), 50, 50, false);
+        btn_prev_bitmap = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_btn_left), 80, 80, false);
+        btn_next_bitmap = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_btn_right), 80, 80, false);
         btn_prev.setImageBitmap(btn_prev_bitmap);
         btn_next.setImageBitmap(btn_next_bitmap);
         btn_prev.setOnClickListener(new View.OnClickListener() {
@@ -42,7 +42,8 @@ public class SM_Activity_3 extends AppCompatActivity {
         });
         cal=Calendar.getInstance();
         date=(TextView)findViewById(R.id.sm_3_date);
-        date.setText((cal.get(Calendar.MONTH)+1)+"월 "+cal.get(Calendar.DAY_OF_MONTH)+"일 "+getDayofWeek(cal.get(Calendar.DATE))+"요일" );
+        String temp=getDayofWeek(cal.get(Calendar.DATE));
+        date.setText((cal.get(Calendar.MONTH)+1)+"월 "+cal.get(Calendar.DAY_OF_MONTH)+"일 "+temp+"요일" );
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
