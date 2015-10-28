@@ -1,43 +1,25 @@
-package com.example.nj.myapplication.YN_Activity;
+package com.example.nj.myapplication.DP_Activity;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 
 import com.example.nj.myapplication.R;
 
-public class BehaviorActivity extends Activity {
-
-
-    Button behavior1,behavior2;
+public class DP_PercentOfWeek extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_behavior);
-
-        behavior1 = (Button)findViewById(R.id.btn_behavior);
-        behavior2 = (Button)findViewById(R.id.btn_behavior);
-
-        behavior1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(BehaviorActivity.this,YNActionAcitivity.class));
-                finish();
-            }
-        });
+        setContentView(R.layout.activity_dp__percent_of_week);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_behavior, menu);
+        getMenuInflater().inflate(R.menu.menu_dp__percent_of_week, menu);
         return true;
     }
 

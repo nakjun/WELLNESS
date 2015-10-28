@@ -29,7 +29,7 @@ public class DPSelectActivity extends Activity {
 
         i = new Intent(DPSelectActivity.this, DPRateActivity.class);
         r = new Random();
-        status = r.nextInt(6);
+        status = 0;
 
         img = (ImageView)findViewById(R.id.image_dpdescript);
         img.setOnClickListener(new View.OnClickListener() {

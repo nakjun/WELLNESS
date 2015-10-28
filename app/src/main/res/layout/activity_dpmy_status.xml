@@ -17,19 +17,23 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <ImageView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/ImageView_Status"
+        android:id="@+id/TextView_Status"
+        android:textSize="30pt"
+        android:gravity="center_vertical|center"
         android:layout_below="@+id/textView13"
+        android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text=""
-        android:id="@+id/textView14"
-        android:layout_below="@+id/ImageView_Status"
+        android:id="@+id/textView_DP_DESCRIPTION"
+        android:layout_below="@+id/TextView_Status"
+        android:textSize="12pt"
+        android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

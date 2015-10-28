@@ -22,6 +22,8 @@ public class DPRateActivity extends Activity {
     Intent intent,getintent;
     int i;
 
+    public static int rates;
+
     String str;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,60 +32,44 @@ public class DPRateActivity extends Activity {
 
         init_imgView();
         intent = new Intent(DPRateActivity.this, DPWhere.class);
-        getintent = getIntent();
-
-        Toast.makeText(getApplicationContext(), "status"+str, Toast.LENGTH_SHORT).show();
 
         img[0].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent.putExtra("star_rate", 0 + "");
-                Toast.makeText(getApplicationContext(), "You Select" + 1 + "stars", Toast.LENGTH_SHORT).show();
+                rates = 1;
                 startActivity(intent);
-
                 finish();
             }
         });
         img[1].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent.putExtra("star_rate", 1 + "");
-                Toast.makeText(getApplicationContext(), "You Select" + 2 + "stars", Toast.LENGTH_SHORT).show();
+                rates=2;
                 startActivity(intent);
-
                 finish();
             }
         });
         img[2].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent.putExtra("star_rate", 2 + "");
-                intent.putExtra("status",str);
-                Toast.makeText(getApplicationContext(), "You Select" + 3 + "stars", Toast.LENGTH_SHORT).show();
+                rates=3;
                 startActivity(intent);
-
                 finish();
             }
         });
         img[3].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent.putExtra("star_rate", 3 + "");
-
-                Toast.makeText(getApplicationContext(), "You Select" + 4 + "stars", Toast.LENGTH_SHORT).show();
+                rates=4;
                 startActivity(intent);
-
                 finish();
             }
         });
         img[4].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent.putExtra("star_rate", 4 + "");
-
-                Toast.makeText(getApplicationContext(), "You Select" + 5 + "stars", Toast.LENGTH_SHORT).show();
+                rates=5;
                 startActivity(intent);
-
                 finish();
             }
         });

@@ -33,8 +33,6 @@ public class DPWhere extends Activity {
 
         intent = new Intent(DPWhere.this,DPSixButtonSelect.class);
 
-        Toast.makeText(getApplicationContext(), "status" + str, Toast.LENGTH_SHORT).show();
-
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

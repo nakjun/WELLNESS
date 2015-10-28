@@ -9,7 +9,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nj.myapplication.HubActivity;
@@ -32,12 +34,15 @@ public class DPmyStatus extends Activity {
     int status;
     int image_id[]={R.drawable.dp_status_anger,R.drawable.dp_status_frustration};
 
-    ImageView img_status;
-    String str;
-
-    String Text[]={""};
+    TextView text_status;
+    TextView description;
 
     phpDown task;
+
+    String Status_Name[]={"\n분노\n","\n좌절\n","\n후회\n","\n야속\n","\n슬픔\n","\n기타\n"};
+    String Status_rates[]={"아주 낮음(1점)","낮음(2점)","보통(3점)","높음(4점)","아주 높음(5점)"};
+
+    String Text[]=new String[5];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,13 +50,22 @@ public class DPmyStatus extends Activity {
         setContentView(R.layout.activity_dpmy_status);
 
         intent_process();
+
         init();
+
 
         task = new phpDown();
         task.execute("http://220.69.209.170/psycho/search.php?id=" + get_ID);
+    }
 
+    void setting_description_text()
+    {
+        Text[0] = "오늘 많이 힘든 날이었군요. 때때로 누구나 자신의 감정을 감당하기 힘들 때가 있답니다. 누군가에게 이런 나의 마음을 표현해 보는 것이 큰 도움이 되기도 해요.\n" +
+                "답답하고 힘든 마음을 충분히 누군가에게 털어 놓고 나면, 한결 기분이 나아진답니다.\n" +
+                "부모님, 친구, 선생님 혹은 사이버상담실로 언제든 도움을 요청해보세요."+get_User_name+"님이 좀 더 힘을 낼 수 있고, 편안한 마음을 가지기를 바랄께요. 화이팅~!";
 
     }
+
 
     void init(){
         status = DPSelectActivity.status;
@@ -59,9 +73,23 @@ public class DPmyStatus extends Activity {
         get_ID = MainActivity.LoginID.get_ID();
         Toast.makeText(DPmyStatus.this, get_ID, Toast.LENGTH_SHORT).show();
 
-        img_status = (ImageView)findViewById(R.id.ImageView_Status);
+        text_status = (TextView)findViewById(R.id.TextView_Status);
+        description = (TextView)findViewById(R.id.textView_DP_DESCRIPTION);
 
-        img_status.setImageResource(image_id[status]);
+        description.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DPmyStatus.this,DP_PercentOfWeek.class));
+                finish();
+            }
+        });
+    }
+
+    void set_display()
+    {
+        text_status.setBackgroundResource(image_id[status]);
+        text_status.setText(Status_Name[DPRateActivity.rates]+Status_rates[DPRateActivity.rates]);
+        description.setText(Text[status]);
     }
 
 
@@ -70,10 +98,9 @@ public class DPmyStatus extends Activity {
         get_intent = getIntent();
         result1 = get_intent.getStringExtra("select1");
         result2 = get_intent.getStringExtra("select2");
-        str = get_intent.getStringExtra("status");
 
-        Toast.makeText(DPmyStatus.this, result1, Toast.LENGTH_SHORT).show();
-        Toast.makeText(DPmyStatus.this, result2, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(DPmyStatus.this, result1, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(DPmyStatus.this, result2, Toast.LENGTH_SHORT).show();
     }
 
 
@@ -136,6 +163,8 @@ public class DPmyStatus extends Activity {
 
         protected void onPostExecute(String str){
 
+            Log.d("userName",str);
+
             if(str.equals("n"))
             {
 
@@ -143,6 +172,8 @@ public class DPmyStatus extends Activity {
             else
             {
                 get_User_name = str;
+                setting_description_text();
+                set_display();
             }
         }
 

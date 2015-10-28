@@ -152,6 +152,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.nj.myapplication.SM_Activity.SM_Activity_2" />
         </activity>
+        <activity
+            android:name=".DP_Activity.DP_PercentOfWeek"
+            android:label="@string/title_activity_dp__percent_of_week" >
+        </activity>
+        <activity
+            android:name=".YN_Activity.YNActionAcitivity"
+            android:label="@string/title_activity_ynaction_acitivity" >
+        </activity>
     </application>
 
 </manifest>

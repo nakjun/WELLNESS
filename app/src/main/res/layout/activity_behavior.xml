@@ -18,25 +18,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="계획"
+        android:textSize="25pt"
         android:id="@+id/btn_behavior"
         android:background="@drawable/yn_button2"
-        android:layout_alignBottom="@+id/imageView_Main2"
+        android:layout_marginLeft="35dp"
+        android:layout_marginStart="133dp"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="64dp"
-        android:layout_marginStart="64dp" />
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="행동"
+        android:textSize="25pt"
         android:id="@+id/btn_behavior2"
         android:background="@drawable/yn_button2"
-        android:layout_alignBottom="@+id/imageView_Main2"
-        android:layout_alignRight="@+id/imageView_Main2"
-        android:layout_alignEnd="@+id/imageView_Main2"
-        android:layout_marginRight="45dp"
-        android:layout_marginEnd="45dp" />
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/btn_behavior"
+        android:layout_toEndOf="@+id/btn_behavior"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="118dp" />
 
 
 </RelativeLayout>
