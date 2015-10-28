@@ -34,7 +34,7 @@
         android:id="@+id/imageView4"
         android:src="@drawable/sm_3_flower"
         android:layout_marginTop="0dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="70dp"
          />
 
     <ImageView
@@ -45,6 +45,75 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="분노"
+        android:id="@+id/TextView_red"
+        android:layout_marginTop="117dp"
+        android:layout_below="@+id/textView10"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="좌절"
+        android:id="@+id/TextView_yellow"
+        android:textSize="30dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/TextView_red"
+        android:layout_toRightOf="@+id/TextView_red"
+        android:layout_toEndOf="@+id/TextView_red" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="후회"
+        android:id="@+id/TextView_green"
+        android:textSize="30dp"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/TextView_yellow"
+        android:layout_alignStart="@+id/TextView_yellow" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="기타"
+        android:id="@+id/TextView_pink"
+        android:textSize="30dp"
+        android:layout_alignTop="@+id/TextView_yellow"
+        android:layout_toRightOf="@+id/textView9"
+        android:layout_toEndOf="@+id/textView9" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="슬픔"
+        android:id="@+id/TextView_blue"
+        android:textSize="30dp"
+        android:layout_alignTop="@+id/TextView_green"
+        android:layout_toRightOf="@+id/textView9"
+        android:layout_toEndOf="@+id/textView9" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="야속"
+        android:id="@+id/TextView_sky"
+        android:textSize="30dp"
+        android:layout_below="@+id/TextView_green"
+        android:layout_toLeftOf="@+id/TextView_yellow"
+        android:layout_toStartOf="@+id/TextView_yellow" />
 
 
 </RelativeLayout>

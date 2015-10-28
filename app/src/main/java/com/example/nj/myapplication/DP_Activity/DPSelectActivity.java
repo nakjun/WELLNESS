@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
 
@@ -20,6 +21,8 @@ public class DPSelectActivity extends Activity {
     ImageView img;
     Intent i;
     Random r;
+
+    TextView t[]=new TextView[6];
 
     public static int status;
     @Override
@@ -31,15 +34,72 @@ public class DPSelectActivity extends Activity {
         r = new Random();
         status = 0;
 
+        set_onclick_status();
+
         img = (ImageView)findViewById(R.id.image_dpdescript);
-        img.setOnClickListener(new View.OnClickListener() {
+    }
+
+    void set_onclick_status()
+    {
+        t[0]=(TextView)findViewById(R.id.TextView_red);
+        t[1]=(TextView)findViewById(R.id.TextView_yellow);
+        t[2]=(TextView)findViewById(R.id.TextView_green);
+        t[3]=(TextView)findViewById(R.id.TextView_sky);
+        t[4]=(TextView)findViewById(R.id.TextView_blue);
+        t[5]=(TextView)findViewById(R.id.TextView_pink);
+
+        t[0].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                status = 0;
                 startActivity(i);
                 finish();
             }
         });
+        t[1].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                status = 1;
+                startActivity(i);
+                finish();
+            }
+        });
+
+        t[2].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                status = 2;
+                startActivity(i);
+                finish();
+            }
+        });
+        t[3].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                status = 3;
+                startActivity(i);
+                finish();
+            }
+        });
+        t[4].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                status = 4;
+                startActivity(i);
+                finish();
+            }
+        });
+        t[5].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                status = 5;
+                startActivity(i);
+                finish();
+            }
+        });
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

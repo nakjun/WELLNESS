@@ -53,7 +53,6 @@ public class DPmyStatus extends Activity {
 
         init();
 
-
         task = new phpDown();
         task.execute("http://220.69.209.170/psycho/search.php?id=" + get_ID);
     }
@@ -87,9 +86,9 @@ public class DPmyStatus extends Activity {
 
     void set_display()
     {
-        text_status.setBackgroundResource(image_id[0]);
+        text_status.setBackgroundResource(image_id[status]);
         text_status.setText(Status_Name[DPRateActivity.rates]+Status_rates[DPRateActivity.rates]);
-        description.setText(Text[0]);
+        description.setText(Text[status]);
     }
 
 
