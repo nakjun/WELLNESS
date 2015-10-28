@@ -79,8 +79,8 @@ public class DPmyStatus extends Activity {
         description.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(DPmyStatus.this,DP_PercentOfWeek.class));
-                finish();
+                //startActivity(new Intent(DPmyStatus.this,DP_PercentOfWeek.class));
+                //finish();
             }
         });
     }

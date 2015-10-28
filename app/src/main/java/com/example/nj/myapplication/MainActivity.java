@@ -57,9 +57,6 @@ public class MainActivity extends Activity {
                 ID = ed_id.getText().toString();
                 PW = ed_pw.getText().toString();
 
-                Toast.makeText(getApplicationContext(), ID, Toast.LENGTH_SHORT).show();
-                Toast.makeText(getApplicationContext(), PW, Toast.LENGTH_SHORT).show();
-
                 task = new phpDown();
                 task.execute("http://220.69.209.170/psycho/login.php?id=" + ID + "&pw=" + PW);
             }
