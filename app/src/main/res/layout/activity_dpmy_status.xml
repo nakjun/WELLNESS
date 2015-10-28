@@ -33,7 +33,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/textView_DP_DESCRIPTION"
         android:layout_below="@+id/TextView_Status"
-        android:textSize="12pt"
         android:layout_marginTop="50dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:nestedScrollingEnabled="true" />
 </RelativeLayout>
