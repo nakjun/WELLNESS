@@ -1,23 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context="com.example.nj.myapplication.SM_Activity.SM_Activity_3">
 
-    <android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
-        android:layout_width="match_parent" android:theme="@style/AppTheme.AppBarOverlay">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/sm_3_view">
 
-        <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
-            android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary" app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/sm_3_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
+    <TextView
+        android:id="@+id/sm_3_title"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@color/sm_2_title"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="@string/sm_2_title"
+        android:textSize="24dp"
+        android:elevation="4dp"
+        android:layout_below="@+id/sm_3_view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-    <android.support.design.widget.FloatingActionButton android:id="@+id/fab"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end" android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sm_3_btn_prev"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="15dp"
+        android:background="@color/transparent" />
 
-</android.support.design.widget.CoordinatorLayout>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sm_3_btn_next"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="15dp"
+        android:background="@color/transparent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView4"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/sm_3_flower"
+        android:layout_below="@+id/sm_3_plaintext" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/sm_3_date"
+        android:layout_below="@+id/sm_3_title"
+        android:layout_toRightOf="@+id/sm_3_btn_prev"
+        android:layout_toEndOf="@+id/sm_3_btn_prev"
+        android:layout_marginTop="62dp"
+        style="@style/TextSize28" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘 하루의 기분은 어땠나요?"
+        android:id="@+id/sm_3_plaintext"
+        android:layout_below="@+id/sm_3_date"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:textColor="@color/black"
+        android:singleLine="false"
+        style="@style/TextSize28" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="슬픔"
+        android:id="@+id/sm_3_flower_2"
+        android:layout_below="@+id/sm_3_flower_1"
+        android:layout_alignRight="@+id/sm_3_plaintext"
+        android:layout_alignEnd="@+id/sm_3_plaintext"
+        android:layout_marginRight="70dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="5dp"
+        style="@style/TextSize28" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="화남"
+        android:id="@+id/sm_3_flower_1"
+        android:layout_marginTop="197dp"
+        style="@style/TextSize28"
+        android:layout_below="@+id/sm_3_plaintext"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="절망"
+        android:id="@+id/sm_3_flower_6"
+        style="@style/TextSize28"
+        android:layout_alignTop="@+id/sm_3_flower_2"
+        android:layout_marginLeft="190dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="우울"
+        android:id="@+id/sm_3_flower_4"
+        android:layout_marginBottom="114dp"
+        style="@style/TextSize28"
+        android:layout_above="@+id/sm_3_btn_prev"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="짜증"
+        android:id="@+id/sm_3_flower_3"
+        android:layout_above="@+id/sm_3_flower_4"
+        android:layout_alignLeft="@+id/sm_3_flower_2"
+        android:layout_alignStart="@+id/sm_3_flower_2"
+        android:layout_marginBottom="36dp"
+        android:textSize="28dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="외로움"
+        android:id="@+id/sm_3_flower_5"
+        android:textSize="28dp"
+        android:layout_alignTop="@+id/sm_3_flower_3"
+        android:layout_alignLeft="@+id/sm_3_flower_6"
+        android:layout_alignStart="@+id/sm_3_flower_6"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
