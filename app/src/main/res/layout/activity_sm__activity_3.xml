@@ -118,15 +118,15 @@
         android:id="@+id/sm_3_flower_6"
         style="@style/TextSize28"
         android:layout_alignTop="@+id/sm_3_flower_2"
-        android:layout_toRightOf="@+id/sm_3_date"
-        android:layout_toEndOf="@+id/sm_3_date" />
+        android:layout_alignLeft="@+id/sm_3_plaintext"
+        android:layout_alignStart="@+id/sm_3_plaintext" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="우울"
         android:id="@+id/sm_3_flower_4"
-        android:layout_marginBottom="114dp"
+        android:layout_marginBottom="50dp"
         style="@style/TextSize28"
         android:layout_above="@+id/sm_3_btn_prev"
         android:layout_centerHorizontal="true" />
@@ -148,9 +148,10 @@
         android:text="외로움"
         android:id="@+id/sm_3_flower_5"
         android:textSize="28dp"
-        android:layout_alignTop="@+id/sm_3_flower_3"
+        android:textColor="@color/white"
+        android:layout_alignBaseline="@+id/sm_3_flower_3"
+        android:layout_alignBottom="@+id/sm_3_flower_3"
         android:layout_alignLeft="@+id/sm_3_flower_6"
-        android:layout_alignStart="@+id/sm_3_flower_6"
-        android:textColor="@color/white" />
+        android:layout_alignStart="@+id/sm_3_flower_6" />
 
 </RelativeLayout>
