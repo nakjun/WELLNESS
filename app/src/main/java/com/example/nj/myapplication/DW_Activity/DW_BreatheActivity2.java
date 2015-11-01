@@ -66,17 +66,14 @@ public class DW_BreatheActivity2 extends AppCompatActivity{
                         wait(8500);
                     }
                     narration.pause();
-                    timer.interrupt();
                     startActivity(new Intent(DW_BreatheActivity2.this, DW_BreatheActivity3.class));
-                    centerImageBitmap.recycle();
-                    backImageBitmap.recycle();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
 
             }
         });
-        //timer.start();
+        timer.start();
     }
     @Override
     protected void onResume() {

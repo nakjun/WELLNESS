@@ -40,4 +40,5 @@
     <string name="title_activity_dp__percent_of_week">DP_PercentOfWeek</string>
     <string name="title_activity_ynaction_acitivity">YNActionAcitivity</string>
     <string name="title_activity_dpcalendar">DPCalendarActivity</string>
+    <string name="title_activity_dw_real_breathe">dw_real_breathe</string>
 </resources>

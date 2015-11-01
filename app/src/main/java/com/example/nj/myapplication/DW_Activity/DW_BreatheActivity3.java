@@ -66,7 +66,7 @@ public class DW_BreatheActivity3 extends Activity {
                         wait(8500);
                     }
                     narration.pause();
-                    //startActivity(new Intent(DW_BreatheActivity3.this, DW_BreatheActivity3.class));
+                    startActivity(new Intent(DW_BreatheActivity3.this, DW_RealBreatheActivity.class));
                     centerImageBitmap.recycle();
                     backImageBitmap.recycle();
                 } catch (InterruptedException e) {
