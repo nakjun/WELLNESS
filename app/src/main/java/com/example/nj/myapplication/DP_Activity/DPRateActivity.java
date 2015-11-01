@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,68 +13,94 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nj.myapplication.R;
 
+import org.w3c.dom.Text;
+
+
+import java.util.logging.LogRecord;
+
 public class DPRateActivity extends Activity {
 
     ImageView img[] = new ImageView[5];
+    TextView Tview;
     Intent intent,getintent;
+    Handler mHandler;
     int i;
 
     public static int rates;
 
     String str;
+
+    void setHandler()
+    {
+        mHandler = new Handler();
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                intent = new Intent(DPRateActivity.this, DPWhere.class);
+                startActivity(intent);
+                finish();
+            }
+        },1500);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dprate);
 
         init_imgView();
-        intent = new Intent(DPRateActivity.this, DPWhere.class);
+
+        Tview = (TextView)findViewById(R.id.textView_rate_discription);
 
         img[0].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 rates = 1;
-                startActivity(intent);
-                finish();
+                Tview.setVisibility(View.VISIBLE);
+                setHandler();
             }
         });
         img[1].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 rates=2;
-                startActivity(intent);
-                finish();
+                Tview.setVisibility(View.VISIBLE);
+                setHandler();
             }
         });
         img[2].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 rates=3;
-                startActivity(intent);
-                finish();
+                Tview.setVisibility(View.VISIBLE);
+                setHandler();
+
             }
         });
         img[3].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 rates=4;
-                startActivity(intent);
-                finish();
+                Tview.setVisibility(View.VISIBLE);
+                setHandler();
             }
         });
         img[4].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                rates=5;
-                startActivity(intent);
-                finish();
+                rates = 5;
+                Tview.setVisibility(View.VISIBLE);
+                setHandler();
             }
         });
     }
+
+
 
     void init_imgView() {
         img[0] = (ImageView) findViewById(R.id.image_veryrow_sel);
@@ -125,3 +152,4 @@ public class DPRateActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 }
+
