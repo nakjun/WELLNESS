@@ -32,7 +32,7 @@ public class DPmyStatus extends Activity {
     String get_ID;
     String get_User_name;
     int status;
-    int image_id[]={R.drawable.dp_status_anger,R.drawable.dp_status_frustration};
+    int image_id[]={R.drawable.dp_status_anger,R.drawable.dp_status_frustration,R.drawable.dp_status_regret,R.drawable.dp_status_appointment,R.drawable.dp_status_sad};
 
     TextView text_status;
     TextView description;
