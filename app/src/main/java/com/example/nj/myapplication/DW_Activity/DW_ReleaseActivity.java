@@ -1,5 +1,6 @@
 package com.example.nj.myapplication.DW_Activity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
@@ -48,18 +49,22 @@ public class DW_ReleaseActivity extends AppCompatActivity {
                 for (int i = 0; i < 8; i++) {
                     player=MediaPlayer.create(getApplicationContext(), soundInitialIndex++);
                     player.start();
-                    cenImg.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            cenImg.setImageBitmap(cenImgBitmap.get(index++));
-                        }
-                    });
+                    if(i<6) {
+                        cenImg.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                cenImg.setImageBitmap(cenImgBitmap.get(index++));
+                            }
+                        });
+                    }
+
                     try {
                         wait(timings[i]);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
+                startActivity(new Intent(DW_ReleaseActivity.this,DW_EndActivity.class));
 
 
             }
