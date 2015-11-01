@@ -29,6 +29,8 @@ public class DPmyStatus extends Activity {
     Intent intent,get_intent ;
     String result1,result2;
 
+    ImageView button;
+
     IDSingletonclass LoginID;
     String get_ID;
     String get_User_name;
@@ -51,6 +53,16 @@ public class DPmyStatus extends Activity {
         setContentView(R.layout.activity_dpmy_status);
 
         intent_process();
+        button = (ImageView)findViewById(R.id.next_button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(DPmyStatus.this,DP_PercentOfWeek.class);
+                startActivity(intent2);
+                finish();
+            }
+        });
 
         Log.d("status",DPSelectActivity.status+"");
 
@@ -62,9 +74,9 @@ public class DPmyStatus extends Activity {
 
     void setting_description_text()
     {
-        Text[0] = "오늘 많이 힘든 날이었군요. 때때로 누구나 자신의 감정을 감당하기 힘들 때가 있답니다. 누군가에게 이런 나의 마음을 표현해 보는 것이 큰 도움이 되기도 해요.\n" +
-                "답답하고 힘든 마음을 충분히 누군가에게 털어 놓고 나면, 한결 기분이 나아진답니다.\n" +
-                "부모님, 친구, 선생님 혹은 사이버상담실로 언제든 도움을 요청해보세요."+get_User_name+"님이 좀 더 힘을 낼 수 있고, 편안한 마음을 가지기를 바랄께요. 화이팅~!";
+        Text[0] = "오늘 많이 힘든 날이었군요. 때때로 누구나 자신의 감정을 감당하기 힘들 때가 있답니다. 누군가에게 이런 나의 마음을 표현해 보는 것이 \n큰 도움이 되기도 해요.\n" +
+                "답답하고 힘든 마음을 충분히 누군가에게 털어 놓고 나면,\n한결 기분이 나아진답니다.\n" +
+                "부모님, 친구, 선생님 혹은 사이버상담실로\n언제든 도움을 요청해보세요.\n"+get_User_name+"님이 좀 더 힘을 낼 수 있고, 편안한 마음을 가지기를 바랄께요. 화이팅~!";
         Text[1] = "좌절감이 높은 날이네요. 많이 힘든 하루가 되었겠어요~\n"+
             "아무것도 할 수 없을 것 같은 지금 생각은 지금의 생각일 뿐이에요!\n"+
             "내일은 또 다른 상황이… 미래에는 지금보다 더 좋고 멋진 일이 벌어질 거라는 믿음을 가져보아요. \n그 속에서 새로운 나를 발견하고 발전해나간다는 걸 잊지 말고요!\n"+
@@ -78,7 +90,6 @@ public class DPmyStatus extends Activity {
         //status = DPSelectActivity.status;
 
         get_ID = MainActivity.LoginID.get_ID();
-        Toast.makeText(DPmyStatus.this, get_ID, Toast.LENGTH_SHORT).show();
 
         text_status = (TextView)findViewById(R.id.TextView_Status);
         description = (TextView)findViewById(R.id.textView_DP_DESCRIPTION);
@@ -180,7 +191,7 @@ public class DPmyStatus extends Activity {
             }
             else
             {
-                get_User_name = str;
+                get_User_name = str.trim();
                 setting_description_text();
                 set_display();
             }

@@ -15,7 +15,7 @@
             android:id="@+id/dp_main_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@drawable/dw_titlebar"
+            android:background="@drawable/dp_titlebar"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
@@ -57,6 +57,8 @@
         android:background="@drawable/dp_btn_right"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/imageView3"
-        android:layout_alignEnd="@+id/imageView3" />
+        android:layout_alignEnd="@+id/imageView3"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp" />
 
 </RelativeLayout>

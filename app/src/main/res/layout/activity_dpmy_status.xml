@@ -15,7 +15,7 @@
             android:id="@+id/dp_status_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@drawable/dw_titlebar"
+            android:background="@drawable/dp_titlebar"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
@@ -38,7 +38,8 @@
         android:gravity="center_vertical|center"
         android:layout_marginTop="60dp"
         android:layout_below="@+id/textView13"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="-15dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -59,6 +60,18 @@
         android:background="@drawable/dp_status_text_img"
         android:layout_alignTop="@+id/TextView_Status"
         android:layout_toRightOf="@+id/TextView_Status"
-        android:layout_toEndOf="@+id/TextView_Status" />
+        android:layout_toEndOf="@+id/TextView_Status"
+        android:layout_marginRight="15dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/next_button"
+        android:background="@drawable/dp_btn_right"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp" />
 
 </RelativeLayout>
