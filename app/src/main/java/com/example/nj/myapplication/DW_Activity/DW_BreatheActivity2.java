@@ -63,7 +63,7 @@ public class DW_BreatheActivity2 extends AppCompatActivity{
             public void run() {
                 try {
                     synchronized (this) {
-                        wait(8500);
+                        wait(9000);
                     }
                     narration.pause();
                     startActivity(new Intent(DW_BreatheActivity2.this, DW_BreatheActivity3.class));
