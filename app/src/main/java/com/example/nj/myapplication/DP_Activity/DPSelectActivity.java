@@ -20,7 +20,6 @@ import java.util.Random;
 public class DPSelectActivity extends Activity {
     ImageView img;
     Intent i;
-    Random r;
 
     TextView t[]=new TextView[6];
 
@@ -31,7 +30,6 @@ public class DPSelectActivity extends Activity {
         setContentView(R.layout.activity_dpselect);
 
         i = new Intent(DPSelectActivity.this, DPRateActivity.class);
-        r = new Random();
         status = 0;
 
         set_onclick_status();
@@ -97,7 +95,6 @@ public class DPSelectActivity extends Activity {
                 finish();
             }
         });
-
     }
 
 

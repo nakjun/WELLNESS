@@ -2,6 +2,7 @@ package com.example.nj.myapplication.DP_Activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -51,6 +52,8 @@ public class DPmyStatus extends Activity {
 
         intent_process();
 
+        Log.d("status",DPSelectActivity.status+"");
+
         init();
 
         task = new phpDown();
@@ -62,12 +65,17 @@ public class DPmyStatus extends Activity {
         Text[0] = "오늘 많이 힘든 날이었군요. 때때로 누구나 자신의 감정을 감당하기 힘들 때가 있답니다. 누군가에게 이런 나의 마음을 표현해 보는 것이 큰 도움이 되기도 해요.\n" +
                 "답답하고 힘든 마음을 충분히 누군가에게 털어 놓고 나면, 한결 기분이 나아진답니다.\n" +
                 "부모님, 친구, 선생님 혹은 사이버상담실로 언제든 도움을 요청해보세요."+get_User_name+"님이 좀 더 힘을 낼 수 있고, 편안한 마음을 가지기를 바랄께요. 화이팅~!";
-
+        Text[1] = "좌절감이 높은 날이네요. 많이 힘든 하루가 되었겠어요~\n"+
+            "아무것도 할 수 없을 것 같은 지금 생각은 지금의 생각일 뿐이에요!\n"+
+            "내일은 또 다른 상황이… 미래에는 지금보다 더 좋고 멋진 일이 벌어질 거라는 믿음을 가져보아요. \n그 속에서 새로운 나를 발견하고 발전해나간다는 걸 잊지 말고요!\n"+
+            "늪에 빠지면 온몸의 힘을 빼고 시간을 버는 게 우선이란 거 우리 알고 있지요? 늪에서 오래 살아남는 게 중요하니까요!"+
+            "지금의 좌절의 늪.. 늪에서는 허우적거리면 거릴수록 수렁 속으로 빠져들게 되요."+
+            "두렵고 불안하지만, \n오늘 하루를 묵묵히 살아내는 것이 중요해요! 힘을 내요. 파이팅!!";
     }
 
 
     void init(){
-        status = DPSelectActivity.status;
+        //status = DPSelectActivity.status;
 
         get_ID = MainActivity.LoginID.get_ID();
         Toast.makeText(DPmyStatus.this, get_ID, Toast.LENGTH_SHORT).show();
@@ -82,13 +90,15 @@ public class DPmyStatus extends Activity {
                 //finish();
             }
         });
+
     }
 
     void set_display()
     {
-        text_status.setBackgroundResource(image_id[status]);
-        text_status.setText(Status_Name[DPRateActivity.rates]+Status_rates[DPRateActivity.rates]);
-        description.setText(Text[status]);
+        text_status.setBackgroundResource(image_id[DPSelectActivity.status]);
+        text_status.setText(Status_Name[DPSelectActivity.status] + Status_rates[DPRateActivity.rates]);
+
+        description.setText(Text[DPSelectActivity.status]);
     }
 
 
