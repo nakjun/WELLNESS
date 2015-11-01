@@ -36,7 +36,6 @@ public class SM_Activity_2 extends AppCompatActivity {
         toolbar.setTitleTextAppearance(getApplicationContext(), R.style.TextSize36);
         setSupportActionBar(toolbar);
 
-
         String day = "";
         cal = Calendar.getInstance();
         String datetype = new String(cal.get(Calendar.YEAR) + cal.get(Calendar.MONTH) + cal.get(Calendar.DAY_OF_MONTH) + "");

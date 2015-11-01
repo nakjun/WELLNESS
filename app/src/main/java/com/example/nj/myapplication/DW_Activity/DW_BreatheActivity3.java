@@ -31,6 +31,9 @@ public class DW_BreatheActivity3 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dw__breathe3);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.dw_breathe_3_toolbar);
+        toolbar.setTitle("");
+
         backImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.common_back_button), 100, 100, false);
         backImage =(ImageButton)findViewById(R.id.dw_sec_back4);
         backImage.setImageBitmap(backImageBitmap);
@@ -51,7 +54,7 @@ public class DW_BreatheActivity3 extends Activity {
         botTextView.setText(R.string.dw_8sec);
 
         centerImage=(ImageView)findViewById(R.id.dw_breathe3_image);
-        centerImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dw_breathe_8sec), 450, 500, false);
+        centerImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dw_breathe_8sec), 900,1000, false);
         centerImage.setImageBitmap(centerImageBitmap);
         narration= MediaPlayer.create(getApplicationContext(), R.raw.dw_narration_6);
         narration.start();
@@ -69,7 +72,6 @@ public class DW_BreatheActivity3 extends Activity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-
             }
         });
         timer.start();
@@ -84,11 +86,8 @@ public class DW_BreatheActivity3 extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         narration.pause();
-        try {
-            timer.wait();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        timer.interrupt();
+
         Destory(centerImage);
         Destory(backImage);
     }
@@ -101,6 +100,5 @@ public class DW_BreatheActivity3 extends Activity {
             bitmap.recycle();
             bitmap = null;
         }
-
     }
 }

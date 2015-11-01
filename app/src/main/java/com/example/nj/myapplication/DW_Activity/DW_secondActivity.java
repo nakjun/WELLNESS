@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -21,6 +22,10 @@ public class DW_secondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dw_second);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.dw_2_toolbar);
+        toolbar.setTitle("");
+
         top=(TextView)findViewById(R.id.dw_sec_topText);
         mid=(TextView)findViewById(R.id.dw_sec_midText);
         bot=(TextView)findViewById(R.id.dw_sec_botText);
@@ -36,7 +41,7 @@ public class DW_secondActivity extends AppCompatActivity {
         });
 
         centerImage=(ImageButton)findViewById(R.id.dW_sec_cenImg);
-        centerImage.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dw_sec_cen), 500, 500, false));
+        centerImage.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dw_sec_cen), 700, 700, false));
         centerImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

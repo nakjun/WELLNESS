@@ -1,41 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:fitsSystemWindows="true"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context="com.example.nj.myapplication.DW_Activity.DW_BreatheActivity3">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/dw_breathe_3_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/dw_breathe_3_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/dw_titlebar"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
     <ImageButton
+        android:id="@+id/dw_sec_back4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/dw_sec_back4" />
+        android:layout_below="@+id/dw_breathe_3_view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
     <TextView
+        android:id="@+id/dw_breathe3_topText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
-        android:id="@+id/dw_breathe3_topText"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="35dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="30dp"
-        android:layout_toRightOf="@id/dw_sec_back4" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_below="@+id/dw_breathe_3_view"
+        android:layout_toRightOf="@+id/dw_sec_back4"
+        android:layout_toEndOf="@+id/dw_sec_back4"
+        android:layout_marginTop="10dp" />
 
     <ImageView
+        android:id="@+id/dw_breathe3_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/dw_breathe3_image"
         android:layout_below="@+id/dw_breathe3_topText"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="142dp"/>
+        android:layout_marginTop="70dp" />
 
     <TextView
+        android:id="@+id/dw_breathe3_botText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/dw_breathe3_botText"
         android:layout_below="@+id/dw_breathe3_image"
         android:layout_centerHorizontal="true"
-        />
+        android:text="New Text" />
 
 
 </RelativeLayout>

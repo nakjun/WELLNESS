@@ -23,9 +23,6 @@ public class SM_Activity_3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sm__activity_3);
         Toolbar toolbar = (Toolbar) findViewById(R.id.sm_3_toolbar);
-        toolbar.setTitle("WELLNESS");
-        toolbar.setTitleTextColor(R.color.sm_2_title);
-        toolbar.setTitleTextAppearance(getApplicationContext(), R.style.TextSize36);
 
         setSupportActionBar(toolbar);
         btn_prev=(ImageButton)findViewById(R.id.sm_3_btn_prev);

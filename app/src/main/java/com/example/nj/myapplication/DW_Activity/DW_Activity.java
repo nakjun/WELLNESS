@@ -9,6 +9,8 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Display;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +19,7 @@ import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
 
-public class DW_Activity extends Activity {
+public class DW_Activity extends AppCompatActivity {
     TextView title;
     ImageView image1,image2,image3,image4;
     Button button;
@@ -28,6 +30,11 @@ public class DW_Activity extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dw_);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.dw_main_toolbar);
+        toolbar.setTitle("");
+        toolbar.setTitleTextAppearance(getApplicationContext(), R.style.TextSize36);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         title=(TextView)findViewById(R.id.dw_main_title);
         title.setText(R.string.dw_title);
         title.setTextSize(32);

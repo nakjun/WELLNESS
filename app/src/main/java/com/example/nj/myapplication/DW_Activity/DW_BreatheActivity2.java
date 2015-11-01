@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
 
-public class DW_BreatheActivity2 extends Activity {
+public class DW_BreatheActivity2 extends AppCompatActivity{
     TextView topTextView,botTextView;
     ImageView centerImage;
     ImageButton backImage;
@@ -30,6 +30,9 @@ public class DW_BreatheActivity2 extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dw__breathe2);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.dw_breathe_2_toolbar);
+        toolbar.setTitle("");
 
         backImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.common_back_button), 100, 100, false);
         backImage =(ImageButton)findViewById(R.id.dw_sec_back3);
@@ -51,7 +54,7 @@ public class DW_BreatheActivity2 extends Activity {
         botTextView.setText(R.string.dw_7sec);
 
         centerImage=(ImageView)findViewById(R.id.dw_breathe2_image);
-        centerImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dw_breathe_7sec), 450, 500, false);
+        centerImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dw_breathe_7sec), 900, 1000, false);
         centerImage.setImageBitmap(centerImageBitmap);
         narration= MediaPlayer.create(getApplicationContext(), R.raw.dw_narration_5);
         narration.start();
@@ -63,6 +66,7 @@ public class DW_BreatheActivity2 extends Activity {
                         wait(8500);
                     }
                     narration.pause();
+                    timer.interrupt();
                     startActivity(new Intent(DW_BreatheActivity2.this, DW_BreatheActivity3.class));
                     centerImageBitmap.recycle();
                     backImageBitmap.recycle();
@@ -72,7 +76,7 @@ public class DW_BreatheActivity2 extends Activity {
 
             }
         });
-        timer.start();
+        //timer.start();
     }
     @Override
     protected void onResume() {
@@ -83,11 +87,7 @@ public class DW_BreatheActivity2 extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        try {
-            timer.wait();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        timer.interrupt();
         narration.pause();
         Destory(centerImage);
         Destory(backImage);
@@ -97,7 +97,9 @@ public class DW_BreatheActivity2 extends Activity {
         Drawable d = iv.getDrawable();
         if(d instanceof Drawable)
         {
-            Bitmap bitmap = ((BitmapDrawable)d).getBitmap();
+            Bitmap bitmap = ((BitmapDrawable)d).getBitmap(
+
+            );
             bitmap.recycle();
             bitmap = null;
         }
