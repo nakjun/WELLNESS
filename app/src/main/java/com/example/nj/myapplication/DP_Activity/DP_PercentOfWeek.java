@@ -26,7 +26,7 @@ public class DP_PercentOfWeek extends Activity {
         back_color = Bitmap.createBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dp_background_red));
 
         crop_image = cropCenterBitmap(back_color, back_color.getWidth(), back_color.getHeight()/(DPRateActivity.rates*20));
-
+//주석!
         backImage.setImageBitmap(crop_image);
         backImage2.setImageBitmap(crop_image);
      //   backImage.setImageBitmap(back_color);
