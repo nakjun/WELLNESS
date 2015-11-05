@@ -82,7 +82,7 @@ public class DW_RealBreatheActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
-                //startActivity(new Intent(DW_RealBreatheActivity.this, ***.class));
+                startActivity(new Intent(DW_RealBreatheActivity.this, DW_ReleaseActivity.class));
             }
         });
         changerThread.start();
