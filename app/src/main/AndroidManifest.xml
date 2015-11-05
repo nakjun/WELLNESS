@@ -183,6 +183,10 @@
             android:label="@string/title_activity_dw__end"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".YN_Activity.YN_WEEKLYDATA"
+            android:label="@string/title_activity_yn__weeklydat" >
+        </activity>
     </application>
 
 </manifest>

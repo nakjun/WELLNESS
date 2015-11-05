@@ -35,7 +35,7 @@ public class BehaviorActivity extends Activity {
         behavior2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(BehaviorActivity.this,YNWeeklyActivity.class));
+                startActivity(new Intent(BehaviorActivity.this,YN_WEEKLYDATA.class));
                 finish();
             }
         });
