@@ -22,6 +22,8 @@ public class DPWhere extends Activity {
     Intent intent,get_intent;
     String str;
 
+    public static String where;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +38,7 @@ public class DPWhere extends Activity {
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                where = "academy";
                 startActivity(intent);
                 finish();
             }
@@ -43,13 +46,17 @@ public class DPWhere extends Activity {
         img2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("click","yes2");
+                where = "school";
+                startActivity(intent);
+                finish();
             }
         });
         img3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("click","yes3");
+                where = "home";
+                startActivity(intent);
+                finish();
             }
         });
 

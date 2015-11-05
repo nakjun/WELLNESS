@@ -21,11 +21,12 @@
         android:textSize="25pt"
         android:id="@+id/btn_behavior"
         android:background="@drawable/yn_button2"
-        android:layout_marginLeft="60dp"
+        android:layout_marginLeft="50dp"
         android:layout_marginStart="133dp"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:typeface="serif" />
 
     <Button
         android:layout_width="wrap_content"
@@ -37,7 +38,7 @@
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/btn_behavior"
         android:layout_toEndOf="@+id/btn_behavior"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginStart="118dp" />
 
 

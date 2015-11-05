@@ -1,45 +1,62 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.nj.myapplication.DP_Activity.DP_PercentOfWeek">
+    tools:context="com.example.nj.myapplication.DP_Activity.DP_PercentOfWeek"
+    android:id="@+id/est">
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/dp_main_view"
+    android:id="@+id/dp_main_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/dp_main_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/dp_titlebar"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/dp_main_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@drawable/dp_titlebar"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+</android.support.design.widget.AppBarLayout>
 
-    </android.support.design.widget.AppBarLayout>
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView4"
-        android:background="@drawable/dp_people"
-        android:backgroundTint="#7fff5f"
-        android:backgroundTintMode="src_atop"
-        android:adjustViewBounds="true"
+        android:id="@+id/imageView_color1"
+
+        android:baselineAlignBottom="true"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/dp_main_view"
-        android:layout_alignStart="@+id/dp_main_view"
-        android:layout_below="@+id/dp_main_view" />
+        android:layout_alignRight="@+id/imageView_over1"
+        android:layout_alignEnd="@+id/imageView_over1" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView5"
+        android:id="@+id/imageView_over1"
         android:background="@drawable/dp_people"
-        android:backgroundTint="#7fff5f"
-        android:backgroundTintMode="src_atop"
-        android:adjustViewBounds="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/dp_main_view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/imageView_color1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView_color2"
+
+        android:baselineAlignBottom="true"
+        android:layout_alignTop="@+id/imageView_color1"
+        android:layout_toRightOf="@+id/imageView_color1"
+        android:layout_toEndOf="@+id/imageView_color1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView_over2"
+        android:background="@drawable/dp_people"
+        android:layout_alignRight="@+id/dp_main_view"
+        android:layout_alignEnd="@+id/dp_main_view"
         android:layout_below="@+id/dp_main_view" />
+
 </RelativeLayout>

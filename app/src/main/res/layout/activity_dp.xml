@@ -61,4 +61,25 @@
         android:layout_marginRight="15dp"
         android:layout_marginBottom="15dp" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘생긴일"
+        android:id="@+id/btn_datainput"
+        android:layout_above="@+id/btn_nextdp"
+        android:layout_alignRight="@+id/textView8"
+        android:layout_alignEnd="@+id/textView8"
+        android:layout_marginRight="50dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginLeft="0dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="통계"
+        android:id="@+id/btn_percent"
+        android:layout_above="@+id/btn_nextdp"
+        android:layout_toRightOf="@+id/textView8"
+        android:layout_toEndOf="@+id/textView8" />
+
 </RelativeLayout>
