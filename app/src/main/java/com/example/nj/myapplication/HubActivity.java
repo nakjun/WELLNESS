@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.example.nj.myapplication.DP_Activity.DpActivity;
 import com.example.nj.myapplication.DW_Activity.DW_Activity;
@@ -23,10 +24,10 @@ public class HubActivity extends Activity {
 
         intent = getIntent();
         ID = intent.getStringExtra("ID");
-        Button btn_478 = (Button)findViewById(R.id.btn_478);
-        Button btn_yesno = (Button)findViewById(R.id.btn_yesno);
-        Button btn_dp = (Button)findViewById(R.id.btn_dp);
-        Button btn_sm=(Button)findViewById(R.id.btn_sm);
+        ImageView btn_478 = (ImageView)findViewById(R.id.imgView_dw);
+        ImageView btn_yesno = (ImageView)findViewById(R.id.imgView_yn);
+        ImageView btn_dp = (ImageView)findViewById(R.id.imgView_dp);
+        ImageView btn_sm=(ImageView)findViewById(R.id.imgView_sw);
         btn_478.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -41,35 +41,69 @@ public class DPmyStatus extends Activity {
     TextView description;
 
     phpDown task;
+    phpUp task2;
 
     String Status_Name[]={"\n분노\n","\n좌절\n","\n후회\n","\n야속\n","\n슬픔\n","\n기타\n"};
     String Status_rates[]={"아주 낮음(1점)","낮음(2점)","보통(3점)","높음(4점)","아주 높음(5점)"};
 
+    String Status[]={"one","two","three","four","five","six"};
+    String Status_rate[]={"one","two","three","four","five"};
+    //String Status[]={"분노","좌절","후회","야속","슬픔","기타"};
+
     String Text[]=new String[5];
+
+    String TEXT1,TEXT2,PLACE,RATES,STAT;
+
+    String ID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dpmy_status);
 
+        ID = MainActivity.LoginID.get_ID();
+/*
+        STAT = Status[DPSelectActivity.status];
+        RATES = Status_rates[DPRateActivity.rates-1];
+        PLACE=DPWhere.where;
+        TEXT1 = DPSixButtonSelect.select[0];
+        TEXT2 = DPSixButtonSelect.select[1];
+*/
+        for(int i =0;i<6;i++)
+        {
+            if(DPSelectActivity.status==i)
+            {
+                STAT = Status[i];
+            }
+        }
+
         intent_process();
         button = (ImageView)findViewById(R.id.next_button);
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent2 = new Intent(DPmyStatus.this,DP_PercentOfWeek.class);
-                startActivity(intent2);
-                finish();
-            }
-        });
-
-        Log.d("status",DPSelectActivity.status+"");
+        Log.d("status", DPSelectActivity.status + "");
 
         init();
 
         task = new phpDown();
         task.execute("http://220.69.209.170/psycho/search.php?id=" + get_ID);
+
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Log.d("GET WHERE", DPWhere.where);
+
+                String LOGTEXT="http://220.69.209.170/psycho/test.php?id=" + ID + "&status="+ STAT + "&rates=" + RATES + "&place=" + PLACE + "&data1=" + TEXT1 + "&data2=" + TEXT2;
+
+                Log.d("TEXT QUERY",LOGTEXT);
+
+                //Log.d("TEXT QUERY","http://220.69.209.170/psycho/test.php?id=" + ID + "&status=" + Status[DPSelectActivity.status].toString() + "&rates=" + Status_rates[DPRateActivity.rates - 1].toString() + "&place=" + DPWhere.where.toString() + "&data1=" + DPSixButtonSelect.select[0].toString() + "&data2=" + DPSixButtonSelect.select[1].toString());
+                task2 = new phpUp();
+                //task2.execute("http://220.69.209.170/psycho/test.php?id=" + ID + "&status="+ STAT + "&rates=" + RATES + "&place=" + PLACE + "&data1=" + TEXT1 + "&data2=" + TEXT2);
+                task2.execute("http://220.69.209.170/psycho/test.php?id=" + ID + "&status="+ "TEST@" + "&rates=" + "TEST@@" + "&place=" + "TEST###" + "&data1=" + "TESTTEST" + "&data2=" + "TESTTEST");
+            }
+        });
+
     }
 
     void setting_description_text()
@@ -107,8 +141,7 @@ public class DPmyStatus extends Activity {
     void set_display()
     {
         text_status.setBackgroundResource(image_id[DPSelectActivity.status]);
-        text_status.setText(Status_Name[DPSelectActivity.status] + Status_rates[DPRateActivity.rates]);
-
+        text_status.setText(Status_Name[DPSelectActivity.status] + Status_rates[DPRateActivity.rates-1]);
         description.setText(Text[DPSelectActivity.status]);
     }
 
@@ -183,7 +216,7 @@ public class DPmyStatus extends Activity {
 
         protected void onPostExecute(String str){
 
-            Log.d("userName",str);
+            Log.d("userName", str);
 
             if(str.equals("n"))
             {
@@ -195,6 +228,46 @@ public class DPmyStatus extends Activity {
                 setting_description_text();
                 set_display();
             }
+        }
+
+    }
+    private class phpUp extends AsyncTask<String, Integer,String> {
+
+        @Override
+        protected String doInBackground(String... urls) {
+            StringBuilder jsonHtml = new StringBuilder();
+            try{
+                // 연결 url 설정
+                URL url = new URL(urls[0]);
+                // 커넥션 객체 생성
+                HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+                // 연결되었으면.
+                if(conn != null){
+                    conn.setConnectTimeout(10000);
+                    conn.setUseCaches(false);
+                    // 연결되었음 코드가 리턴되면.
+                    if(conn.getResponseCode() == HttpURLConnection.HTTP_OK){
+                        BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
+                        for(;;){
+                            // 웹상에 보여지는 텍스트를 라인단위로 읽어 저장.
+                            String line = br.readLine();
+                            if(line == null) break;
+                            // 저장된 텍스트 라인을 jsonHtml에 붙여넣음
+                            jsonHtml.append(line + "\n");
+                        }
+                        br.close();
+                    }
+                    conn.disconnect();
+                }
+            } catch(Exception ex){
+                ex.printStackTrace();
+            }
+            return jsonHtml.toString();
+        }
+
+
+        protected void onPostExecute(String str) {
+            Log.d("UPLOAD RETURN DATA",str);
         }
 
     }

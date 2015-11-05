@@ -164,6 +164,10 @@
             android:name=".DP_Activity.DPCalendarActivity"
             android:label="@string/title_activity_dpcalendar" >
         </activity>
+        <activity
+            android:name=".YN_Activity.YNWeeklyActivity"
+            android:label="@string/title_activity_ynweekly" >
+        </activity>
     </application>
 
 </manifest>

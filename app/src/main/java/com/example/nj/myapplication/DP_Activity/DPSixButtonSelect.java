@@ -13,7 +13,7 @@ import android.widget.TextView;
 import com.example.nj.myapplication.R;
 
 public class DPSixButtonSelect extends Activity {
-    String select[] = {"", ""};
+    public static String select[] = {"", ""};
     String Origin_Text[] = {"누가 나를\n놀렸다", "내 뜻대로\n되지않았다", "학습량이\n많았다", "소외\n당했다", "누군가에게\n야단맞았다", "기타\n다른 사유"};
     String Text[] = {"그 사람을 때리고\n밀쳤다", "소리나 비명을\n질렀다", "내버려두고\n가버렸다", "어른에게\n말했다", "아무것도 하지\n않았다", "기타\n다른 행동"};
     String Text_Title = "기분(감정)이 들때 나는 무엇을 했나요?";
@@ -57,10 +57,10 @@ public class DPSixButtonSelect extends Activity {
             @Override
             public void onClick(View v) {
                 if (flag) {
-                    select[1] = btn[0].getText().toString();
+                    select[1] = btn[0].getText().toString().replace("\n"," ");
                     intent_setting();
                 } else {
-                    select[0] = btn[0].getText().toString();
+                    select[0] = btn[0].getText().toString().replace("\n"," ");
                     setTextSixButton();
                     flag = true;
                 }
@@ -70,10 +70,10 @@ public class DPSixButtonSelect extends Activity {
             @Override
             public void onClick(View v) {
                 if (flag) {
-                    select[1] = btn[1].getText().toString();
+                    select[1] = btn[1].getText().toString().replace("\n", " ");
                     intent_setting();
                 } else {
-                    select[0] = btn[1].getText().toString();
+                    select[0] = btn[1].getText().toString().replace("\n", " ");
                     setTextSixButton();
                     flag = true;
                 }
@@ -83,10 +83,10 @@ public class DPSixButtonSelect extends Activity {
             @Override
             public void onClick(View v) {
                 if (flag) {
-                    select[1] = btn[2].getText().toString();
+                    select[1] = btn[2].getText().toString().replace("\n", " ");
                     intent_setting();
                 } else {
-                    select[0] = btn[2].getText().toString();
+                    select[0] = btn[2].getText().toString().replace("\n", " ");
                     setTextSixButton();
                     flag = true;
                 }
@@ -96,10 +96,10 @@ public class DPSixButtonSelect extends Activity {
             @Override
             public void onClick(View v) {
                 if (flag) {
-                    select[1] = btn[3].getText().toString();
+                    select[1] = btn[3].getText().toString().replace("\n", " ");
                     intent_setting();
                 } else {
-                    select[0] = btn[3].getText().toString();
+                    select[0] = btn[3].getText().toString().replace("\n", " ");
                     setTextSixButton();
                     flag = true;
                 }
@@ -109,10 +109,10 @@ public class DPSixButtonSelect extends Activity {
             @Override
             public void onClick(View v) {
                 if (flag) {
-                    select[1] = btn[4].getText().toString();
+                    select[1] = btn[4].getText().toString().replace("\n", " ");
                     intent_setting();
                 } else {
-                    select[0] = btn[4].getText().toString();
+                    select[0] = btn[4].getText().toString().replace("\n", " ");
                     setTextSixButton();
                     flag = true;
                 }
@@ -122,10 +122,10 @@ public class DPSixButtonSelect extends Activity {
             @Override
             public void onClick(View v) {
                 if (flag) {
-                    select[1] = btn[5].getText().toString();
+                    select[1] = btn[5].getText().toString().replace("\n", " ");
                     intent_setting();
                 } else {
-                    select[0] = btn[5].getText().toString();
+                    select[0] = btn[5].getText().toString().replace("\n"," ");
                     setTextSixButton();
                     flag = true;
                 }
