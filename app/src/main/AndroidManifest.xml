@@ -164,6 +164,25 @@
             android:name=".DP_Activity.DPCalendarActivity"
             android:label="@string/title_activity_dpcalendar" >
         </activity>
+        <activity
+            android:name=".DW_Activity.DW_RealBreatheActivity"
+            android:label="@string/title_activity_dw_real_breathe"
+            android:parentActivityName=".DW_Activity.DW_BreatheActivity3"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nj.myapplication.DW_Activity.DW_BreatheActivity3" />
+        </activity>
+        <activity
+            android:name=".DW_Activity.DW_ReleaseActivity"
+            android:label="@string/title_activity_dw__release"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".DW_Activity.DW_EndActivity"
+            android:label="@string/title_activity_dw__end"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>
