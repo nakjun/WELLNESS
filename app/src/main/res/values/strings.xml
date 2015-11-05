@@ -41,5 +41,7 @@
     <string name="title_activity_ynaction_acitivity">YNActionAcitivity</string>
     <string name="title_activity_dpcalendar">DPCalendarActivity</string>
     <string name="title_activity_dw_real_breathe">dw_real_breathe</string>
+    <string name="title_activity_dw__release">dw_release</string>
+    <string name="title_activity_dw__end">dw_release</string>
     <string name="title_activity_ynweekly">YNWeeklyActivity</string>
 </resources>
