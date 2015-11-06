@@ -187,6 +187,10 @@
             android:name=".YN_Activity.YN_WEEKLYDATA"
             android:label="@string/title_activity_yn__weeklydat" >
         </activity>
+        <activity
+            android:name=".YN_Activity.YN_boardActivity"
+            android:label="@string/title_activity_yn_board" >
+        </activity>
     </application>
 
 </manifest>

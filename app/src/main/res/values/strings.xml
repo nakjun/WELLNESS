@@ -45,4 +45,5 @@
     <string name="title_activity_dw__end">dw_release</string>
     <string name="title_activity_ynweekly">YNWeeklyActivity</string>
     <string name="title_activity_yn__weeklydat">YN_WEEKLYDATA</string>
+    <string name="title_activity_yn_board">YN_boardActivity</string>
 </resources>

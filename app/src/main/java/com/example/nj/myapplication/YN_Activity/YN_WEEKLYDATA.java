@@ -85,25 +85,7 @@ public class YN_WEEKLYDATA extends Activity {
         for(int i=0;i<7;i++)
         {
             if(img_setup[i]){
-            YN_WEEKLYDATA.imgView[i].setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ImageView clicked = (ImageView) findViewById(R.id.img_clickedImage);
-                clicked.setVisibility(View.VISIBLE);
-                //clicked.setImageBitmap(this);
-                Log.d("THIS",this.toString());
-
-                ImageView click_back = (ImageView) findViewById(R.id.img_clickedBackground);
-                click_back.setVisibility(View.VISIBLE);
-                TextView t1 = (TextView) findViewById(R.id.tView_With);
-                TextView t2 = (TextView) findViewById(R.id.tView_When);
-                TextView t3 = (TextView) findViewById(R.id.tView_Where);
-
-                t1.setVisibility(View.VISIBLE);
-                t2.setVisibility(View.VISIBLE);
-                t3.setVisibility(View.VISIBLE);
             }
-        });}
         }
 
     }
@@ -224,7 +206,25 @@ public class YN_WEEKLYDATA extends Activity {
                             YN_WEEKLYDATA.img_setup[j] = true;
                             index= Integer.parseInt(data[i].charAt(0) + "");
                             YN_WEEKLYDATA.imgView[j].setImageBitmap(YN_WEEKLYDATA.bitmap[index]);
-                            index_list.add(index);
+                            YN_WEEKLYDATA.imgView[i].setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    ImageView clicked = (ImageView) findViewById(R.id.img_clickedImage);
+                                    clicked.setVisibility(View.VISIBLE);
+                                    //clicked.setImageBitmap(this);
+                                    Log.d("THIS", this.toString());
+
+                                    ImageView click_back = (ImageView) findViewById(R.id.img_clickedBackground);
+                                    click_back.setVisibility(View.VISIBLE);
+                                    TextView t1 = (TextView) findViewById(R.id.tView_With);
+                                    TextView t2 = (TextView) findViewById(R.id.tView_When);
+                                    TextView t3 = (TextView) findViewById(R.id.tView_Where);
+
+                                    t1.setVisibility(View.VISIBLE);
+                                    t2.setVisibility(View.VISIBLE);
+                                    t3.setVisibility(View.VISIBLE);
+                                }
+                            });
                         }
                     }
                 }
