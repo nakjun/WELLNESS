@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import com.example.nj.myapplication.DP_Activity.DpActivity;
 import com.example.nj.myapplication.DW_Activity.DW_Activity;
 import com.example.nj.myapplication.SM_Activity.SM_Activity;
+import com.example.nj.myapplication.YN_Activity.BehaviorActivity;
 import com.example.nj.myapplication.YN_Activity.YesNoActivity;
 
 public class HubActivity extends Activity {
@@ -37,7 +38,7 @@ public class HubActivity extends Activity {
         btn_yesno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HubActivity.this, YesNoActivity.class));
+                startActivity(new Intent(HubActivity.this, BehaviorActivity.class));
             }
         });
         btn_dp.setOnClickListener(new View.OnClickListener() {
