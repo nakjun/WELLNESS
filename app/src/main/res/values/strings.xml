@@ -46,4 +46,10 @@
     <string name="title_activity_ynweekly">YNWeeklyActivity</string>
     <string name="title_activity_yn__weeklydat">YN_WEEKLYDATA</string>
     <string name="title_activity_yn_board">YN_boardActivity</string>
+    <string name="title_activity_sm__activity_4">SM_Activity_4</string>
+    <string name="title_activity_sm__activity_5">SM_Activity_5</string>
+    <string name="title_activity_sm__activity_6">SM_Activity_6</string>
+    <string name="title_activity_sm__activity_7">SM_Activity_7</string>
+    <string name="title_activity_sm__activity_8">SM_Activity_8</string>
+    <string name="title_activity_sm__activity_9">SM_Activity_9</string>
 </resources>

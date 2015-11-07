@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.example.nj.myapplication.SM_Activity.SM_Activity_2"
-    >
+    android:background="@color/white">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:id="@+id/sm_2_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@drawable/sm_titlebar"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
@@ -31,7 +31,8 @@
         android:columnCount="7"
         android:rowCount="2"
         android:padding="10dp"
-        android:outlineProvider="paddedBounds">
+        android:outlineProvider="paddedBounds"
+        android:id="@+id/gridLayout">
 
         <TextView
             android:layout_width="70dp"
@@ -194,19 +195,6 @@
 
     </GridLayout>
 
-    <TextView
-        android:id="@+id/sm_2_title"
-        android:layout_width="fill_parent"
-        android:layout_height="60dp"
-        android:background="@color/sm_2_title"
-        android:foregroundGravity="center"
-        android:gravity="center"
-        android:text="@string/sm_2_title"
-        android:textSize="24dp"
-        android:layout_below="@+id/view"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:elevation="4dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -217,9 +205,9 @@
         android:textAlignment="center"
         android:gravity="center"
         android:textSize="28dp"
-        android:layout_marginTop="125dp"
-        android:layout_below="@+id/sm_2_title"
-        android:layout_centerHorizontal="true" />
+        android:layout_above="@+id/gridLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="77dp" />
 
 
     <ImageButton

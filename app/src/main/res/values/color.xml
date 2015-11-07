@@ -3,8 +3,10 @@
     <color name="transparent">#00000000</color>
     <color name="black">#000000</color>
     <color name="sm_main_text">#1F497D</color>
-    <color name="sm_2_title">#d4b9ff</color>
-    <color name="sm_2_table_dark">#8064a1</color>
+    <color name="sm_2_table_dark">#60EFF8</color>
     <color name="white">#ffffff</color>
-    <color name="dw_titlebar">#98DC43</color>
+    <color name="yn_main_color">#FFEC60</color>
+    <color name="dp_main_color">#FF35FF</color>
+    <color name="sm_main_color">#94F4F8</color>
+    <color name="dw_main_color">#98DC43</color>
 </resources>

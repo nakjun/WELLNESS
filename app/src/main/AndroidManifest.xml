@@ -191,6 +191,36 @@
             android:name=".YN_Activity.YN_boardActivity"
             android:label="@string/title_activity_yn_board" >
         </activity>
+        <activity
+            android:name=".SM_Activity.SM_Activity_4"
+            android:label="@string/title_activity_sm__activity_4"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".SM_Activity.SM_Activity_5"
+            android:label="@string/title_activity_sm__activity_5"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".SM_Activity.SM_Activity_6"
+            android:label="@string/title_activity_sm__activity_6"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".SM_Activity.SM_Activity_7"
+            android:label="@string/title_activity_sm__activity_7"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".SM_Activity.SM_Activity_8"
+            android:label="@string/title_activity_sm__activity_8"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".SM_Activity.SM_Activity_9"
+            android:label="@string/title_activity_sm__activity_9"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

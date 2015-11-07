@@ -29,10 +29,9 @@ public class SM_Activity_2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sm__activity_2);
+        setContentView(R.layout.activity_sm_activity_2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.sm_2_toolbar);
-        toolbar.setTitle("WELLNESS");
-        toolbar.setTitleTextColor(R.color.sm_2_title);
+        toolbar.setTitle("");
         toolbar.setTitleTextAppearance(getApplicationContext(), R.style.TextSize36);
         setSupportActionBar(toolbar);
 

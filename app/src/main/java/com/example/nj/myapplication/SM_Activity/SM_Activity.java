@@ -48,6 +48,7 @@ public class SM_Activity extends AppCompatActivity {
         text.setText(R.string.sm_main_text);
         text.setTextColor(Color.parseColor("#1F497D"));
 
+
     }
 
     @Override
@@ -55,6 +56,8 @@ public class SM_Activity extends AppCompatActivity {
         super.onDestroy();
         Destory(centerImage);
         Destory(imagebtn);
+        centerImageBitmap.recycle();
+        btnBitmap.recycle();
     }
     public void Destory(ImageView iv) {
 
