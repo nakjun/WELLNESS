@@ -38,7 +38,7 @@ public class HubActivity extends Activity {
         btn_yesno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HubActivity.this, BehaviorActivity.class));
+                startActivity(new Intent(HubActivity.this, YesNoActivity.class));
             }
         });
         btn_dp.setOnClickListener(new View.OnClickListener() {

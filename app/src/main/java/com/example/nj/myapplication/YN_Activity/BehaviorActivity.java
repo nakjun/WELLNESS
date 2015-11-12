@@ -29,14 +29,14 @@ public class BehaviorActivity extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(BehaviorActivity.this,YNActionAcitivity.class));
-                finish();
+                //finish();
             }
         });
         behavior2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(BehaviorActivity.this,YN_WEEKLYDATA.class));
-                finish();
+                //finish();
             }
         });
     }
