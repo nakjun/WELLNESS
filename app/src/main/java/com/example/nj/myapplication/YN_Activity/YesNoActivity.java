@@ -60,7 +60,7 @@ public class YesNoActivity extends Activity {
                     no_count++;
                     Log.d("counted", "no count : " + no_count);
                 } else {
-                    yes_count++;
+                    no_count++;
                     i = new Intent(YesNoActivity.this, SplashActivity2.class);
                     i.putExtra("YesCount", yes_count);
                     startActivity(i);

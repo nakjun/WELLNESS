@@ -51,12 +51,13 @@
 
         android:layout_centerHorizontal="true"
         android:nestedScrollingEnabled="true"
-        android:typeface="monospace" />
+        android:typeface="monospace"
+        android:visibility="invisible" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView6"
+        android:id="@+id/imgView_btnDescription"
         android:background="@drawable/dp_status_text_img"
         android:layout_alignTop="@+id/TextView_Status"
         android:layout_toRightOf="@+id/TextView_Status"

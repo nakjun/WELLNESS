@@ -31,6 +31,8 @@ public class DPmyStatus extends Activity {
 
     ImageView button;
 
+    //TextView
+
     IDSingletonclass LoginID;
     String get_ID;
     String get_User_name;
@@ -39,6 +41,8 @@ public class DPmyStatus extends Activity {
 
     TextView text_status;
     TextView description;
+
+    ImageView imgView;
 
     phpDown task;
     phpUp task2;
@@ -69,6 +73,16 @@ public class DPmyStatus extends Activity {
         TEXT1 = DPSixButtonSelect.select[0];
         TEXT2 = DPSixButtonSelect.select[1];
 */
+
+        imgView = (ImageView)findViewById(R.id.imgView_btnDescription);
+
+        imgView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                description.setVisibility(View.VISIBLE);
+            }
+        });
+
         for(int i =0;i<6;i++)
         {
             if(DPSelectActivity.status==i)
@@ -127,6 +141,8 @@ public class DPmyStatus extends Activity {
 
         text_status = (TextView)findViewById(R.id.TextView_Status);
         description = (TextView)findViewById(R.id.textView_DP_DESCRIPTION);
+
+
 
         description.setOnClickListener(new View.OnClickListener() {
             @Override
