@@ -36,6 +36,13 @@ public class SM_Activity extends AppCompatActivity {
         imagebtn=(ImageButton)findViewById(R.id.sm_main_btn);
         imagebtn.setImageBitmap(btnBitmap);
         imagebtn.setBackgroundResource(R.color.transparent);
+        centerImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SM_Activity.this, SM_Activity_2.class));
+            }
+        });
+
         imagebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
