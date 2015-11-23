@@ -25,6 +25,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Calendar;
 
 public class DpActivity extends Activity {
     ImageView img1,img2;
@@ -66,7 +67,7 @@ public class DpActivity extends Activity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(DpActivity.this,DP_PercentOfWeek.class);
+                Intent i = new Intent(DpActivity.this,CalendarView.class);
                 startActivity(i);
                 finish();
             }
