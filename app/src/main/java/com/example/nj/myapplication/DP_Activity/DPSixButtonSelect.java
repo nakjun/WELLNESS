@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
+import com.example.nj.myapplication.Util;
 
 public class DPSixButtonSelect extends Activity {
     public static String select[] = {"", ""};
@@ -29,7 +30,7 @@ public class DPSixButtonSelect extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dpsix_button_select);
-
+        Util.setGlobalFont(this, getWindow().getDecorView());
         init();
         set_clickListener();
     }

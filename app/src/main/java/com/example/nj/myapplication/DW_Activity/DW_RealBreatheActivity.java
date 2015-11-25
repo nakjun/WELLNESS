@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 
 import com.example.nj.myapplication.R;
+import com.example.nj.myapplication.Util;
 
 public class DW_RealBreatheActivity extends AppCompatActivity {
     ImageView cenImg;
@@ -21,6 +22,7 @@ public class DW_RealBreatheActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dw_real_breathe);
         Toolbar toolbar = (Toolbar) findViewById(R.id.dw_real_breathe_toolbar);
+        Util.setGlobalFont(this, getWindow().getDecorView());
         toolbar.setTitle("");
 
         cenImg=(ImageView)findViewById(R.id.dw_real_breathe_cenImg);

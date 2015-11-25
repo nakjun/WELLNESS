@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.nj.myapplication.MainActivity;
 import com.example.nj.myapplication.R;
+import com.example.nj.myapplication.Util;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -37,6 +38,8 @@ public class Calendar3 extends Activity implements View.OnClickListener {
     private int oneday_width =0;
     private int oneday_height =0;
 
+    int NUMBER = 0;
+
     phpDown task;
 
     ArrayList<String> daylist; //일자 목록을 가지고 있는다. 1,2,3,4,.... 28?30?31?
@@ -44,13 +47,13 @@ public class Calendar3 extends Activity implements View.OnClickListener {
 
     TextView aDateTxt;
 
-    public String Status="'";
+    public String Status[]={""};
     public int dayCnt;
     private int mSelect = -1;
 
     protected void initialize(){
         setContentView(R.layout.calendarview);
-
+        Util.setGlobalFont(this, getWindow().getDecorView());
         rightNow = Calendar.getInstance();
         gCal = new GregorianCalendar();
         iYear = rightNow.get(Calendar.YEAR);
@@ -245,7 +248,7 @@ public class Calendar3 extends Activity implements View.OnClickListener {
 
                             oneday[dayCnt].isToday = true;
                            // actlist.set(dayCnt,"오늘");
-                            oneday[dayCnt].invalidate();
+                            //oneday[dayCnt].invalidate();
                             mSelect = dayCnt;
                         }
                     }
@@ -302,7 +305,7 @@ public class Calendar3 extends Activity implements View.OnClickListener {
                     Log.d("TMP",TMP);
                     task.execute("http://220.69.209.170/psycho/dp_search_month.php?id=" + MainActivity.LoginID.get_ID() + "&year=" + iYear + "&month=" + (iMonth+1)+"&day="+dayCnt);
                 }
-                actlist.set(dayCnt,Status);
+                actlist.set(dayCnt,Status[dayCnt]);
                 oneday[dayCnt].invalidate();
 
                 oneday[dayCnt].setTextDay(daylist.get(dayCnt).toString()); //요일,일자 넣기
@@ -449,12 +452,13 @@ public class Calendar3 extends Activity implements View.OnClickListener {
 
         protected void onPostExecute(String str){
             if(str.length()>1) {
-                Status = str;
+                Status[NUMBER] = str;
             }
             else
             {
-                Status="";
+                Status[NUMBER]="";
             }
+            NUMBER++;
 
         }
 

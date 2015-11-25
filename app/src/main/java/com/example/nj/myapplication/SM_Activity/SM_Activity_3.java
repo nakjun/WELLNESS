@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
+import com.example.nj.myapplication.Util;
 
 import java.util.Calendar;
 
@@ -25,7 +26,7 @@ public class SM_Activity_3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sm_activity_3);
         Toolbar toolbar = (Toolbar) findViewById(R.id.sm_3_toolbar);
-
+        Util.setGlobalFont(this, getWindow().getDecorView());
         setSupportActionBar(toolbar);
         setTitle("");
         btn_prev=(ImageButton)findViewById(R.id.sm_3_btn_prev);

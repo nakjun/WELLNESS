@@ -19,6 +19,7 @@ import com.example.nj.myapplication.HubActivity;
 import com.example.nj.myapplication.IDSingletonclass;
 import com.example.nj.myapplication.MainActivity;
 import com.example.nj.myapplication.R;
+import com.example.nj.myapplication.Util;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -64,7 +65,7 @@ public class DPmyStatus extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dpmy_status);
-
+        Util.setGlobalFont(this, getWindow().getDecorView());
         ID = MainActivity.LoginID.get_ID();
 /*
         STAT = Status[DPSelectActivity.status];
@@ -147,8 +148,8 @@ public class DPmyStatus extends Activity {
         description.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(DPmyStatus.this,DP_PercentOfWeek.class));
-                //finish();
+                startActivity(new Intent(DPmyStatus.this,DP_PercentOfWeek.class));
+                finish();
             }
         });
 

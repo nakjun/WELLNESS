@@ -11,6 +11,7 @@ import android.widget.Button;
 
 import com.example.nj.myapplication.HubActivity;
 import com.example.nj.myapplication.R;
+import com.example.nj.myapplication.Util;
 
 public class DW_EndActivity extends AppCompatActivity {
     Button loop,finish;
@@ -18,6 +19,7 @@ public class DW_EndActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dw__end);
+        Util.setGlobalFont(this, getWindow().getDecorView());
         Toolbar toolbar = (Toolbar) findViewById(R.id.dw_end_toolbar);
         setSupportActionBar(toolbar);
 

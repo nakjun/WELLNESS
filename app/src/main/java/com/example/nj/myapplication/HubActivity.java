@@ -22,6 +22,7 @@ public class HubActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hub);
+        Util.setGlobalFont(this, getWindow().getDecorView());
 
         intent = getIntent();
         ID = intent.getStringExtra("ID");

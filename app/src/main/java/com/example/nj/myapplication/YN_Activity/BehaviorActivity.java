@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.nj.myapplication.R;
+import com.example.nj.myapplication.Util;
 
 public class BehaviorActivity extends Activity {
 
@@ -21,7 +22,7 @@ public class BehaviorActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_behavior);
-
+        Util.setGlobalFont(this, getWindow().getDecorView());
         behavior1 = (Button)findViewById(R.id.btn_behavior);
         behavior2 = (Button)findViewById(R.id.btn_behavior2);
 

@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
+import com.example.nj.myapplication.Util;
 
 public class DW_BreatheActivity3 extends Activity {
     TextView topTextView,botTextView;
@@ -30,6 +31,7 @@ public class DW_BreatheActivity3 extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dw__breathe3);
+        Util.setGlobalFont(this, getWindow().getDecorView());
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.dw_breathe_3_toolbar);
         toolbar.setTitle("");

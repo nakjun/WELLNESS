@@ -17,6 +17,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.nj.myapplication.R;
+import com.example.nj.myapplication.Util;
 
 public class SM_Activity_8 extends AppCompatActivity {
     ImageView box,pic;
@@ -26,6 +27,7 @@ public class SM_Activity_8 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sm_activity_8);
+        Util.setGlobalFont(this, getWindow().getDecorView());
         Toolbar toolbar = (Toolbar) findViewById(R.id.sm_8_toolbar);
         setTitle("");
         setSupportActionBar(toolbar);

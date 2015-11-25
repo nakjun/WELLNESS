@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
+import com.example.nj.myapplication.Util;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -31,6 +32,7 @@ public class SM_Activity_2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sm_activity_2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.sm_2_toolbar);
+        Util.setGlobalFont(this, getWindow().getDecorView());
         toolbar.setTitle("");
         toolbar.setTitleTextAppearance(getApplicationContext(), R.style.TextSize36);
         setSupportActionBar(toolbar);

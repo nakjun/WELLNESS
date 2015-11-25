@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
+import com.example.nj.myapplication.Util;
 
 public class YesNoActivity extends Activity {
 
@@ -26,7 +27,7 @@ public class YesNoActivity extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yes_no);
-
+        Util.setGlobalFont(this, getWindow().getDecorView());
         max = text.length;
         imgYes = (ImageButton)findViewById(R.id.imageButton_YES);
         imgNo = (ImageButton)findViewById(R.id.imageButton_NO);

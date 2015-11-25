@@ -1,30 +1,34 @@
-package com.example.nj.myapplication.YN_Activity;
+package com.example.nj.myapplication.CDI_Activity;
 
-import android.content.Intent;
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
-import com.example.nj.myapplication.Util;
 
-public class nonameActivity extends AppCompatActivity {
+import org.w3c.dom.Text;
+
+public class CDI_Activity2 extends Activity {
+
+    Button btn;
+    TextView Tview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_noname);
-        Util.setGlobalFont(this, getWindow().getDecorView());
-        ImageView imgview = (ImageView)findViewById(R.id.imageView_YNmain);
-        imgview.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_cdi_2);
+
+        btn = (Button)findViewById(R.id.btn_result_visible);
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(nonameActivity.this, YesNoActivity.class);
-                startActivity(i);
-                finish();
+                Tview = (TextView)findViewById(R.id.Tview_result);
+                Tview.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -32,7 +36,7 @@ public class nonameActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_noname, menu);
+        getMenuInflater().inflate(R.menu.menu_cdi__activity3, menu);
         return true;
     }
 

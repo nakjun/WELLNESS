@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import com.example.nj.myapplication.DW_Activity.DW_BreatheActivity2;
 import com.example.nj.myapplication.R;
+import com.example.nj.myapplication.Util;
 
 public class SM_Activity extends AppCompatActivity {
     ImageButton imagebtn;
@@ -29,6 +30,8 @@ public class SM_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sm_activity);
+        Util.setGlobalFont(this, getWindow().getDecorView());
+
         centerImage=(ImageView)findViewById(R.id.sm_main_centerimage);
         centerImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_main_1), 800, 1200, false);
         centerImage.setImageBitmap(centerImageBitmap);
