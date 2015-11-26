@@ -52,7 +52,8 @@
         android:layout_centerHorizontal="true"
         android:nestedScrollingEnabled="true"
         android:typeface="monospace"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        android:textSize="25dp" />
 
     <ImageView
         android:layout_width="wrap_content"

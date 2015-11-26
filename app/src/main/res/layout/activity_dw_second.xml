@@ -56,7 +56,10 @@
         android:layout_marginTop="58dp"
         android:layout_below="@+id/dW_sec_cenImg"
         android:layout_alignLeft="@+id/dw_sec_botText"
-        android:layout_alignStart="@+id/dw_sec_botText" />
+        android:layout_alignStart="@+id/dw_sec_botText"
+        android:textSize="35dp"
+        android:gravity="center"
+        android:layout_marginLeft="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -67,7 +70,8 @@
         android:layout_below="@+id/dw_sec_midText"
         android:layout_centerHorizontal="true"
         android:textAlignment="gravity"
-        android:gravity="center" />
+        android:gravity="center"
+        android:textSize="25dp" />
 
 
 </RelativeLayout>

@@ -79,7 +79,7 @@
         android:text="좌절"
         android:id="@+id/TextView_yellow"
         android:textSize="30dp"
-        android:layout_marginLeft="65dp"
+        android:layout_marginLeft="75dp"
         android:layout_marginStart="65dp"
         android:layout_marginTop="60dp"
         android:layout_below="@+id/TextView_red"
@@ -97,7 +97,8 @@
         android:layout_below="@+id/TextView_yellow"
         android:layout_alignLeft="@+id/TextView_yellow"
         android:layout_alignStart="@+id/TextView_yellow"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -109,7 +110,7 @@
         android:layout_alignTop="@+id/TextView_yellow"
         android:layout_toRightOf="@+id/textView9"
         android:layout_toEndOf="@+id/textView9"
-        android:layout_marginRight="50dp" />
+        android:layout_marginLeft="35dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -121,7 +122,7 @@
         android:layout_alignTop="@+id/TextView_green"
         android:layout_toRightOf="@+id/textView9"
         android:layout_toEndOf="@+id/textView9"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginLeft="35dp" />
 
     <TextView
         android:layout_width="wrap_content"

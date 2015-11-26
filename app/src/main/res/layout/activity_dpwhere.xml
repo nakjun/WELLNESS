@@ -97,8 +97,8 @@
         android:text="집에서"
         android:id="@+id/textView16"
         android:layout_alignTop="@+id/textView15"
-        android:layout_alignRight="@+id/textView12"
-        android:layout_alignEnd="@+id/textView12"
-        android:layout_marginRight="20dp" />
+        android:layout_alignRight="@+id/linearLayout"
+        android:layout_alignEnd="@+id/linearLayout"
+        android:layout_marginRight="40dp" />
 
 </RelativeLayout>

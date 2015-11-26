@@ -61,10 +61,6 @@ public class SM_Activity extends AppCompatActivity {
                 startActivity(new Intent(SM_Activity.this, SM_Activity_2.class));
             }
         });
-        Toast toast = Toast.makeText(getApplicationContext(),
-                deviceWidth+"", Toast.LENGTH_LONG);
-        toast.setGravity(Gravity.CENTER, 0, 0);
-        toast.show();
         title=(TextView)findViewById(R.id.sm_main_title);
         title.setText(R.string.sm_main_title);
         text=(TextView)findViewById(R.id.sm_main_text);

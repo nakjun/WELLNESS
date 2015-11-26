@@ -32,7 +32,8 @@
         android:rowCount="2"
         android:padding="10dp"
         android:outlineProvider="paddedBounds"
-        android:id="@+id/gridLayout">
+        android:id="@+id/gridLayout"
+        android:layout_marginLeft="220dp">
 
         <TextView
             android:layout_width="45dp"

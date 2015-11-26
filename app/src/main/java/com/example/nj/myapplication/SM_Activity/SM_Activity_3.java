@@ -49,8 +49,8 @@ public class SM_Activity_3 extends AppCompatActivity {
             }
         });
 
-        iv=(ImageView)findViewById(R.id.imageView4);
-        iv.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_3_flower), deviceWidth, deviceWidth, false));
+        //iv=(ImageView)findViewById(R.id.imageView4);
+        //iv.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_3_flower), 700, 700, false));
         cal=Calendar.getInstance();
         date=(TextView)findViewById(R.id.sm_3_date);
         String temp=getDayofWeek(cal.get(Calendar.DATE));
