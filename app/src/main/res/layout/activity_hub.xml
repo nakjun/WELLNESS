@@ -8,25 +8,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imgView_dp"
-        android:background="@drawable/hub_dp"
-        android:layout_marginTop="110dp"
+        android:src="@drawable/hub_dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imgView_dw"
-        android:background="@drawable/hub_dw"
-        android:layout_alignTop="@+id/imgView_dp"
+        android:src="@drawable/hub_dw"
+        android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imgView_sw"
-        android:background="@drawable/hub_sm"
+        android:src="@drawable/hub_sm"
         android:layout_below="@+id/imgView_dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -35,10 +37,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imgView_yn"
-        android:background="@drawable/hub_yn"
-        android:layout_below="@+id/imgView_dw"
-        android:layout_toRightOf="@+id/imgView_sw"
-        android:layout_toEndOf="@+id/imgView_sw" />
+        android:src="@drawable/hub_yn"
+        android:layout_below="@+id/imgView_dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>

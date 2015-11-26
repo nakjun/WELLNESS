@@ -8,6 +8,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -32,7 +33,12 @@ public class SM_Activity_2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sm_activity_2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.sm_2_toolbar);
+
+        DisplayMetrics displayMetrics = new DisplayMetrics();
         Util.setGlobalFont(this, getWindow().getDecorView());
+        int deviceWidth = displayMetrics.widthPixels;
+        int deviceHeight = displayMetrics.heightPixels;
+
         toolbar.setTitle("");
         toolbar.setTitleTextAppearance(getApplicationContext(), R.style.TextSize36);
         setSupportActionBar(toolbar);
@@ -45,12 +51,19 @@ public class SM_Activity_2 extends AppCompatActivity {
 
         dayz = new TextView[7];
         dayz[0] = (TextView) findViewById(R.id.sm_2_table_00);
+        dayz[0].setWidth((deviceWidth/6));
         dayz[1] = (TextView) findViewById(R.id.sm_2_table_01);
+        dayz[1].setWidth((deviceWidth/6));
         dayz[2] = (TextView) findViewById(R.id.sm_2_table_02);
+        dayz[2].setWidth((deviceWidth/6));
         dayz[3] = (TextView) findViewById(R.id.sm_2_table_03);
+        dayz[3].setWidth((deviceWidth/6));
         dayz[4] = (TextView) findViewById(R.id.sm_2_table_04);
+        dayz[4].setWidth((deviceWidth/6));
         dayz[5] = (TextView) findViewById(R.id.sm_2_table_05);
+        dayz[5].setWidth((deviceWidth/6));
         dayz[6] = (TextView) findViewById(R.id.sm_2_table_06);
+        dayz[6].setWidth((deviceWidth/6));
         int limit=0;
         int todayposition = cal.get(Calendar.DATE);
         cal.add(Calendar.DATE, 0 - (daynum - 2));

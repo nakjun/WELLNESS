@@ -42,11 +42,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/dW_sec_cenImg"
+        android:layout_alignWithParentIfMissing="false"
         android:layout_below="@+id/dw_sec_topText"
-        android:layout_marginTop="142dp"
-        android:layout_centerInParent="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignWithParentIfMissing="false" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -54,9 +53,10 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/dw_sec_midText"
+        android:layout_marginTop="58dp"
         android:layout_below="@+id/dW_sec_cenImg"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp" />
+        android:layout_alignLeft="@+id/dw_sec_botText"
+        android:layout_alignStart="@+id/dw_sec_botText" />
 
     <TextView
         android:layout_width="wrap_content"

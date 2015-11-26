@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.animation.*;
 import android.widget.ImageView;
 
 import com.example.nj.myapplication.R;
@@ -31,12 +32,12 @@ public class DW_ReleaseActivity extends AppCompatActivity {
         for (int i = 0; i < 6; i++) {
             Bitmap temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), id++),433, 1000, false);
             cenImgBitmap.add(temp);
+
+
+
         }
-
-
-
         cenImg = (ImageView) findViewById(R.id.dw_release_cenImg);
-        final int timings[] = {46000, 65000, 67000, 79000, 72000, 90000, 95000, 38000};
+        final int timings[] = {48000, 67000, 69000, 81000, 74000, 92000, 97000, 40000};
         Thread timer = new Thread(new Runnable() {
             @Override
             synchronized public void run() {
@@ -44,7 +45,7 @@ public class DW_ReleaseActivity extends AppCompatActivity {
                 player = MediaPlayer.create(getApplicationContext(), R.raw.dw_release_ready);
                 player.start();
                 try {
-                    wait(13000);
+                    wait(14000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -52,6 +53,7 @@ public class DW_ReleaseActivity extends AppCompatActivity {
                     player=MediaPlayer.create(getApplicationContext(), soundInitialIndex++);
                     player.start();
                     if(i<6) {
+
                         cenImg.post(new Runnable() {
                             @Override
                             public void run() {
@@ -59,7 +61,18 @@ public class DW_ReleaseActivity extends AppCompatActivity {
                             }
                         });
                     }
+                    if(i==0) {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            AlphaAnimation anim = new AlphaAnimation(0.0f, 1.0f);
+                            anim.setDuration(2000);
+                            cenImg.startAnimation(anim);
+                        }
+                    });
 
+
+                    }
                     try {
                         wait(timings[i]);
                     } catch (InterruptedException e) {

@@ -54,7 +54,7 @@
         android:id="@+id/dw_breathe2_botText"
         android:layout_below="@+id/dw_breathe2_image"
         android:layout_centerHorizontal="true"
-        />
+        android:layout_marginTop="20dp" />
 
 
 </RelativeLayout>

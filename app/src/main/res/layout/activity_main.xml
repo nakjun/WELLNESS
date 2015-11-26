@@ -58,9 +58,11 @@
         android:text="로그인"
         android:id="@+id/btn_login"
 
+        android:layout_marginTop="31dp"
         android:layout_below="@+id/Til_pw"
-        android:layout_alignLeft="@+id/Til_pw"
-        android:layout_alignStart="@+id/Til_pw" />
+        android:layout_toLeftOf="@+id/btn_join"
+        android:layout_alignLeft="@+id/btn_find"
+        android:layout_alignStart="@+id/btn_find" />
 
     <Button
         android:layout_width="wrap_content"
@@ -69,10 +71,8 @@
 
         android:id="@+id/btn_join"
         android:layout_alignTop="@+id/btn_login"
-        android:layout_toRightOf="@+id/btn_login"
-        android:layout_toEndOf="@+id/btn_login"
-        android:layout_marginLeft="23dp"
-        android:layout_marginStart="63dp" />
+        android:layout_alignRight="@+id/Til_pw"
+        android:layout_alignEnd="@+id/Til_pw" />
 
     <Button
         android:layout_width="wrap_content"
@@ -80,11 +80,11 @@
         android:text="아이디,패스워드 찾기"
 
         android:id="@+id/btn_find"
-        android:layout_alignTop="@+id/btn_join"
-        android:layout_toRightOf="@+id/btn_join"
-        android:layout_toEndOf="@+id/btn_join"
-        android:layout_marginLeft="23dp"
-        android:layout_marginStart="73dp" />
+        android:layout_below="@+id/btn_join"
+        android:layout_alignLeft="@+id/Til_pw"
+        android:layout_alignStart="@+id/Til_pw"
+        android:layout_alignRight="@+id/Til_pw"
+        android:layout_alignEnd="@+id/Til_pw" />
 
 
 

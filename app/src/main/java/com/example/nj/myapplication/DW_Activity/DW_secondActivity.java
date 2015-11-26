@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -26,13 +27,17 @@ public class DW_secondActivity extends AppCompatActivity {
         Util.setGlobalFont(this, getWindow().getDecorView());
         Toolbar toolbar = (Toolbar) findViewById(R.id.dw_2_toolbar);
         toolbar.setTitle("");
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        int deviceWidth = displayMetrics.widthPixels;
+        int deviceHeight = displayMetrics.heightPixels;
 
         top=(TextView)findViewById(R.id.dw_sec_topText);
         mid=(TextView)findViewById(R.id.dw_sec_midText);
         bot=(TextView)findViewById(R.id.dw_sec_botText);
 
         backImage =(ImageButton)findViewById(R.id.dw_sec_back);
-        backImage.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.common_back_button), 100, 100, false));
+        backImage.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_btn_left), 50, 50, false));
         backImage.setBackgroundResource(R.color.transparent);
         backImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,7 +47,7 @@ public class DW_secondActivity extends AppCompatActivity {
         });
 
         centerImage=(ImageButton)findViewById(R.id.dW_sec_cenImg);
-        centerImage.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dw_sec_cen), 700, 700, false));
+        centerImage.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dw_sec_cen), (int)(deviceWidth*0.5), (int)(deviceWidth*0.5), false));
         centerImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

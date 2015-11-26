@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,6 +24,13 @@ public class BehaviorActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_behavior);
         Util.setGlobalFont(this, getWindow().getDecorView());
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+
+        int deviceWidth = displayMetrics.widthPixels;
+        int deviceHeight = displayMetrics.heightPixels;
+
         behavior1 = (Button)findViewById(R.id.btn_behavior);
         behavior2 = (Button)findViewById(R.id.btn_behavior2);
 
