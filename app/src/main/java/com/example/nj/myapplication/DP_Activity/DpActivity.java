@@ -63,9 +63,14 @@ public class DpActivity extends Activity {
         btn2 = (Button)findViewById(R.id.btn_month);
         btn3 = (Button)findViewById(R.id.btn_week);
 
-        btn1.setWidth(MainActivity.width/3);
-        btn2.setWidth(MainActivity.width/3);
-        btn3.setWidth(MainActivity.width/3);
+        btn1.setWidth(MainActivity.width / 3);
+        btn1.setHeight(MainActivity.height / 7);
+        btn2.setWidth(MainActivity.width / 3);
+        btn2.setHeight(MainActivity.height / 7);
+        btn3.setWidth(MainActivity.width / 3);
+        btn3.setHeight(MainActivity.height / 7);
+
+
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override

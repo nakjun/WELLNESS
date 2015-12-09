@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -62,9 +64,25 @@ public class DPSixButtonSelect extends Activity {
         btn[4] = (Button) findViewById(R.id.BUTTON_FIVE);
         btn[5] = (Button) findViewById(R.id.BUTTON_SIX);
 
+        int Size=15;
+
+        if(MainActivity.width==480) Size = 30;
+        if(MainActivity.width==800) Size = 20;
+        if(MainActivity.width==1080) Size = 25;
+
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dp_circle), MainActivity.width/2, MainActivity.height/4, false);
+        Drawable d = new BitmapDrawable(temp);
+
+        for(int i=0;i<6;i++)
+        {
+            btn[i].setTextSize(Size);
+            btn[i].setWidth(MainActivity.width / 2);
+            btn[i].setHeight(MainActivity.height / 10);
+            btn[i].setBackground(d);
+        }
 
         iView = (ImageView)findViewById(R.id.imageView6);
-        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dp_circle), MainActivity.width/3, MainActivity.height/10, false);
+
 
         for (int i = 0; i < 6; i++) {
             btn[i].setText(Origin_Text[i]);

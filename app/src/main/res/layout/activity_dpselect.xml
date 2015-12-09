@@ -44,20 +44,18 @@
         android:layout_alignParentStart="true" />
 
     <ImageView
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView4"
-        android:src="@drawable/sm_3_flower"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_above="@+id/image_dpdescript"
-        android:layout_below="@+id/dp_select_view" />
+        android:layout_below="@+id/textView10" />
 
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/image_dpdescript"
-        android:background="@drawable/dp_descript"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -68,9 +66,9 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="분노"
         android:id="@+id/TextView_red"
-        android:layout_below="@+id/textView10"
-        android:layout_centerHorizontal="true"
-        android:textSize="30dp" />
+        android:textSize="30dp"
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -79,10 +77,7 @@
         android:text="좌절"
         android:id="@+id/TextView_yellow"
         android:textSize="30dp"
-        android:layout_marginLeft="75dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="60dp"
-        android:layout_below="@+id/TextView_red"
+        android:layout_alignTop="@+id/TextView_pink"
         android:layout_toRightOf="@+id/TextView_red"
         android:layout_toEndOf="@+id/TextView_red" />
 
@@ -93,12 +88,9 @@
         android:text="후회"
         android:id="@+id/TextView_green"
         android:textSize="30dp"
-        android:layout_marginTop="115dp"
         android:layout_below="@+id/TextView_yellow"
         android:layout_alignLeft="@+id/TextView_yellow"
-        android:layout_alignStart="@+id/TextView_yellow"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp" />
+        android:layout_alignStart="@+id/TextView_yellow" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -107,9 +99,9 @@
         android:text="기타"
         android:id="@+id/TextView_pink"
         android:textSize="30dp"
-        android:layout_above="@+id/TextView_green"
-        android:layout_alignRight="@+id/textView9"
-        android:layout_alignEnd="@+id/textView9" />
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_toLeftOf="@+id/TextView_red"
+        android:layout_toStartOf="@+id/TextView_red" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -118,9 +110,9 @@
         android:text="슬픔"
         android:id="@+id/TextView_blue"
         android:textSize="30dp"
-        android:layout_below="@+id/TextView_green"
-        android:layout_alignRight="@+id/textView9"
-        android:layout_alignEnd="@+id/textView9" />
+        android:layout_alignTop="@+id/TextView_green"
+        android:layout_alignLeft="@+id/TextView_pink"
+        android:layout_alignStart="@+id/TextView_pink" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -129,10 +121,9 @@
         android:text="야속"
         android:id="@+id/TextView_sky"
         android:textSize="30dp"
-        android:layout_alignTop="@+id/TextView_blue"
         android:layout_alignLeft="@+id/TextView_red"
         android:layout_alignStart="@+id/TextView_red"
-        android:layout_marginTop="50dp" />
+        android:layout_alignBottom="@+id/imageView4" />
 
 
 </RelativeLayout>

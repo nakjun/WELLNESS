@@ -23,7 +23,9 @@
         android:layout_column="0"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/dpSixButtonTitle" />
+        android:layout_below="@+id/dpSixButtonTitle"
+        android:layout_toLeftOf="@+id/BUTTON_FOUR"
+        android:layout_toStartOf="@+id/BUTTON_FOUR" />
 
     <Button
         android:layout_width="wrap_content"

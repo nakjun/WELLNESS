@@ -48,7 +48,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView2"
         android:layout_below="@+id/textView8"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2dp" />
 
     <ImageView
         android:layout_width="match_parent"
@@ -76,7 +77,8 @@
         android:background="@color/sm_2_table_dark"
         android:layout_below="@+id/imageView2"
         android:layout_toLeftOf="@+id/btn_week"
-        android:layout_toStartOf="@+id/btn_week" />
+        android:layout_toStartOf="@+id/btn_week"
+        android:layout_marginLeft="2dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -85,7 +87,8 @@
         android:id="@+id/btn_week"
         android:background="@color/sm_2_table_dark"
         android:layout_below="@+id/imageView2"
-        android:layout_toLeftOf="@+id/btn_nextdp"
-        android:layout_toStartOf="@+id/btn_nextdp" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="2dp" />
 
 </RelativeLayout>

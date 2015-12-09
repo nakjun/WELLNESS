@@ -179,6 +179,7 @@ public class MainActivity extends Activity {
                     i = new Intent(MainActivity.this, HubActivity.class);
                     LoginID = new IDSingletonclass(ID);
                     startActivity(i);
+                    finish();
                 }
                 else {
                     Toast.makeText(getApplicationContext(), "Login Fail", Toast.LENGTH_SHORT).show();

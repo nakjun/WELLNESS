@@ -193,11 +193,13 @@
         <activity
             android:name=".SM_Activity.SM_Activity_4"
             android:label="@string/title_activity_sm__activity_4"
+            android:windowSoftInputMode="stateVisible"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
             android:name=".SM_Activity.SM_Activity_5"
             android:label="@string/title_activity_sm__activity_5"
+            android:windowSoftInputMode="stateVisible"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
@@ -213,6 +215,7 @@
         <activity
             android:name=".SM_Activity.SM_Activity_8"
             android:label="@string/title_activity_sm__activity_8"
+            android:windowSoftInputMode="stateVisible"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity

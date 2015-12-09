@@ -1,5 +1,6 @@
 package com.example.nj.myapplication.SM_Activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -49,7 +51,7 @@ public class SM_Activity_4 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //TODO: DB Send message;
-                startActivity(new Intent(SM_Activity_4.this,SM_Activity_5.class));
+                startActivity(new Intent(SM_Activity_4.this, SM_Activity_5.class));
             }
         });
 
@@ -57,6 +59,12 @@ public class SM_Activity_4 extends AppCompatActivity {
         bubble=(ImageView)findViewById(R.id.sm_4_bubble);
         bubble.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_4_bubble), 800, 800, false));
         textfield=(EditText)findViewById(R.id.sm_4_textfield);
+        textfield.requestFocus();
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        //imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
+        //imm.showSoftInput(textfield,0);
+        imm.showSoftInputFromInputMethod (textfield.getApplicationWindowToken(),InputMethodManager.SHOW_FORCED);
+
         textfield.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {

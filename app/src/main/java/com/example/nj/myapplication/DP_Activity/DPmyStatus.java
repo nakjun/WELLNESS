@@ -2,7 +2,10 @@ package com.example.nj.myapplication.DP_Activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -58,6 +61,7 @@ public class DPmyStatus extends Activity {
     //String Status[]={"분노","좌절","후회","야속","슬픔","기타"};
 
     String Text[]=new String[5];
+    Bitmap temp;
 
     String TEXT1,TEXT2,PLACE,RATES,STAT;
 
@@ -167,8 +171,6 @@ public class DPmyStatus extends Activity {
         text_status = (TextView)findViewById(R.id.TextView_Status);
         description = (TextView)findViewById(R.id.textView_DP_DESCRIPTION);
 
-
-
         description.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -181,9 +183,19 @@ public class DPmyStatus extends Activity {
 
     void set_display()
     {
-        text_status.setBackgroundResource(image_id[DPSelectActivity.status]);
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), image_id[DPSelectActivity.status]), MainActivity.width*2 / 3, MainActivity.height / 4, false);
+        Drawable d = new BitmapDrawable(temp);
+        text_status.setBackground(d);
+
+        int Size=25;
+
+        if(MainActivity.width==480) Size = 20;
+        if(MainActivity.width==800) Size = 25;
+        if(MainActivity.width==1080) Size = 14;
+
         text_status.setText(Status_Name[DPSelectActivity.status] + Status_rates[DPRateActivity.rates-1]);
         description.setText(Text[DPSelectActivity.status]);
+
     }
 
 
