@@ -39,21 +39,17 @@ public class HubActivity extends Activity {
 
         int deviceWidth = displayMetrics.widthPixels;
         int deviceHeight = displayMetrics.heightPixels;
-        Display display = getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-        int width = size.x;
 
         intent = getIntent();
         ID = intent.getStringExtra("ID");
         ImageView btn_478 = (ImageView)findViewById(R.id.imgView_dw);
-        btn_478.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.hub_dw), (int)(width / 2), (int)(width / 2), false));
+        btn_478.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.hub_dw), (int)(deviceWidth / 2), (int)(deviceWidth / 2), false));
         ImageView btn_yesno = (ImageView)findViewById(R.id.imgView_yn);
-        btn_yesno.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.hub_yn), (int)(width / 2), (int)(width /2), false));
+        btn_yesno.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.hub_yn), (int)(deviceWidth / 2), (int)(deviceWidth /2), false));
         ImageView btn_dp = (ImageView)findViewById(R.id.imgView_dp);
-        btn_dp.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.hub_dp), width / 2, width / 2, false));
+        btn_dp.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.hub_dp), deviceWidth / 2, deviceWidth / 2, false));
         ImageView btn_sm=(ImageView)findViewById(R.id.imgView_sw);
-        btn_sm.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.hub_sm), width / 2, width / 2, false));
+        btn_sm.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.hub_sm), deviceWidth / 2, deviceWidth / 2, false));
 //        RelativeLayout.LayoutParams params=new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
 //        params.setMargins((int) (deviceWidth * 0.01), (int) (deviceHeight * 0.01), (int) (deviceWidth * 0.01), (int) (deviceHeight * 0.01));
 //        btn_dp.setLayoutParams(params);

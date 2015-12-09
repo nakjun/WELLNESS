@@ -6,6 +6,17 @@
     tools:context="com.example.nj.myapplication.DP_Activity.DpActivity"
     >
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_nextdp"
+        android:background="@drawable/dp_btn_right"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/imageView3"
+        android:layout_alignEnd="@+id/imageView3"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp" />
+
     <android.support.design.widget.AppBarLayout
         android:id="@+id/dp_main_view"
         android:layout_width="match_parent"
@@ -35,53 +46,46 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/dp_main_picture"
         android:id="@+id/imageView2"
         android:layout_below="@+id/textView8"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="53dp" />
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/imageView3"
-        android:background="@drawable/dp_text_main"
-        android:layout_alignTop="@+id/imageView2"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="250dp" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_nextdp"
-        android:background="@drawable/dp_btn_right"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/imageView3"
-        android:layout_alignEnd="@+id/imageView3"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="15dp" />
+        android:layout_above="@+id/btn_nextdp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="오늘생긴일"
         android:id="@+id/btn_datainput"
-        android:background="@drawable/yn_button2"
-        android:layout_below="@+id/imageView3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="65dp" />
+        android:background="@color/sm_2_table_dark"
+        android:layout_toLeftOf="@+id/btn_month"
+        android:layout_toStartOf="@+id/btn_month"
+        android:layout_below="@+id/imageView2" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="통계"
-        android:id="@+id/btn_percent"
-        android:background="@drawable/yn_button2"
-        android:layout_below="@+id/imageView3"
-        android:layout_alignRight="@+id/btn_nextdp"
-        android:layout_alignEnd="@+id/btn_nextdp"
-        android:layout_marginRight="65dp" />
+        android:text="월간통계"
+        android:id="@+id/btn_month"
+        android:background="@color/sm_2_table_dark"
+        android:layout_below="@+id/imageView2"
+        android:layout_toLeftOf="@+id/btn_week"
+        android:layout_toStartOf="@+id/btn_week" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="주간통계"
+        android:id="@+id/btn_week"
+        android:background="@color/sm_2_table_dark"
+        android:layout_below="@+id/imageView2"
+        android:layout_toLeftOf="@+id/btn_nextdp"
+        android:layout_toStartOf="@+id/btn_nextdp" />
 
 </RelativeLayout>

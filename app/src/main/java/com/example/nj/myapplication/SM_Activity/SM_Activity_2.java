@@ -9,11 +9,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.nj.myapplication.MainActivity;
 import com.example.nj.myapplication.R;
 import com.example.nj.myapplication.Util;
 
@@ -49,21 +51,30 @@ public class SM_Activity_2 extends AppCompatActivity {
         dateFormat = new SimpleDateFormat(datetype);
         int daynum = cal.get(Calendar.DAY_OF_WEEK);
 
+        int calWidth = (MainActivity.width/7);
+
         dayz = new TextView[7];
         dayz[0] = (TextView) findViewById(R.id.sm_2_table_00);
-        dayz[0].setWidth((deviceWidth/6));
+        dayz[0].setWidth(calWidth);
+        dayz[0].setHeight(MainActivity.height/10);
         dayz[1] = (TextView) findViewById(R.id.sm_2_table_01);
-        dayz[1].setWidth((deviceWidth/6));
+        dayz[1].setWidth(calWidth);
+        dayz[1].setHeight(MainActivity.height/10);
         dayz[2] = (TextView) findViewById(R.id.sm_2_table_02);
-        dayz[2].setWidth((deviceWidth/6));
+        dayz[2].setWidth(calWidth);
+        dayz[2].setHeight(MainActivity.height/10);
         dayz[3] = (TextView) findViewById(R.id.sm_2_table_03);
-        dayz[3].setWidth((deviceWidth/6));
+        dayz[3].setWidth(calWidth);
+        dayz[3].setHeight(MainActivity.height/10);
         dayz[4] = (TextView) findViewById(R.id.sm_2_table_04);
-        dayz[4].setWidth((deviceWidth/6));
+        dayz[4].setWidth(calWidth);
+        dayz[4].setHeight(MainActivity.height/10);
         dayz[5] = (TextView) findViewById(R.id.sm_2_table_05);
-        dayz[5].setWidth((deviceWidth/6));
+        dayz[5].setWidth(calWidth);
+        dayz[5].setHeight(MainActivity.height/10);
         dayz[6] = (TextView) findViewById(R.id.sm_2_table_06);
-        dayz[6].setWidth((deviceWidth/6));
+        dayz[6].setWidth(calWidth);
+        dayz[6].setHeight(MainActivity.height/10);
         int limit=0;
         int todayposition = cal.get(Calendar.DATE);
         cal.add(Calendar.DATE, 0 - (daynum - 2));
@@ -90,9 +101,9 @@ public class SM_Activity_2 extends AppCompatActivity {
         for (int i = 0; i < 7; i++) {
             if (i <= limit) {
                 if (available[i]) {
-                    tableBitmapArray[i] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_2_go_on_finger), 60, 60, false);
+                    tableBitmapArray[i] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_2_go_on_finger), MainActivity.width/7, MainActivity.height/15, false);
                 } else {
-                    tableBitmapArray[i] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_2_done_footstep), 60, 60, false);
+                    tableBitmapArray[i] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_2_done_footstep), MainActivity.width/7, MainActivity.height/15, false);
                 }
             }
         }

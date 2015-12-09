@@ -26,14 +26,14 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="활동 게시판"
         android:id="@+id/textView"
-        android:layout_alignTop="@+id/imageView8"
+        android:layout_alignTop="@+id/btn_boardplus"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView8"
+        android:id="@+id/btn_boardplus"
         android:layout_below="@+id/dp_main_view"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -42,12 +42,130 @@
         android:layout_marginRight="7dp" />
 
     <ListView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/listView2"
         android:layout_below="@+id/textView"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentRight="false"
         android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true" />
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:id="@+id/img_databox_BoardInput"
+        android:background="@drawable/databox"
+        android:visibility="invisible"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="입력"
+        android:id="@+id/btn_submit"
+        android:background="#f5e4e4"
+        android:layout_below="@+id/edit_when"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:id="@+id/img_databox_image"
+        android:layout_alignTop="@+id/img_databox_BoardInput"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:layout_marginTop="12dp"
+        android:background="#555555" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="누구와 함께?"
+        android:id="@+id/tview_upload_with"
+        android:layout_below="@+id/img_databox_image"
+        android:layout_alignLeft="@+id/img_databox_BoardInput"
+        android:layout_alignStart="@+id/img_databox_BoardInput"
+        android:visibility="invisible"
+        android:layout_marginLeft="30dp"
+        android:textSize="18dp"
         android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="어디에서 ?"
+        android:id="@+id/tview_upload_where"
+        android:visibility="invisible"
+        android:layout_below="@+id/tview_upload_with"
+        android:layout_alignLeft="@+id/img_databox_BoardInput"
+        android:layout_alignStart="@+id/img_databox_BoardInput"
+        android:layout_marginLeft="30dp"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="언제 ?"
+        android:id="@+id/tview_upload_when"
+        android:visibility="invisible"
+        android:textSize="18dp"
+        android:layout_below="@+id/tview_upload_where"
+        android:layout_alignLeft="@+id/img_databox_BoardInput"
+        android:layout_alignStart="@+id/img_databox_BoardInput"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="이미지 불러오기"
+        android:id="@+id/tview_loadimage"
+        android:layout_alignTop="@+id/img_databox_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:visibility="invisible" />
+
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_with"
+        android:layout_alignBottom="@+id/tview_upload_with"
+        android:layout_alignLeft="@+id/tview_loadimage"
+        android:layout_alignStart="@+id/tview_loadimage"
+        android:layout_alignRight="@+id/img_databox_BoardInput"
+        android:layout_alignEnd="@+id/img_databox_BoardInput"
+        android:layout_marginRight="35dp"
+        android:visibility="invisible" />
+
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_where"
+        android:layout_above="@+id/tview_upload_when"
+        android:layout_alignLeft="@+id/edit_with"
+        android:layout_alignStart="@+id/edit_with"
+        android:layout_alignRight="@+id/edit_with"
+        android:layout_alignEnd="@+id/edit_with"
+        android:visibility="invisible" />
+
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_when"
+        android:layout_alignBottom="@+id/tview_upload_when"
+        android:layout_alignLeft="@+id/edit_where"
+        android:layout_alignStart="@+id/edit_where"
+        android:layout_alignRight="@+id/edit_where"
+        android:layout_alignEnd="@+id/edit_where"
+        android:visibility="invisible" />
 
 </RelativeLayout>

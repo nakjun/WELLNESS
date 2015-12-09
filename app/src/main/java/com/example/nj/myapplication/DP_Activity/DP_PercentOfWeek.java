@@ -42,19 +42,16 @@ public class DP_PercentOfWeek extends Activity {
 
         LayoutParams params = (LayoutParams) P1.getLayoutParams();
         params.width = deviceWidth/3;
-        params.height = deviceWidth/3;
 
         P1.setLayoutParams(params);
 
         params = (LayoutParams) P2.getLayoutParams();
         params.width = deviceWidth/3;
-        params.height = deviceWidth/3;
 
         P2.setLayoutParams(params);
 
         params = (LayoutParams) P3.getLayoutParams();
         params.width = deviceWidth/3;
-        params.height = deviceWidth/3;
 
         P3.setLayoutParams(params);
 

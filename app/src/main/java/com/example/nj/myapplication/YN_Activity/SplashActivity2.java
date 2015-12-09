@@ -25,9 +25,16 @@ public class SplashActivity2 extends Activity {
         int yes_count = intent.getIntExtra("YesCount",0);
         int no_count = intent.getIntExtra("NoCount",0);
 
+        int Size=24;
+        if(YesNoActivity.deviceWidth==480) Size = 25;
+        if(YesNoActivity.deviceWidth==800) Size = 35;
+        if(YesNoActivity.deviceWidth==1080) Size = 20;
+
+
         result_text = (TextView)findViewById(R.id.textView_result);
+        result_text.setTextSize(Size);
         result_text.setText("YES를 "+yes_count+"개 선택하셨습니다.\n" +
-                "더 많은 YES를 선택하고 싶다면 다음 장으로 이동해주세요");
+                "더 많은 YES를 선택하고 싶다면\n다음 장으로 이동해주세요");
 
         RelativeLayout relative = (RelativeLayout)findViewById(R.id.Re);
         relative.setOnClickListener(new View.OnClickListener() {

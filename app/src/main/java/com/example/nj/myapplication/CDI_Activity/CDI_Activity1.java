@@ -61,6 +61,9 @@ public class CDI_Activity1 extends Activity {
                     Log.d("COUNT3",COUNT3+"");
 
                     Intent i = new Intent(CDI_Activity1.this,CDI_Activity2.class);
+                    i.putExtra("COUNT1",COUNT3);
+                    i.putExtra("COUNT2",COUNT3);
+                    i.putExtra("COUNT3R",COUNT3);
                     startActivity(i);
                     finish();
                 }

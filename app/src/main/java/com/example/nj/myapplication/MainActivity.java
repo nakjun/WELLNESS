@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 
 import com.example.nj.myapplication.CDI_Activity.CDI_Activity;
 import com.example.nj.myapplication.DW_Activity.DW_Activity;
+import com.example.nj.myapplication.YN_Activity.BehaviorActivity;
 import com.example.nj.myapplication.YN_Activity.YesNoActivity;
 
 import org.json.JSONArray;
@@ -38,11 +40,21 @@ public class MainActivity extends Activity {
     public static IDSingletonclass LoginID;
     Intent i;
 
+    public static int width,height;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+
+        width = displayMetrics.widthPixels;
+        height = displayMetrics.heightPixels;
+
 
         Util.setGlobalFont(this, getWindow().getDecorView());
 

@@ -3,11 +3,11 @@ package com.example.nj.myapplication.DP_Activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,21 +17,21 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.nj.myapplication.IDSingletonclass;
 import com.example.nj.myapplication.MainActivity;
 import com.example.nj.myapplication.R;
 import com.example.nj.myapplication.Util;
+import com.example.nj.myapplication.YN_Activity.YesNoActivity;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.Calendar;
 
 public class DpActivity extends Activity {
     ImageView img1,img2;
-    Button btn1,btn2;
+    Button btn1,btn2,btn3;
     phpUp task;
+    Bitmap temp;
     String ID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +40,14 @@ public class DpActivity extends Activity {
         Util.setGlobalFont(this, getWindow().getDecorView());
         ID = MainActivity.LoginID.get_ID();
 
+
+
+
         img1 = (ImageView)findViewById(R.id.imageView2);
         img2 = (ImageView)findViewById(R.id.imageView3);
+
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dp_main_picture), MainActivity.width, MainActivity.height/2, false);
+        img1.setImageBitmap(temp);
 
         ImageButton img_btn = (ImageButton)findViewById(R.id.btn_nextdp);
         img_btn.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +60,12 @@ public class DpActivity extends Activity {
             }
         });
         btn1 = (Button)findViewById(R.id.btn_datainput);
-        btn2 = (Button)findViewById(R.id.btn_percent);
+        btn2 = (Button)findViewById(R.id.btn_month);
+        btn3 = (Button)findViewById(R.id.btn_week);
+
+        btn1.setWidth(MainActivity.width/3);
+        btn2.setWidth(MainActivity.width/3);
+        btn3.setWidth(MainActivity.width/3);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +81,15 @@ public class DpActivity extends Activity {
             public void onClick(View v) {
                 Intent i = new Intent(DpActivity.this,CalendarView.class);
                 startActivity(i);
-                finish();
+                //finish();
+            }
+        });
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(DpActivity.this,DP_PercentOfWeek.class);
+                startActivity(i);
+                //finish();
             }
         });
 
@@ -82,7 +101,7 @@ public class DpActivity extends Activity {
         Destory(img2);
 
         super.onDestroy();
-    }//김민상 코딩좀해라~
+    }
 
     public void Destory(ImageView iv) {
 

@@ -47,7 +47,7 @@ public class Calendar3 extends Activity implements View.OnClickListener {
 
     TextView aDateTxt;
 
-    public String Status[]={""};
+    public String Status="";
     public int dayCnt;
     private int mSelect = -1;
 
@@ -305,7 +305,7 @@ public class Calendar3 extends Activity implements View.OnClickListener {
                     Log.d("TMP",TMP);
                     task.execute("http://220.69.209.170/psycho/dp_search_month.php?id=" + MainActivity.LoginID.get_ID() + "&year=" + iYear + "&month=" + (iMonth+1)+"&day="+dayCnt);
                 }
-                actlist.set(dayCnt,Status[dayCnt]);
+                actlist.set(dayCnt,Status);
                 oneday[dayCnt].invalidate();
 
                 oneday[dayCnt].setTextDay(daylist.get(dayCnt).toString()); //요일,일자 넣기
@@ -452,11 +452,11 @@ public class Calendar3 extends Activity implements View.OnClickListener {
 
         protected void onPostExecute(String str){
             if(str.length()>1) {
-                Status[NUMBER] = str;
+                Status= str;
             }
             else
             {
-                Status[NUMBER]="";
+                Status="";
             }
             NUMBER++;
 

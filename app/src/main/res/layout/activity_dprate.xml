@@ -36,7 +36,6 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/textView11"
         android:id="@+id/dp_GridLayout"
-        android:layout_marginTop="150dp"
         android:rowCount="5"
         android:columnCount="2"
         android:layout_alignParentRight="true"
@@ -44,20 +43,17 @@
         android:paddingBottom="50dp"
         android:paddingLeft="20dp"
         android:rowOrderPreserved="false"
-        android:useDefaultMargins="true"
-        android:layout_marginBottom="100dp">
+        android:useDefaultMargins="true">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/image_veryrow_sel"
-            android:background="@drawable/dp_star1"
             android:layout_row="0"
             android:layout_column="0" />
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/dp_star2"
             android:id="@+id/image_row_sel"
             android:layout_row="1"
             android:layout_column="0" />
@@ -65,21 +61,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/image_middle_sel"
-            android:background="@drawable/dp_star3"
             android:layout_row="2"
             android:layout_column="0" />
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/image_high_sel"
-            android:background="@drawable/dp_star4"
             android:layout_row="3"
             android:layout_column="0" />
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/image_veryhigh_sel"
-            android:background="@drawable/dp_star5"
             android:layout_row="4"
             android:layout_column="0" />
 

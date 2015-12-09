@@ -13,7 +13,6 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="아이디"
         android:id="@+id/textView2"
-        android:layout_marginTop="80dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -25,10 +24,10 @@
         android:id="@+id/editText_inputID"
         android:maxLength="20"
         android:layout_alignTop="@+id/textView2"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp" />
+        android:layout_alignRight="@+id/editText_inputPW"
+        android:layout_alignEnd="@+id/editText_inputPW"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -36,11 +35,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="패스워드"
         android:id="@+id/textView3"
-        android:layout_marginTop="160dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="20dp" />
+        android:layout_below="@+id/editText_inputID"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
 
     <EditText
         android:layout_width="fill_parent"
@@ -48,21 +45,18 @@
         android:id="@+id/editText_inputPW"
         android:maxLength="20"
         android:inputType="textPassword"
-        android:layout_alignTop="@+id/textView3"
-        android:layout_alignLeft="@+id/editText_inputID"
-        android:layout_alignStart="@+id/editText_inputID"
-        android:layout_marginRight="100dp" />
+        android:layout_below="@+id/editText_inputID"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="이름"
         android:id="@+id/textView4"
-        android:layout_marginTop="240dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="20dp" />
+        android:layout_below="@+id/editText_inputPW"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
 
     <EditText
         android:layout_width="fill_parent"
@@ -72,28 +66,28 @@
         android:layout_alignTop="@+id/textView4"
         android:layout_alignLeft="@+id/editText_inputPW"
         android:layout_alignStart="@+id/editText_inputPW"
-        android:layout_marginRight="100dp" />
+        android:layout_alignRight="@+id/editText_inputPW"
+        android:layout_alignEnd="@+id/editText_inputPW" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="성별"
         android:id="@+id/textView5"
-        android:layout_marginTop="320dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="20dp" />
+        android:layout_alignBottom="@+id/editText_inputGENDER"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4" />
 
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText_inputGENDER"
         android:maxLength="20"
-        android:layout_alignTop="@+id/textView5"
+        android:layout_below="@+id/editText_inputNAME"
+        android:layout_alignRight="@+id/editText_inputNAME"
+        android:layout_alignEnd="@+id/editText_inputNAME"
         android:layout_alignLeft="@+id/editText_inputNAME"
-        android:layout_alignStart="@+id/editText_inputNAME"
-        android:layout_marginRight="100dp" />
+        android:layout_alignStart="@+id/editText_inputNAME" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -101,11 +95,10 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="생년월일"
         android:id="@+id/textView7"
-        android:layout_marginTop="470dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="20dp" />
+        android:layout_below="@+id/textView6"
+        android:layout_alignLeft="@+id/textView6"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_marginTop="25dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -113,26 +106,23 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="닉네임"
         android:id="@+id/textView6"
-        android:layout_marginTop="400dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="20dp" />
+        android:layout_alignBottom="@+id/editText_inputNICK"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5" />
 
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText_inputNICK"
         android:maxLength="20"
-        android:layout_alignTop="@+id/textView6"
+        android:layout_below="@+id/textView5"
         android:layout_alignLeft="@+id/editText_inputGENDER"
-        android:layout_alignStart="@+id/editText_inputGENDER"
-        android:layout_marginRight="100dp" />
+        android:layout_alignStart="@+id/editText_inputGENDER" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="전송"
+        android:text="가입하기"
         android:id="@+id/btn_submit_joindata"
         android:layout_below="@+id/datePicker"
         android:layout_centerHorizontal="true" />
@@ -144,7 +134,6 @@
         android:calendarViewShown="false"
         android:spinnersShown="true"
         android:layout_alignTop="@+id/textView7"
-        android:layout_alignLeft="@+id/editText_inputNICK"
-        android:layout_alignStart="@+id/editText_inputNICK"
-        android:layout_marginRight="100dp" />
+        android:layout_toRightOf="@+id/textView7"
+        android:layout_toEndOf="@+id/textView7" />
 </RelativeLayout>

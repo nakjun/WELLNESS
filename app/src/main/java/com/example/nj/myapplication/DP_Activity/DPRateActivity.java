@@ -3,6 +3,7 @@ package com.example.nj.myapplication.DP_Activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
@@ -16,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.nj.myapplication.MainActivity;
 import com.example.nj.myapplication.R;
 import com.example.nj.myapplication.Util;
 
@@ -26,12 +28,13 @@ import java.util.logging.LogRecord;
 
 public class DPRateActivity extends Activity {
 
+
     ImageView img[] = new ImageView[5];
     TextView Tview;
     Intent intent,getintent;
     Handler mHandler;
     int i;
-
+    Bitmap temp;
     public static int rates;
 
     String str;
@@ -109,6 +112,17 @@ public class DPRateActivity extends Activity {
         img[2] = (ImageView) findViewById(R.id.image_middle_sel);
         img[3] = (ImageView) findViewById(R.id.image_high_sel);
         img[4] = (ImageView) findViewById(R.id.image_veryhigh_sel);
+
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dp_star1), MainActivity.width, MainActivity.height/10, false);
+        img[0].setImageBitmap(temp);
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dp_star2), MainActivity.width, MainActivity.height/10, false);
+        img[1].setImageBitmap(temp);
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dp_star3), MainActivity.width, MainActivity.height/10,false);
+        img[2].setImageBitmap(temp);
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dp_star4), MainActivity.width, MainActivity.height/10, false);
+        img[3].setImageBitmap(temp);
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dp_star5), MainActivity.width, MainActivity.height/10, false);
+        img[4].setImageBitmap(temp);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

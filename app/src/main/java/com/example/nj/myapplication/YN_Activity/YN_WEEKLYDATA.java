@@ -5,8 +5,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.nj.myapplication.HubActivity;
 import com.example.nj.myapplication.IDSingletonclass;
+import com.example.nj.myapplication.MainActivity;
 import com.example.nj.myapplication.R;
 import com.example.nj.myapplication.Util;
 
@@ -31,22 +32,34 @@ public class YN_WEEKLYDATA extends Activity {
 
     Calendar cal;
     String dayz[]={"","","","","","",""};
-    public static Bitmap bitmap[];
+
     public static ImageView imgView[];
     public static char num[]={'1','2','3','4','5','6','7'};
     int img_view_ID[]={R.id.img_mon,R.id.img_tue,R.id.img_wed,R.id.img_thu,R.id.img_fri,R.id.img_sat,R.id.img_sun};
-    int img_name[]={R.drawable.yn_actiivity_tr,R.drawable.yn_activity_movie,R.drawable.yn_actiivity_tv,R.drawable.yn_actiivity_cleaning,R.drawable.yn_activity_playing,R.drawable.yn_acitivity_game,R.drawable.yn_activity_reading,R.drawable.yn_activity_food,R.drawable.yn_activity_inst,R.drawable.yn_activity_sing,R.drawable.yn_actiivity_shopping,R.drawable.yn_actiivity_daily};
     public static boolean img_setup[];
     boolean available[];
     public static int index=0;
     public ArrayList<Integer> index_list;
     phpDown task;
+    Bitmap bitmap2[] = new Bitmap[7];
+    Bitmap temp;
+    ImageView title1,title2,title3,title4,title5,title6,title7;
+    ImageView data1,data2;
+    int deviceWidth,deviceHeight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yn__weeklydat);
         Util.setGlobalFont(this, getWindow().getDecorView());
+
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+
+        deviceWidth = displayMetrics.widthPixels;
+        deviceHeight = displayMetrics.heightPixels;
+
         init();
 
         img_setup=new boolean[7];
@@ -92,18 +105,68 @@ public class YN_WEEKLYDATA extends Activity {
     }
     void init()
     {
+        title1 = (ImageView)findViewById(R.id.monday);
+        title2 = (ImageView)findViewById(R.id.Tueday);
+        title3 = (ImageView)findViewById(R.id.Wedday);
+        title4 = (ImageView)findViewById(R.id.Thuday);
+        title5 = (ImageView)findViewById(R.id.Friday);
+        title6 = (ImageView)findViewById(R.id.Satday);
+        title7 = (ImageView)findViewById(R.id.sunday);
+
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.yn_monday),deviceWidth/2, deviceHeight/17, false);
+        title1.setImageBitmap(temp);
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.yn_tueday),deviceWidth/2, deviceHeight/17, false);
+        title2.setImageBitmap(temp);
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.yn_wedday),deviceWidth/2, deviceHeight/17, false);
+        title3.setImageBitmap(temp);
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.yn_thuday),deviceWidth/2, deviceHeight/17, false);
+        title4.setImageBitmap(temp);
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.yn_friday),deviceWidth/2, deviceHeight/17, false);
+        title5.setImageBitmap(temp);
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.yn_saturday),deviceWidth/2, deviceHeight/17, false);
+        title6.setImageBitmap(temp);
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.yn_sunday),deviceWidth, deviceHeight/17, false);
+        title7.setImageBitmap(temp);
+
+        data1 = (ImageView)findViewById(R.id.img_clickedImage);
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.databox),deviceWidth/2, (deviceHeight)/5, false);
+        data1.setImageBitmap(temp);
+
+        data2 = (ImageView)findViewById(R.id.img_clickedBackground);
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.databox),deviceWidth/2, (deviceHeight)/5, false);
+        data2.setImageBitmap(temp);
+
         index_list = new ArrayList<>();
 
         imgView = new ImageView[7];
-        bitmap = new Bitmap[12];
+        Bitmap b = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.yn_datatable),deviceWidth/2, (deviceHeight*3)/17, false);
         for(int i=0;i<7;i++)
         {
             imgView[i] = (ImageView)findViewById(img_view_ID[i]);
+            imgView[i].setImageBitmap(b);
         }
-        for(int i=0;i<12;i++)
-        {
-            bitmap[i]=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(),img_name[i]), 300, 167, false);
-        }
+        b = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.yn_datatable),deviceWidth, (deviceHeight*3)/17, false);
+        imgView[6].setImageBitmap(b);
+        imgView[0].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ImageView clicked = (ImageView) findViewById(R.id.img_clickedImage);
+                //clicked.setVisibility(View.VISIBLE);
+                //clicked.setImageBitmap(this);
+                Log.d("THIS", this.toString());
+
+                ImageView click_back = (ImageView) findViewById(R.id.img_clickedBackground);
+                clicked.setImageBitmap(bitmap2[0]);
+                //clicked.setVisibility(View.VISIBLE);
+                TextView t1 = (TextView) findViewById(R.id.tView_With);
+                TextView t2 = (TextView) findViewById(R.id.tView_When);
+                TextView t3 = (TextView) findViewById(R.id.tView_Where);
+
+                t1.setVisibility(View.VISIBLE);
+                t2.setVisibility(View.VISIBLE);
+                t3.setVisibility(View.VISIBLE);
+            }
+        });
     }
 
     String getDayofWeek(int n) {
@@ -192,12 +255,15 @@ public class YN_WEEKLYDATA extends Activity {
         protected void onPostExecute(String str){
             String data[]=str.split(" ");
 
-            Log.d("DATA SPLIT LENGTH",data.length+"");
+            //Log.d("DATA SPLIT LENGTH",data.length+"");
 
             for(int i=0;i<data.length;i++) {
-                Log.d("DATA "+i+" FULL STATUS",data[i]);
-                Log.d("DATA "+i+" LENGTH", data[i].length() + "");
+                //Log.d("DATA "+i+" FULL STATUS",data[i]);
+                //Log.d("DATA "+i+" LENGTH", data[i].length() + "");
             }
+
+            //Listviewitem line = new Listviewitem(new ImageLoader().getBitmapIMG(dat[0],dat[1]));
+            //data.add(line);
 
             for(int i=0;i<data.length;i++)
             {
@@ -206,26 +272,14 @@ public class YN_WEEKLYDATA extends Activity {
                         if (data[i].charAt(data[i].length() - 1) == YN_WEEKLYDATA.num[j] ||data[i].charAt(data[i].length() - 2) == YN_WEEKLYDATA.num[j]) {
                             YN_WEEKLYDATA.img_setup[j] = true;
                             index= Integer.parseInt(data[i].charAt(0) + "");
-                            YN_WEEKLYDATA.imgView[j].setImageBitmap(YN_WEEKLYDATA.bitmap[index]);
-                            YN_WEEKLYDATA.imgView[i].setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    ImageView clicked = (ImageView) findViewById(R.id.img_clickedImage);
-                                    clicked.setVisibility(View.VISIBLE);
-                                    //clicked.setImageBitmap(this);
-                                    Log.d("THIS", this.toString());
 
-                                    ImageView click_back = (ImageView) findViewById(R.id.img_clickedBackground);
-                                    click_back.setVisibility(View.VISIBLE);
-                                    TextView t1 = (TextView) findViewById(R.id.tView_With);
-                                    TextView t2 = (TextView) findViewById(R.id.tView_When);
-                                    TextView t3 = (TextView) findViewById(R.id.tView_Where);
+                            //YN_WEEKLYDATA.imgView[j].setImageBitmap(YN_WEEKLYDATA.bitmap[index]);
+                            Log.d("FOLDER",MainActivity.LoginID.get_ID());
+                            Log.d("FILE",data[i].charAt(0)+"");
+                            Bitmap b = new ImageLoader().getBitmapIMG(MainActivity.LoginID.get_ID(),data[i].charAt(0)+"");
 
-                                    t1.setVisibility(View.VISIBLE);
-                                    t2.setVisibility(View.VISIBLE);
-                                    t3.setVisibility(View.VISIBLE);
-                                }
-                            });
+                            bitmap2[j] = Bitmap.createScaledBitmap(b, deviceWidth/2, (deviceHeight*3)/17, false);
+                            YN_WEEKLYDATA.imgView[j].setImageBitmap(bitmap2[j]);
                         }
                     }
                 }

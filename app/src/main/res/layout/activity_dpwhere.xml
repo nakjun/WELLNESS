@@ -31,74 +31,30 @@
         android:layout_alignLeft="@+id/dp_main_view"
         android:layout_alignStart="@+id/dp_main_view" />
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/imageView_academy"
+        android:layout_gravity="center_vertical"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:id="@+id/linearLayout">
+        android:layout_alignParentStart="true" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView_academy"
-            android:layout_gravity="center_vertical"
-            android:background="@drawable/dp_academy"
-            android:layout_marginLeft="50dp" />
-
-        <ImageView
-            android:layout_width="128dp"
-            android:layout_height="128dp"
-            android:id="@+id/imageView_school"
-            android:background="@drawable/dp_school"
-            android:layout_marginLeft="60dp" />
-
-        <ImageView
-            android:layout_width="128dp"
-            android:layout_height="128dp"
-            android:background="@drawable/dp_house"
-            android:id="@+id/imageView_home"
-            android:layout_gravity="center_vertical"
-            android:layout_toRightOf="@+id/linearLayout"
-            android:layout_marginLeft="50dp"
-            android:layout_alignTop="@+id/linearLayout"
-            android:layout_alignRight="@+id/textView12"
-            android:layout_alignEnd="@+id/textView12" />
-
-    </LinearLayout>
-
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="학원에서"
-        android:id="@+id/textView14"
-        android:layout_below="@+id/linearLayout"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="75dp"
-        android:layout_marginStart="74dp"
-        android:layout_marginTop="10dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="학교에서"
-        android:id="@+id/textView15"
-        android:layout_alignTop="@+id/textView14"
+        android:id="@+id/imageView_school"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="집에서"
-        android:id="@+id/textView16"
-        android:layout_alignTop="@+id/textView15"
-        android:layout_alignRight="@+id/linearLayout"
-        android:layout_alignEnd="@+id/linearLayout"
-        android:layout_marginRight="40dp" />
+        android:id="@+id/imageView_home"
+        android:layout_gravity="center_vertical"
+
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

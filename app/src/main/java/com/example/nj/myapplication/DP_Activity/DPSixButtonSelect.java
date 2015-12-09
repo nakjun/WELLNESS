@@ -3,6 +3,8 @@ package com.example.nj.myapplication.DP_Activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +16,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.nj.myapplication.MainActivity;
 import com.example.nj.myapplication.R;
 import com.example.nj.myapplication.Util;
 
@@ -25,12 +28,14 @@ public class DPSixButtonSelect extends Activity {
 
     boolean flag = false,etc_flag=false;
     TextView title;
-    ImageView iView;
+    ImageView iView,iView2;
     Button btn[] = new Button[6];
     EditText txt;
 
     Intent intent, get_intent;
     String str;
+
+    Bitmap temp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +52,7 @@ public class DPSixButtonSelect extends Activity {
     void init() {
         intent = new Intent(DPSixButtonSelect.this, DPmyStatus.class);
 
+        iView2=(ImageView)findViewById(R.id.imageView9);
         title = (TextView) findViewById(R.id.dpSixButtonTitle);
 
         btn[0] = (Button) findViewById(R.id.BUTTON_ONE);
@@ -55,7 +61,11 @@ public class DPSixButtonSelect extends Activity {
         btn[3] = (Button) findViewById(R.id.BUTTON_FOUR);
         btn[4] = (Button) findViewById(R.id.BUTTON_FIVE);
         btn[5] = (Button) findViewById(R.id.BUTTON_SIX);
+
+
         iView = (ImageView)findViewById(R.id.imageView6);
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dp_circle), MainActivity.width/3, MainActivity.height/10, false);
+
         for (int i = 0; i < 6; i++) {
             btn[i].setText(Origin_Text[i]);
         }
@@ -134,6 +144,7 @@ public class DPSixButtonSelect extends Activity {
 
                 txt.setVisibility(View.VISIBLE);
                 iView.setVisibility(View.VISIBLE);
+                iView2.setVisibility(View.VISIBLE);
             }
         });
         iView.setOnClickListener(new View.OnClickListener() {
@@ -143,11 +154,14 @@ public class DPSixButtonSelect extends Activity {
                 {
                     txt.setVisibility(View.INVISIBLE);
                     iView.setVisibility(View.INVISIBLE);
+                    iView2.setVisibility(View.INVISIBLE);
+                    txt.setText("");
                     etc_flag=true;
                 }
                 else {
                     txt.setVisibility(View.VISIBLE);
                     iView.setVisibility(View.VISIBLE);
+                    iView2.setVisibility(View.VISIBLE);
                 }
 
                 if (flag) {

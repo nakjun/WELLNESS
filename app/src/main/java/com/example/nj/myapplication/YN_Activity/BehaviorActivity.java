@@ -2,6 +2,8 @@ package com.example.nj.myapplication.YN_Activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -10,15 +12,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.example.nj.myapplication.R;
 import com.example.nj.myapplication.Util;
 
 public class BehaviorActivity extends Activity {
 
-
-    Button behavior1,behavior2;
-
+    ImageView btn1,btn2,main;
+    //Button behavior1,behavior2;
+    Bitmap temp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,17 +34,27 @@ public class BehaviorActivity extends Activity {
         int deviceWidth = displayMetrics.widthPixels;
         int deviceHeight = displayMetrics.heightPixels;
 
-        behavior1 = (Button)findViewById(R.id.btn_behavior);
-        behavior2 = (Button)findViewById(R.id.btn_behavior2);
+        btn1 = (ImageView)findViewById(R.id.yn_btn1);
+        btn2 = (ImageView)findViewById(R.id.yn_btn2);
+        main = (ImageView)findViewById(R.id.imageView_Main2);
 
-        behavior1.setOnClickListener(new View.OnClickListener() {
+
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.yn_title2),deviceWidth, deviceHeight/2, false);
+        main.setImageBitmap(temp);
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.yn_btn1),deviceWidth/2, deviceHeight/5, false);
+        btn1.setImageBitmap(temp);
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.yn_btn2),deviceWidth/2, deviceHeight/5, false);
+        btn2.setImageBitmap(temp);
+        //btn1.set
+
+        btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(BehaviorActivity.this,YNActionAcitivity.class));
                 //finish();
             }
         });
-        behavior2.setOnClickListener(new View.OnClickListener() {
+        btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(BehaviorActivity.this,YN_WEEKLYDATA.class));

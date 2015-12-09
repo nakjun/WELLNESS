@@ -3,6 +3,7 @@ package com.example.nj.myapplication.DP_Activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.nj.myapplication.MainActivity;
 import com.example.nj.myapplication.R;
 import com.example.nj.myapplication.Util;
 
@@ -23,6 +25,7 @@ public class DPWhere extends Activity {
     Intent intent,get_intent;
     String str;
 
+    Bitmap temp;
     public static String where;
 
     @Override
@@ -35,6 +38,13 @@ public class DPWhere extends Activity {
         img3 = (ImageView)findViewById(R.id.imageView_home);
 
         intent = new Intent(DPWhere.this,DPSixButtonSelect.class);
+
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dp_academy), MainActivity.width/4, MainActivity.height/5, false);
+        img1.setImageBitmap(temp);
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dp_school), MainActivity.width/4, MainActivity.height/5, false);
+        img2.setImageBitmap(temp);
+        temp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dp_house), MainActivity.width/4, MainActivity.height/5, false);
+        img3.setImageBitmap(temp);
 
         img1.setOnClickListener(new View.OnClickListener() {
             @Override

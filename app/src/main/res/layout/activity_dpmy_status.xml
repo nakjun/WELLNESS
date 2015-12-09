@@ -36,10 +36,8 @@
         android:textSize="30pt"
         android:background="@drawable/dp_status_anger"
         android:gravity="center_vertical|center"
-        android:layout_marginTop="60dp"
         android:layout_below="@+id/textView13"
-        android:layout_centerHorizontal="true"
-        android:layout_marginRight="-15dp" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -76,7 +76,7 @@
         android:layout_marginLeft="150dp"
         android:layout_marginRight="150dp"
         android:minLines="12"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="0dp" />
 
     />
 

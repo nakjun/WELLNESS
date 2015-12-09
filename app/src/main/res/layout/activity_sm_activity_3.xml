@@ -71,11 +71,9 @@
         android:text="슬픔"
         android:id="@+id/sm_3_flower_2"
         style="@style/TextSize28"
-        android:layout_alignTop="@+id/sm_3_flower_6"
-        android:layout_toRightOf="@+id/sm_3_plaintext"
-        android:layout_toEndOf="@+id/sm_3_plaintext"
-        android:layout_marginLeft="44dp"
-        android:layout_marginStart="44dp" />
+        android:layout_alignRight="@+id/sm_3_date"
+        android:layout_alignEnd="@+id/sm_3_date"
+        android:layout_alignTop="@+id/sm_3_flower_6" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -83,9 +81,9 @@
         android:text="화남"
         android:id="@+id/sm_3_flower_1"
         style="@style/TextSize28"
-        android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/sm_3_flower_4"
         android:layout_alignStart="@+id/sm_3_flower_4"
+        android:layout_marginBottom="50dp"
         android:layout_marginTop="350dp" />
 
     <TextView
@@ -94,9 +92,11 @@
         android:text="절망"
         android:id="@+id/sm_3_flower_6"
         style="@style/TextSize28"
+        android:layout_marginLeft="200dp"
+        android:layout_marginStart="76dp"
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/sm_3_date"
-        android:layout_toEndOf="@+id/sm_3_date" />
+        android:layout_toRightOf="@+id/sm_3_plaintext"
+        android:layout_toEndOf="@+id/sm_3_plaintext" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -104,9 +104,9 @@
         android:text="우울"
         android:id="@+id/sm_3_flower_4"
         style="@style/TextSize28"
+        android:layout_marginTop="79dp"
         android:layout_below="@+id/sm_3_flower_5"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="99dp" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -114,11 +114,10 @@
         android:text="짜증"
         android:id="@+id/sm_3_flower_3"
         android:textSize="28dp"
-        android:layout_marginTop="74dp"
-        android:layout_below="@+id/sm_3_flower_2"
-        android:layout_alignLeft="@+id/sm_3_flower_2"
-        android:layout_alignStart="@+id/sm_3_flower_2"
-        android:layout_marginRight="10dp" />
+        android:layout_marginTop="146dp"
+        android:layout_below="@+id/sm_3_flower_6"
+        android:layout_alignLeft="@+id/sm_3_flower_6"
+        android:layout_alignStart="@+id/sm_3_flower_6" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -128,7 +127,7 @@
         android:textSize="28dp"
         android:textColor="@color/white"
         android:layout_alignTop="@+id/sm_3_flower_3"
-        android:layout_alignLeft="@+id/sm_3_flower_6"
-        android:layout_alignStart="@+id/sm_3_flower_6" />
+        android:layout_alignRight="@+id/sm_3_flower_2"
+        android:layout_alignEnd="@+id/sm_3_flower_2" />
 
 </RelativeLayout>

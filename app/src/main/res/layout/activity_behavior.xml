@@ -1,45 +1,31 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent"
     tools:context="com.example.nj.myapplication.YN_Activity.BehaviorActivity">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView_Main2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="0dp" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView_Main2"
-        android:background="@drawable/yn_title2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/yn_btn1"
+        android:layout_alignBottom="@+id/yn_btn2"
+        android:layout_alignLeft="@+id/imageView_Main2"
+        android:layout_alignStart="@+id/imageView_Main2" />
 
-    <Button
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="계획"
-        android:textSize="25pt"
-        android:id="@+id/btn_behavior"
-        android:background="@drawable/yn_button2"
-        android:layout_marginLeft="50dp"
-        android:layout_marginStart="133dp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:typeface="serif" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="행동"
-        android:textSize="25pt"
-        android:id="@+id/btn_behavior2"
-        android:background="@drawable/yn_button2"
-        android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/btn_behavior"
-        android:layout_toEndOf="@+id/btn_behavior"
-        android:layout_marginLeft="60dp"
-        android:layout_marginStart="118dp" />
+        android:id="@+id/yn_btn2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="false" />
 
 
 </RelativeLayout>

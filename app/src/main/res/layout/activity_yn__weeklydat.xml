@@ -17,147 +17,146 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView5"
+        android:id="@+id/monday"
         android:layout_below="@+id/textView18"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@drawable/yn_monday" />
+        android:visibility="visible" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView7"
-        android:background="@drawable/yn_tueday"
-        android:layout_alignTop="@+id/imageView5"
-        android:layout_toRightOf="@+id/imageView5"
-        android:layout_toEndOf="@+id/imageView5" />
+        android:id="@+id/Tueday"
+        android:layout_alignTop="@+id/monday"
+        android:layout_toRightOf="@+id/monday"
+        android:layout_toEndOf="@+id/monday"
+        android:visibility="visible" />
 
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/img_mon"
-        android:background="@drawable/yn_datatable"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/imageView7"
-        android:layout_toStartOf="@+id/imageView7"
-        android:layout_below="@+id/imageView5" />
+        android:layout_toLeftOf="@+id/Tueday"
+        android:layout_toStartOf="@+id/Tueday"
+        android:layout_below="@+id/monday"
+        android:visibility="visible" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/img_tue"
-        android:background="@drawable/yn_datatable"
         android:layout_alignBottom="@+id/img_mon"
-        android:layout_alignRight="@+id/imageView7"
-        android:layout_alignEnd="@+id/imageView7" />
+        android:layout_alignRight="@+id/Tueday"
+        android:layout_alignEnd="@+id/Tueday"
+        android:visibility="visible" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView10"
-        android:background="@drawable/yn_wedday"
+        android:id="@+id/Wedday"
         android:layout_below="@+id/img_mon"
         android:layout_alignLeft="@+id/img_mon"
-        android:layout_alignStart="@+id/img_mon" />
+        android:layout_alignStart="@+id/img_mon"
+        android:visibility="visible" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView11"
-        android:background="@drawable/yn_thuday"
+        android:id="@+id/Thuday"
         android:layout_below="@+id/img_mon"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:visibility="visible" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/img_wed"
-        android:background="@drawable/yn_datatable"
-        android:layout_alignLeft="@+id/imageView10"
-        android:layout_alignStart="@+id/imageView10"
-        android:layout_below="@+id/imageView10" />
+        android:layout_alignLeft="@+id/Wedday"
+        android:layout_alignStart="@+id/Wedday"
+        android:layout_below="@+id/Wedday"
+        android:visibility="visible" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/img_thu"
-        android:background="@drawable/yn_datatable"
-        android:layout_alignLeft="@+id/imageView15"
-        android:layout_alignStart="@+id/imageView15"
+        android:layout_alignLeft="@+id/Satday"
+        android:layout_alignStart="@+id/Satday"
         android:layout_alignParentLeft="false"
-        android:layout_below="@+id/imageView11"
-        android:layout_above="@+id/imageView15" />
+        android:layout_below="@+id/Thuday"
+        android:layout_above="@+id/Satday"
+        android:visibility="visible" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView14"
-        android:background="@drawable/yn_friday"
+        android:id="@+id/Friday"
         android:layout_below="@+id/img_wed"
         android:layout_alignLeft="@+id/img_wed"
-        android:layout_alignStart="@+id/img_wed" />
+        android:layout_alignStart="@+id/img_wed"
+        android:visibility="visible" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView15"
-        android:background="@drawable/yn_saturday"
+        android:id="@+id/Satday"
         android:layout_below="@+id/img_wed"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:visibility="visible" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/img_fri"
-        android:background="@drawable/yn_datatable"
-        android:layout_below="@+id/imageView14"
-        android:layout_alignLeft="@+id/imageView14"
-        android:layout_alignStart="@+id/imageView14"
-        android:layout_toLeftOf="@+id/imageView15"
-        android:layout_toStartOf="@+id/imageView15" />
+        android:layout_below="@+id/Friday"
+        android:layout_alignLeft="@+id/Friday"
+        android:layout_alignStart="@+id/Friday"
+        android:layout_toLeftOf="@+id/Satday"
+        android:layout_toStartOf="@+id/Satday"
+        android:visibility="visible" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/img_sat"
-        android:background="@drawable/yn_datatable"
-        android:layout_alignRight="@+id/imageView15"
-        android:layout_alignEnd="@+id/imageView15"
-        android:layout_alignLeft="@+id/imageView15"
-        android:layout_alignStart="@+id/imageView15"
-        android:layout_above="@+id/imageView18" />
+        android:layout_alignRight="@+id/Satday"
+        android:layout_alignEnd="@+id/Satday"
+        android:layout_alignLeft="@+id/Satday"
+        android:layout_alignStart="@+id/Satday"
+        android:layout_above="@+id/sunday"
+        android:visibility="visible" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView18"
-        android:background="@drawable/yn_sunday"
+        android:id="@+id/sunday"
         android:layout_alignLeft="@+id/img_fri"
         android:layout_alignStart="@+id/img_fri"
         android:layout_below="@+id/img_fri"
         android:layout_alignRight="@+id/img_sat"
-        android:layout_alignEnd="@+id/img_sat" />
+        android:layout_alignEnd="@+id/img_sat"
+        android:visibility="visible" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/img_sun"
-        android:background="@drawable/yn_datatable"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/imageView18"
-        android:layout_alignStart="@+id/imageView18"
+        android:layout_alignLeft="@+id/sunday"
+        android:layout_alignStart="@+id/sunday"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/imageView18" />
+        android:layout_below="@+id/sunday"
+        android:visibility="visible" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/img_clickedImage"
-        android:background="@drawable/yn_datatable"
         android:layout_alignTop="@+id/textView18"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
@@ -167,11 +166,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/img_clickedBackground"
-        android:background="@drawable/yn_datatable"
         android:layout_below="@+id/img_clickedImage"
-        android:layout_alignLeft="@+id/img_clickedImage"
-        android:layout_alignStart="@+id/img_clickedImage"
-        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
         android:visibility="invisible" />
 
     <TextView
@@ -184,7 +180,8 @@
         android:layout_alignLeft="@+id/img_clickedBackground"
         android:layout_alignStart="@+id/img_clickedBackground"
         android:visibility="invisible"
-        android:layout_marginTop="2dp" />
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -192,12 +189,12 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="When : "
         android:id="@+id/tView_When"
-        android:layout_below="@+id/imageView14"
+        android:layout_marginTop="50dp"
+        android:visibility="invisible"
+        android:layout_below="@+id/tView_With"
         android:layout_alignLeft="@+id/img_clickedBackground"
         android:layout_alignStart="@+id/img_clickedBackground"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="12dp"
-        android:visibility="invisible" />
+        android:layout_marginLeft="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -205,10 +202,11 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Where :"
         android:id="@+id/tView_Where"
-        android:layout_below="@+id/tView_When"
+        android:visibility="invisible"
+        android:layout_alignBottom="@+id/img_clickedBackground"
         android:layout_alignLeft="@+id/img_clickedBackground"
         android:layout_alignStart="@+id/img_clickedBackground"
-        android:layout_marginTop="12dp"
-        android:visibility="invisible" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="50dp" />
 
 </RelativeLayout>

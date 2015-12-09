@@ -13,101 +13,111 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:columnCount="4"
-        android:rowCount="5"
-        android:layout_below="@+id/dpSixButtonTitle"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="75dp"
-        android:layout_marginLeft="35dp"
-        android:useDefaultMargins="true"
-        android:id="@+id/gridLayout2">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/BUTTON_ONE"
-            android:background="@drawable/dp_circle"
-            android:text="누가 나를
-놀렸다"
-            android:layout_row="0"
-            android:layout_column="0" />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/BUTTON_TWO"
-            android:background="@drawable/dp_circle"
-            android:text="내 뜻대로
-되지 않았다"
-            android:layout_row="0"
-            android:layout_column="1" />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/BUTTON_THREE"
-            android:background="@drawable/dp_circle"
-            android:text="학습량이
-많았다"
-            android:layout_row="0"
-            android:layout_column="2" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/BUTTON_FOUR"
-            android:background="@drawable/dp_circle"
-            android:text="소외
-당했다"
-            android:layout_row="3"
-            android:layout_column="0" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/BUTTON_FIVE"
-            android:background="@drawable/dp_circle"
-            android:text="누군가에게
-야단 맞았다"
-            android:layout_row="3"
-            android:layout_column="1" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/BUTTON_SIX"
-            android:background="@drawable/dp_circle"
-            android:text="기타
-다른사유"
-            android:layout_row="3"
-            android:layout_column="2" />
-
-    </GridLayout>
-
-    <EditText
-        android:layout_width="fill_parent"
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp"
-        android:background="@drawable/databox"
-        android:layout_alignRight="@+id/gridLayout2"
-        android:layout_alignEnd="@+id/gridLayout2"
+        android:id="@+id/BUTTON_ONE"
+        android:text="누가 나를
+놀렸다"
+        android:layout_row="0"
+        android:layout_column="0"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:visibility="invisible" />
+        android:layout_below="@+id/dpSixButtonTitle" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BUTTON_TWO"
+        android:text="내 뜻대로
+되지 않았다"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_above="@+id/BUTTON_THREE"
+        android:layout_toRightOf="@+id/BUTTON_ONE"
+        android:layout_toEndOf="@+id/BUTTON_ONE" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BUTTON_THREE"
+        android:text="학습량이
+많았다"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:layout_below="@+id/BUTTON_ONE"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BUTTON_FOUR"
+        android:text="소외
+당했다"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:layout_alignBaseline="@+id/BUTTON_THREE"
+        android:layout_toRightOf="@+id/BUTTON_THREE" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BUTTON_FIVE"
+        android:text="누군가에게
+야단 맞았다"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:layout_below="@+id/BUTTON_THREE"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BUTTON_SIX"
+        android:text="기타
+다른사유"
+        android:layout_row="4"
+        android:layout_column="1"
+        android:layout_alignTop="@+id/BUTTON_FIVE"
+        android:layout_toRightOf="@+id/BUTTON_FIVE"
+        android:layout_toEndOf="@+id/BUTTON_FIVE" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView6"
         android:background="@drawable/dp_btn_right"
+        android:visibility="invisible"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/editText"
-        android:layout_alignEnd="@+id/editText"
-        android:visibility="invisible" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:maxLength="50" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView9"
+        android:background="@drawable/databox"
+        android:visibility="invisible"
+        android:layout_row="26"
+        android:layout_column="4"
+        android:layout_alignRight="@+id/imageView6"
+        android:layout_alignEnd="@+id/imageView6"
+        android:layout_below="@+id/BUTTON_SIX" />
 
 </RelativeLayout>

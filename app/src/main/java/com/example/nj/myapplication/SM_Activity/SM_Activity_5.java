@@ -51,7 +51,7 @@ public class SM_Activity_5 extends AppCompatActivity {
         cen_char=(ImageView)findViewById(R.id.sm_5_main_char);
         cen_char.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_5_smurf), 500, 500, false));
         bubble=(ImageView)findViewById(R.id.sm_5_bubble);
-        bubble.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_4_bubble), 700, 700, false));
+        bubble.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_4_bubble), 800, 800, false));
         textfield=(EditText)findViewById(R.id.sm_5_textfield);
         textfield.addTextChangedListener(new TextWatcher() {
             @Override

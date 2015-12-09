@@ -58,8 +58,8 @@ public class YNActionAcitivity extends Activity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //Log.d("VALUE",position+"");
-                YNActionAcitivity.index = position;
+                Log.d("VALUE",position+"");
+                //YNActionAcitivity.index = position;
             }
         });
 
@@ -119,7 +119,7 @@ public class YNActionAcitivity extends Activity {
         @Override
         public long getItemId(int position){return position;}
         @Override
-        public View getView(int position, View convertView, ViewGroup parent){
+        public View getView(final int position, View convertView, ViewGroup parent){
             if(convertView==null){
                 convertView=inflater.inflate(layout,parent,false);
             }
@@ -132,6 +132,7 @@ public class YNActionAcitivity extends Activity {
             icon.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    index=position;
                     index2 = 0;
                     startActivity(intent);
                     finish();
@@ -140,6 +141,7 @@ public class YNActionAcitivity extends Activity {
             icon2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    index=position;
                     index2 = 1;
                     startActivity(intent);
                     finish();
