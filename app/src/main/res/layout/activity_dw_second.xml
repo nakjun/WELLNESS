@@ -1,17 +1,16 @@
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    tools:context="com.example.nj.myapplication.DW_Activity.DW_secondActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/dw_2_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
-
         <android.support.v7.widget.Toolbar
             android:id="@+id/dw_2_toolbar"
             android:layout_width="match_parent"
@@ -20,86 +19,59 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.v4.widget.DrawerLayout
-        android:id="@+id/dw2_fragment_navigation_drawer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dw_sec_back"
+        android:layout_below="@+id/dw_2_view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            tools:context="com.example.nj.myapplication.DW_Activity.DW_secondActivity">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/dw_sec_topText"
+        android:layout_below="@+id/dw_2_view"
+        android:layout_toRightOf="@+id/dw_sec_back"
+        android:layout_toEndOf="@+id/dw_sec_back"
+        android:layout_marginTop="10dp" />
 
-            <ImageButton
-                android:id="@+id/dw_sec_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/dw_2_view" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dW_sec_cenImg"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_below="@+id/dw_sec_topText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
 
-            <TextView
-                android:id="@+id/dw_sec_topText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/dw_2_view"
-                android:layout_marginTop="10dp"
-                android:layout_toEndOf="@+id/dw_sec_back"
-                android:layout_toRightOf="@+id/dw_sec_back"
-                android:text="Large Text"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_gravity="center_horizontal" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/dw_sec_midText"
+        android:layout_marginTop="58dp"
+        android:layout_below="@+id/dW_sec_cenImg"
+        android:layout_alignLeft="@+id/dw_sec_botText"
+        android:layout_alignStart="@+id/dw_sec_botText"
+        android:textSize="35dp"
+        android:gravity="center"
+        android:layout_marginLeft="30dp" />
 
-            <ImageButton
-                android:id="@+id/dW_sec_cenImg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/dw_sec_topText"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
-                android:layout_gravity="center" />
-
-            <TextView
-                android:id="@+id/dw_sec_midText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/dw_sec_botText"
-                android:layout_alignStart="@+id/dw_sec_botText"
-                android:layout_below="@+id/dW_sec_cenImg"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="58dp"
-                android:gravity="center"
-                android:text="Large Text"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="35dp"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:id="@+id/dw_sec_botText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/dw_sec_midText"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:text="Large Text"
-                android:textAlignment="gravity"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="25dp"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginBottom="30dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/dw_sec_botText"
+        android:layout_below="@+id/dw_sec_midText"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="gravity"
+        android:gravity="center"
+        android:textSize="25dp" />
 
 
-        </FrameLayout>
-
-        <fragment
-            android:id="@+id/dw2_fragment"
-            android:name="layout.NavigationDrawerFragment"
-            android:layout_width="280dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            app:layout="@layout/fragment_navigation_drawer"
-            tools:layout="@layout/fragment_navigation_drawer" />
-    </android.support.v4.widget.DrawerLayout>
-</LinearLayout>
+</RelativeLayout>

@@ -10,7 +10,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
@@ -25,8 +24,6 @@ import com.example.nj.myapplication.DW_Activity.DW_BreatheActivity2;
 import com.example.nj.myapplication.R;
 import com.example.nj.myapplication.Util;
 
-import layout.NavigationDrawerFragment;
-
 public class SM_Activity extends AppCompatActivity {
     ImageButton imagebtn;
     ImageView centerImage;
@@ -40,14 +37,7 @@ public class SM_Activity extends AppCompatActivity {
         DisplayMetrics displayMetrics = new DisplayMetrics();
 
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-        ///////////
-        Toolbar toolbar = (Toolbar) findViewById(R.id.sm_toolbar);
-        toolbar.setTitle("");
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        NavigationDrawerFragment drawerFragment =(NavigationDrawerFragment)getSupportFragmentManager().findFragmentById(R.id.sm1_fragment);
-        drawerFragment.setUp(R.id.sm1_fragment, (DrawerLayout) findViewById(R.id.sm1_fragment_navigation_drawer), toolbar, 2);
-        /////////
+
         int deviceWidth = displayMetrics.widthPixels;
         int deviceHeight = displayMetrics.heightPixels;
 

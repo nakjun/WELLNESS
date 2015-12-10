@@ -9,7 +9,6 @@ import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
@@ -20,8 +19,6 @@ import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
 import com.example.nj.myapplication.Util;
-
-import layout.NavigationDrawerFragment;
 
 public class DW_BreatheActivity1 extends AppCompatActivity{
     TextView topTextView, botTextView;
@@ -43,11 +40,6 @@ public class DW_BreatheActivity1 extends AppCompatActivity{
         int deviceHeight = displayMetrics.heightPixels;
         Toolbar toolbar = (Toolbar) findViewById(R.id.dw_breathe_1_toolbar);
         toolbar.setTitle("");
-
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        NavigationDrawerFragment drawerFragment =(NavigationDrawerFragment)getSupportFragmentManager().findFragmentById(R.id.dw3_fragment);
-        drawerFragment.setUp(R.id.dw3_fragment, (DrawerLayout) findViewById(R.id.dw3_fragment_navigation_drawer), toolbar, 2);
 
         backImage = (ImageButton) findViewById(R.id.dw_sec_back2);
         backImage.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_btn_left), 50, 50, false));

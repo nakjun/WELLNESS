@@ -58,7 +58,7 @@
 
         <activity
             android:name=".DW_Activity.DW_Activity"
-            android:label=""
+            android:label="@string/title_activity_dw_"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
@@ -67,7 +67,7 @@
         </activity>
         <activity
             android:name=".DW_Activity.DW_secondActivity"
-            android:label=""
+            android:label="@string/title_activity_dw_second"
             android:parentActivityName=".DW_Activity.DW_Activity"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
@@ -76,7 +76,7 @@
         </activity>
         <activity
             android:name=".DW_Activity.DW_BreatheActivity1"
-            android:label=""
+            android:label="@string/title_activity_dw_breatheactivity1"
             android:parentActivityName=".DW_Activity.DW_secondActivity"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
@@ -85,7 +85,7 @@
         </activity>
         <activity
             android:name=".DW_Activity.DW_BreatheActivity2"
-            android:label=""
+            android:label="@string/title_activity_dw_breatheactivity2"
             android:parentActivityName=".DW_Activity.DW_BreatheActivity1"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
@@ -122,7 +122,7 @@
         </activity>
         <activity
             android:name=".DW_Activity.DW_BreatheActivity3"
-            android:label=""
+            android:label="@string/title_activity_dw__breathe3"
             android:parentActivityName=".DW_Activity.DW_BreatheActivity2"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
@@ -145,7 +145,7 @@
         </activity>
         <activity
             android:name=".SM_Activity.SM_Activity_3"
-            android:label=""
+            android:label="@string/title_activity_sm__activity_3"
             android:parentActivityName=".SM_Activity.SM_Activity_2"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
@@ -162,7 +162,7 @@
         </activity>
         <activity
             android:name=".DW_Activity.DW_RealBreatheActivity"
-            android:label=""
+            android:label="@string/title_activity_dw_real_breathe"
             android:parentActivityName=".DW_Activity.DW_BreatheActivity3"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
@@ -174,17 +174,17 @@
             android:label="@string/app_name" />
         <activity
             android:name=".DW_Activity.DW_ReleaseActivity"
-            android:label=""
+            android:label="@string/title_activity_dw__release"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
             android:name=".DW_Activity.DW_EndActivity"
-            android:label=""
+            android:label="@string/title_activity_dw__end"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
             android:name=".YN_Activity.YN_WEEKLYDATA"
-            android:label="" >
+            android:label="@string/title_activity_yn__weeklydat" >
         </activity>
         <activity
             android:name=".YN_Activity.YN_boardActivity"

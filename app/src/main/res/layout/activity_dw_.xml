@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:fitsSystemWindows="true"
+    tools:context="com.example.nj.myapplication.DW_Activity.DW_Activity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/dw_main_view"
@@ -21,90 +22,66 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.v4.widget.DrawerLayout
-        android:id="@+id/dwmain_fragment_navigation_drawer"
+    <TextView
+        android:id="@+id/dw_main_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:textStyle="bold"
+        android:layout_below="@+id/dw_main_view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <GridLayout
+        android:id="@+id/dw_main_imageGrid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dw_main_title"
+        android:layout_centerHorizontal="true"
+        android:columnCount="2"
+        android:rowCount="2">
+
+        <ImageView
+            android:id="@+id/dw_main_image1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:cropToPadding="true" />
+
+        <ImageView
+            android:id="@+id/dw_main_image2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:cropToPadding="true" />
+
+        <ImageView
+            android:id="@+id/dw_main_image3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:cropToPadding="true" />
+
+        <ImageView
+            android:id="@+id/dw_main_image4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:cropToPadding="true" />
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/dw_main_button"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            tools:context="com.example.nj.myapplication.DW_Activity.DW_Activity">
-
-            <TextView
-                android:id="@+id/dw_main_title"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/dw_main_view"
-                android:text="New Text"
-                android:textStyle="bold" />
-
-            <GridLayout
-                android:id="@+id/dw_main_imageGrid"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/dw_main_title"
-                android:layout_centerHorizontal="true"
-                android:columnCount="2"
-                android:rowCount="2">
-
-                <ImageView
-                    android:id="@+id/dw_main_image1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_column="0"
-                    android:layout_row="0"
-                    android:cropToPadding="true" />
-
-                <ImageView
-                    android:id="@+id/dw_main_image2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_column="1"
-                    android:layout_row="0"
-                    android:cropToPadding="true" />
-
-                <ImageView
-                    android:id="@+id/dw_main_image3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_column="0"
-                    android:layout_row="1"
-                    android:cropToPadding="true" />
-
-                <ImageView
-                    android:id="@+id/dw_main_image4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_column="1"
-                    android:layout_row="1"
-                    android:cropToPadding="true" />
-
-            </GridLayout>
-
-            <Button
-                android:id="@+id/dw_main_button"
-                android:layout_width="match_parent"
-                android:layout_height="119dp"
-                android:layout_below="@id/dw_main_imageGrid"
-                android:layout_centerInParent="true"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/dw_main_button_name"
-                android:layout_gravity="bottom" />
-        </FrameLayout>
-
-        <fragment
-            android:id="@+id/dwmain_fragment"
-            android:name="layout.NavigationDrawerFragment"
-            android:layout_width="280dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            app:layout="@layout/fragment_navigation_drawer"
-            tools:layout="@layout/fragment_navigation_drawer" />
-
-
-    </android.support.v4.widget.DrawerLayout>
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_below="@id/dw_main_imageGrid"
+        android:layout_centerInParent="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="@string/dw_main_button_name" />
+</RelativeLayout>
