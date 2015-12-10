@@ -1,6 +1,5 @@
 package com.example.nj.myapplication.DW_Activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -9,6 +8,8 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
@@ -18,8 +19,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 import com.example.nj.myapplication.R;
 import com.example.nj.myapplication.Util;
+
+import layout.NavigationDrawerFragment;
 
 public class DW_Activity extends AppCompatActivity {
     TextView title;
@@ -27,6 +31,9 @@ public class DW_Activity extends AppCompatActivity {
     Button button;
     MediaPlayer narration;
     int width;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -34,7 +41,17 @@ public class DW_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_dw_);
         Util.setGlobalFont(this, getWindow().getDecorView());
         Toolbar toolbar = (Toolbar) findViewById(R.id.dw_main_toolbar);
+        setSupportActionBar(toolbar);
         toolbar.setTitle("");
+
+        ///////////
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        NavigationDrawerFragment drawerFragment =(NavigationDrawerFragment)getSupportFragmentManager().findFragmentById(R.id.dwmain_fragment);
+        drawerFragment.setUp(R.id.dwmain_fragment,(DrawerLayout)findViewById(R.id.dwmain_fragment_navigation_drawer),toolbar,2);
+        /////////
+
+        toolbar.setNavigationIcon(R.drawable.drawer);
+
         toolbar.setTitleTextAppearance(getApplicationContext(), R.style.TextSize36);
         //getSupportActionBar().setDisplayShowHomeEnabled(true);
         DisplayMetrics displayMetrics = new DisplayMetrics();
@@ -77,6 +94,7 @@ public class DW_Activity extends AppCompatActivity {
 
 
     }
+
 
      @Override
     protected void onResume() {
