@@ -548,7 +548,7 @@ public class YN_boardActivity extends Activity {
             int deviceWidth = displayMetrics.widthPixels;
 
             Bitmap bitmap2;
-            bitmap2 = Bitmap.createScaledBitmap(listviewitem.getbitmap(), deviceWidth, 400, false);
+            bitmap2 = Bitmap.createScaledBitmap(listviewitem.getbitmap(), deviceWidth, MainActivity.height/3, false);
             icon.setImageBitmap(bitmap2);
             //icon.setImageResource(listviewitem.getIcon());
 

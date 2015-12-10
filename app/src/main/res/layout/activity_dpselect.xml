@@ -67,7 +67,6 @@
         android:text="분노"
         android:id="@+id/TextView_red"
         android:textSize="30dp"
-        android:layout_alignTop="@+id/imageView4"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -121,9 +120,7 @@
         android:text="야속"
         android:id="@+id/TextView_sky"
         android:textSize="30dp"
-        android:layout_alignLeft="@+id/TextView_red"
-        android:layout_alignStart="@+id/TextView_red"
-        android:layout_alignBottom="@+id/imageView4" />
+        android:layout_alignStart="@+id/TextView_red" />
 
 
 </RelativeLayout>

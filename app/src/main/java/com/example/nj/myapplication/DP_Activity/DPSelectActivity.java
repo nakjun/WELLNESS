@@ -48,11 +48,14 @@ public class DPSelectActivity extends Activity {
         RelativeLayout.LayoutParams params_yellow = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         RelativeLayout.LayoutParams params_green = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         RelativeLayout.LayoutParams params_blue = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        //RelativeLayout.LayoutParams params_sky = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        //RelativeLayout.LayoutParams params_red = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        RelativeLayout.LayoutParams params_sky = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        RelativeLayout.LayoutParams params_red = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
-        //params_red.topMargin = MainActivity.height*2/16;
-        //params_sky.bottomMargin = MainActivity.height*2/16;
+        params_red.leftMargin = MainActivity.width/2;
+        params_red.topMargin = MainActivity.height*4/16;
+
+        params_sky.leftMargin = MainActivity.width/2;
+        params_sky.topMargin = MainActivity.height*3/5;
 
         params_pink.leftMargin = MainActivity.width/4;
         params_pink.topMargin = MainActivity.height*5/16;
@@ -66,10 +69,10 @@ public class DPSelectActivity extends Activity {
         params_blue.topMargin = MainActivity.height*8/16;
         params_blue.leftMargin = MainActivity.width/4;
 
-        //t[0].setLayoutParams(params_red);
+        t[0].setLayoutParams(params_red);
         t[1].setLayoutParams(params_yellow);
         t[2].setLayoutParams(params_green);
-//        t[3].setLayoutParams(params_sky);
+        t[3].setLayoutParams(params_sky);
         t[4].setLayoutParams(params_blue);
         t[5].setLayoutParams(params_pink);
 

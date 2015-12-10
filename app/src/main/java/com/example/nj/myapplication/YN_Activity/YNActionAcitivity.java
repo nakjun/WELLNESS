@@ -3,6 +3,8 @@ package com.example.nj.myapplication.YN_Activity;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.nj.myapplication.MainActivity;
 import com.example.nj.myapplication.R;
 import com.example.nj.myapplication.Util;
 
@@ -126,8 +129,14 @@ public class YNActionAcitivity extends Activity {
             final Listviewitem listviewitem=data.get(position);
             ImageView icon=(ImageView)convertView.findViewById(R.id.img_one);
             ImageView icon2=(ImageView)convertView.findViewById(R.id.img_two);
-            icon.setImageResource(listviewitem.getIcon());
-            icon2.setImageResource(listviewitem.getIcon2());
+
+            Bitmap bitmap2;
+            bitmap2 = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(), listviewitem.getIcon()), MainActivity.width/2, MainActivity.height/3, false);
+            icon.setImageBitmap(bitmap2);
+            bitmap2 = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(), listviewitem.getIcon2()), MainActivity.width/2, MainActivity.height/3, false);
+            icon2.setImageBitmap(bitmap2);
+            //icon.setImageResource(listviewitem.getIcon());
+            //icon2.setImageResource(listviewitem.getIcon2());
 
             icon.setOnClickListener(new View.OnClickListener() {
                 @Override
