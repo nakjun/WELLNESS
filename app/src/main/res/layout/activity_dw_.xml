@@ -99,7 +99,7 @@
         <fragment
             android:id="@+id/dwmain_fragment"
             android:name="layout.NavigationDrawerFragment"
-            android:layout_width="@dimen/nav_drawer_width"
+            android:layout_width="280dp"
             android:layout_height="match_parent"
             android:layout_gravity="start"
             app:layout="@layout/fragment_navigation_drawer"

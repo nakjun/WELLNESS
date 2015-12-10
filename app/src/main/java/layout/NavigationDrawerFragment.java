@@ -40,17 +40,12 @@ public class NavigationDrawerFragment extends Fragment {
     public static final String PREF_FILE_NAME = "testpref";
     public static final String KEY_USER_LEARNED_DRAWER = "user_learned_drawer";
     private View containerView;
-    private static TextView []list;
-    private static ImageView []imagelist;
-
     public NavigationDrawerFragment() {
         // Required empty public constructor
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
-        list=new TextView[5];
-        imagelist=new ImageView[4];
         userLearnedDrawer = Boolean.valueOf(readFromPreferences(getActivity(), KEY_USER_LEARNED_DRAWER, "false"));
         if (savedInstanceState != null) {
             FromSavedInstanceState = true;
