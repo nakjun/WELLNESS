@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
@@ -21,6 +22,8 @@ import com.example.nj.myapplication.Util;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+
+import layout.NavigationDrawerFragment;
 
 public class SM_Activity_2 extends AppCompatActivity {
     Calendar cal;
@@ -44,6 +47,12 @@ public class SM_Activity_2 extends AppCompatActivity {
         toolbar.setTitle("");
         toolbar.setTitleTextAppearance(getApplicationContext(), R.style.TextSize36);
         setSupportActionBar(toolbar);
+        ///////////
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        NavigationDrawerFragment drawerFragment =(NavigationDrawerFragment)getSupportFragmentManager().findFragmentById(R.id.sm2_fragment);
+        drawerFragment.setUp(R.id.sm2_fragment, (DrawerLayout) findViewById(R.id.sm2_fragment_navigation_drawer), toolbar, 2);
+        /////////
 
         String day = "";
         cal = Calendar.getInstance();

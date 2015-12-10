@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:fitsSystemWindows="true"
-    tools:context="com.example.nj.myapplication.SM_Activity.SM_Activity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,46 +20,72 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/sm_main_centerimage"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/sm1_fragment_navigation_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <ImageButton
-        android:background="?android:attr/selectableItemBackground"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/sm_main_btn"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="15dp" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            tools:context="com.example.nj.myapplication.SM_Activity.SM_Activity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/sm_main_title"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:textSize="28dp"
-        android:layout_above="@+id/sm_main_text"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="159dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/sm_main_text"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="22dp"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:foregroundGravity="center" />
-</RelativeLayout>
+
+            <ImageView
+                android:id="@+id/sm_main_centerimage"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
+
+            <ImageButton
+                android:id="@+id/sm_main_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="15dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_gravity="bottom|right" />
+
+            <TextView
+                android:id="@+id/sm_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/sm_main_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="159dp"
+                android:gravity="center"
+                android:text="Large Text"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="28dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/sm_main_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="New Text"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:layout_gravity="center" />
+        </FrameLayout>
+        <fragment
+            android:id="@+id/sm1_fragment"
+            android:name="layout.NavigationDrawerFragment"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:layout="@layout/fragment_navigation_drawer"
+            tools:layout="@layout/fragment_navigation_drawer" />
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

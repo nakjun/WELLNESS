@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.example.nj.myapplication.SM_Activity.SM_Activity_2"
-    android:background="@color/white">
+    android:orientation="vertical">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        android:id="@+id/view">
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/sm_2_toolbar"
@@ -23,185 +21,217 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <GridLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:columnCount="7"
-        android:rowCount="2"
-        android:outlineProvider="paddedBounds"
-        android:id="@+id/gridLayout">
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/sm2_fragment_navigation_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="day1"
-            android:id="@+id/sm_2_table_00"
-            android:background="@color/sm_2_table_dark"
-            android:layout_column="0"
-            android:layout_row="0"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="day2"
-            android:id="@+id/sm_2_table_01"
-            android:background="@color/sm_2_table_dark"
-            android:layout_row="0"
-            android:layout_column="1"
-            android:textColor="@color/white"
-            android:textAlignment="center"
-            android:gravity="center" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="day2"
-            android:id="@+id/sm_2_table_02"
-            android:background="@color/sm_2_table_dark"
-            android:layout_column="2"
-            android:layout_row="0"
-            android:textColor="@color/white"
-            android:textAlignment="center"
-            android:gravity="center" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="day2"
-            android:id="@+id/sm_2_table_03"
-            android:background="@color/sm_2_table_dark"
-            android:layout_column="3"
-            android:layout_row="0"
-            android:textColor="@color/white"
-            android:gravity="center"
-            android:textAlignment="center" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="day2"
-            android:id="@+id/sm_2_table_04"
-            android:background="@color/sm_2_table_dark"
-            android:layout_row="0"
-            android:layout_column="4"
-            android:autoText="false"
-            android:textColor="@color/white"
-            android:textAlignment="center"
-            android:gravity="center" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="day2"
-            android:id="@+id/sm_2_table_05"
-            android:background="@color/sm_2_table_dark"
-            android:layout_column="5"
-            android:layout_row="0"
-            android:textColor="@color/white"
-            android:textAlignment="center"
-            android:gravity="center" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="day2"
-            android:id="@+id/sm_2_table_06"
-            android:background="@color/sm_2_table_dark"
-            android:layout_column="6"
-            android:layout_row="0"
-            android:textColor="@color/white"
-            android:gravity="center" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/sm_2_table_10"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:adjustViewBounds="false"
-            android:background="@color/transparent" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/sm_2_table_11"
-            android:layout_column="1"
-            android:layout_row="1"
-            android:background="@color/transparent" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/sm_2_table_12"
-            android:layout_row="1"
-            android:layout_column="2"
-            android:background="@color/transparent" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/sm_2_table_13"
-            android:layout_row="1"
-            android:layout_column="3"
-            android:background="@color/transparent" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/sm_2_table_14"
-            android:layout_row="1"
-            android:layout_column="4"
-            android:background="@color/transparent" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/sm_2_table_15"
-            android:layout_row="1"
-            android:layout_column="5"
-            android:background="@color/transparent" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/sm_2_table_16"
-            android:layout_row="1"
-            android:layout_column="6"
-            android:background="@color/transparent" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            tools:context="com.example.nj.myapplication.SM_Activity.SM_Activity_2">
 
 
-    </GridLayout>
+            <GridLayout
+                android:id="@+id/gridLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:columnCount="7"
+                android:outlineProvider="paddedBounds"
+                android:rowCount="2"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/sm_2_table_00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:layout_row="0"
+                    android:background="@color/sm_2_table_dark"
+                    android:gravity="center"
+                    android:text="day1"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/sm_2_table_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_row="0"
+                    android:background="@color/sm_2_table_dark"
+                    android:gravity="center"
+                    android:text="day2"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/sm_2_table_02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_row="0"
+                    android:background="@color/sm_2_table_dark"
+                    android:gravity="center"
+                    android:text="day2"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/sm_2_table_03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:layout_row="0"
+                    android:background="@color/sm_2_table_dark"
+                    android:gravity="center"
+                    android:text="day2"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/sm_2_table_04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:layout_row="0"
+                    android:autoText="false"
+                    android:background="@color/sm_2_table_dark"
+                    android:gravity="center"
+                    android:text="day2"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/sm_2_table_05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="5"
+                    android:layout_row="0"
+                    android:background="@color/sm_2_table_dark"
+                    android:gravity="center"
+                    android:text="day2"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/sm_2_table_06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="6"
+                    android:layout_row="0"
+                    android:background="@color/sm_2_table_dark"
+                    android:gravity="center"
+                    android:text="day2"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+
+                <ImageButton
+                    android:id="@+id/sm_2_table_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="1"
+                    android:adjustViewBounds="false"
+                    android:background="@color/transparent" />
+
+                <ImageButton
+                    android:id="@+id/sm_2_table_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_row="1"
+                    android:background="@color/transparent" />
+
+                <ImageButton
+                    android:id="@+id/sm_2_table_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_row="1"
+                    android:background="@color/transparent" />
+
+                <ImageButton
+                    android:id="@+id/sm_2_table_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:layout_row="1"
+                    android:background="@color/transparent" />
+
+                <ImageButton
+                    android:id="@+id/sm_2_table_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:layout_row="1"
+                    android:background="@color/transparent" />
+
+                <ImageButton
+                    android:id="@+id/sm_2_table_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="5"
+                    android:layout_row="1"
+                    android:background="@color/transparent" />
+
+                <ImageButton
+                    android:id="@+id/sm_2_table_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="6"
+                    android:layout_row="1"
+                    android:background="@color/transparent" />
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/sm_main_title"
-        android:id="@+id/sm_main_title"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:textSize="28dp"
-        android:layout_above="@+id/gridLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="77dp" />
+            </GridLayout>
 
 
-    <ImageButton
-        android:background="?android:attr/selectableItemBackground"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/sm_2_btn"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_margin="15dp" />
-</RelativeLayout>
+            <TextView
+                android:id="@+id/sm_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/gridLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="77dp"
+                android:gravity="center"
+                android:text="@string/sm_main_title"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="28dp"
+                android:layout_gravity="center_horizontal" />
+
+
+            <ImageButton
+                android:id="@+id/sm_2_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_margin="15dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_gravity="left|bottom" />
+        </FrameLayout>
+
+        <fragment
+            android:id="@+id/sm2_fragment"
+            android:name="layout.NavigationDrawerFragment"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:layout="@layout/fragment_navigation_drawer"
+            tools:layout="@layout/fragment_navigation_drawer" />
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

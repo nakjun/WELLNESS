@@ -1,5 +1,8 @@
 package com.example.nj.myapplication.DW_Activity;
 
+import android.support.v7.app.AppCompatActivity;
+
+
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -36,15 +39,15 @@ public class DW_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dw_);
         Util.setGlobalFont(this, getWindow().getDecorView());
         Toolbar toolbar = (Toolbar) findViewById(R.id.dw_main_toolbar);
-        setSupportActionBar(toolbar);
+
         toolbar.setTitle("");
 
         ///////////
+        setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         NavigationDrawerFragment drawerFragment =(NavigationDrawerFragment)getSupportFragmentManager().findFragmentById(R.id.dwmain_fragment);
         drawerFragment.setUp(R.id.dwmain_fragment,(DrawerLayout)findViewById(R.id.dwmain_fragment_navigation_drawer),toolbar,2);

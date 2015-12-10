@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
@@ -15,6 +16,8 @@ import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
 import com.example.nj.myapplication.Util;
+
+import layout.NavigationDrawerFragment;
 
 public class DW_secondActivity extends AppCompatActivity {
     TextView top,mid,bot;
@@ -27,6 +30,14 @@ public class DW_secondActivity extends AppCompatActivity {
         Util.setGlobalFont(this, getWindow().getDecorView());
         Toolbar toolbar = (Toolbar) findViewById(R.id.dw_2_toolbar);
         toolbar.setTitle("");
+        setSupportActionBar(toolbar);
+        ///////////
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        NavigationDrawerFragment drawerFragment =(NavigationDrawerFragment)getSupportFragmentManager().findFragmentById(R.id.dw2_fragment);
+        drawerFragment.setUp(R.id.dw2_fragment, (DrawerLayout) findViewById(R.id.dw2_fragment_navigation_drawer), toolbar, 2);
+        /////////
+
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int deviceWidth = displayMetrics.widthPixels;
